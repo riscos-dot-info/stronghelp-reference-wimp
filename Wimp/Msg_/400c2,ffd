@@ -4,7 +4,7 @@ Message_TaskInitialise (&400C2)
 + 20	<currently active object pointer=>OS:OS_handlers_cao>
 + 24	slot size
 + 28	Task name given to Wimp_Initialise, *control* terminated
-
-This message is broadcast when a task calls <Wimp_Initialise>. The fields are set so that it appears to originate from the new task.
+#line
+This message is broadcast when a task calls <Wimp_Initialise>. The fields are set so that it appears to originate from the new task. The Task Manager uses this message to identify the task's name. These names are stored in a table which can be queried using <TaskManager_TaskNameFromHandle>.
 #Line
-See <PRM 3, page 240=>PRM-3:240>.
+See <PRM 3-240=>PRM-3:240>.

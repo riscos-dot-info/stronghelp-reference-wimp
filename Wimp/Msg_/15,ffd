@@ -1,17 +1,25 @@
 AppControl  (&15)
 #Parent Msg_
 + 20	protocol version number (1)
-+ 24	flags (bit 0 means 'do it now')
++ 24	<flags=>.flags>
 + 28	<operation=>.operation>
-
-This message is used to control a generic set of applications.
-# Gerph> Note: This has been found by a note from Stuart Brodie. Thanks.
+#line
+This message is used to control applications in a generic manner.
+#
+# Gerph> Note: This has been found by a note from Stewart Brodie. Thanks.
+# Koschei> And elaborated/confirmed by hotpot.
 #Subpage operation
 AppControl operations
-Value	Meaning
+/Value/	/Meaning/
 #Line
 0	Stop
 1	Wake up
 2	Pause
 3	Minimise memory
 4	Open configuration
+#
+#Subpage flags
+Flags
+/Bit/	/Meaning/
+#line
+0	Do action immediately

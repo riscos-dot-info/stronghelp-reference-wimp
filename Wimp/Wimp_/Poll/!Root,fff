@@ -17,6 +17,7 @@ Reason Codes :
 6	<Mouse Click=>Wimp_Poll6>		17	<User Message=>wimp_sendmessage2>
 7	<User Drag Box=>Wimp_Poll7>		18	<User Message Recorded=>wimp_sendmessage2>
 8	<Key Pressed=>Wimp_Poll8>		19	<User Message Acknowledge=>wimp_sendmessage2>
+512	<Toolbox Event=>Toolbox:!Root>
 #indent
 
 Priority : Highest: 17-19  Next: 1-6,8,9  Then: the rest  Lowest: 0

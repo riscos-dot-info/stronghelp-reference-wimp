@@ -2,7 +2,7 @@ Wimp_AutoScroll (&400FD)
 #Parent Wimp_
 {f25}Þ{f}	R0 =	<flags=>.inflags>
 		{/}If R0 bits 0 or 1 are set,{/}
-		R1 !	<block=>.r1>
+		R1 =	pointer to <block=>.r1>
 {f25}Ü{f}	R0	<new flags=>.newflags>
 #line
 This call controls how the Wimp automatically scrolls an application's windows.
@@ -10,6 +10,7 @@ This call controls how the Wimp automatically scrolls an application's windows.
 #subpage r1
 Wimp_AutoScroll block
 /Offset/	/Meaning/
+#line
 0	Window handle of window to scroll
 4	Left pause zone width (in OS units), eg. 80, ignored if flag bit 0 is clear
 8	Bottom pause zone height (in OS units), eg. 80, ignored if flag bit 1 is clear
@@ -25,6 +26,7 @@ Wimp_AutoScroll block
 #subpage inflags
 Wimp_AutoScroll R0 entry flags
 /Bit/	/Meaning/
+#line
 0	Enable horizontal autoscrolling
 1	Enable vertical autoscrolling
 2	Delegate window repositioning to task (send <Scroll_Requests=>wimp_poll10> rather than <Open_Window_Requests=>wimp_poll2>
@@ -34,6 +36,7 @@ Other bits are reserved.
 #subpage newflags
 Wimp_AutoScroll R0 exit flags
 /Bits/	/Meaning/
+#line
 0-2	are preserved or read, according to <bit 7=>.inflags> on entry.
 7	is cleared
 8	set	Autoscrolling has commenced (this bit is set after a pause is completed, and remains set when a scroll has "hit the stops", but is cleared again when the pointer re-enters the centre zone)

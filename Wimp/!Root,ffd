@@ -8,6 +8,7 @@ Wimp SWIs
 <TaskManager>
 <TaskWindow>
 <DragASprite>
+<DragAnObject>
 <FilerAction>
 <Free>
 <ColourPicker>
@@ -18,4 +19,4 @@ Wimp SWIs
 #include topics
 #Line
 #align centre
-{/}<Wimp SWIs manual=>about>, v1.07, 17-Jun-1999{/}
+{/}<Wimp SWIs manual=>about>, v1.08, 26-Nov-1999{/}

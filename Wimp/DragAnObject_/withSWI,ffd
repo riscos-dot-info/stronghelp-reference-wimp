@@ -1,0 +1,2 @@
+DragAnObject [SWI renderer]
+When calling DragAnObject with a SWI as the renderer, the block pointed to by R2 should be 10 words long. These words are loaded into R0-R9, and the SWI is called from SVC mode.

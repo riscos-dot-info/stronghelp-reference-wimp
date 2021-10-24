@@ -1,0 +1,8 @@
+Box block
+Offset	Use
+#Line
+#Wrap Off
+0	x0 (left)
+4	y0 (bottom)
+8	x1 (right)
+12	y1 (top)

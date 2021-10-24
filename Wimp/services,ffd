@@ -1,0 +1,25 @@
+Service calls
+#Parent OS_
+#Table Columns 3
+49 <Start Wimp=>OS:Service_49>
+4A <Started Wimp=>OS:Service_4A>
+53 <Wimp_Closedown=>OS:Service_53>
+57 <Wimp ReportError=>OS:Service_57>
+5C <Wimp SaveDesktop=>OS:Service_5C>
+5D <Wimp Palette=>OS:Service_5D>
+7C <Desktop welcome message=>OS:Service_7C>
+85 <Wimp SpritesMoved=>OS:Service_85>
+86 <Wimp RegisterFilters=>OS:Service_86>
+400C0 Wimp ErrorStarting
+400C1 Wimp ErrorButtonPressed
+400C2 Wimp ErrorEnding
+87 <FilterManager installed=>OS:Service_87>
+88 <FilterManager dying=>OS:Service_88>
+93 <Colour picker loaded=>Service_93>
+4B <Start Filer=>OS:Service_4B>
+4C <Started Filer=>OS:Service_4C>
+4F <Filer is dying=>OS:Service_4F>
+6A <Filer enumerate formats=>OS:Service_6A>
+6B <Identify format=>OS:Service_6B>
+6C <Display format help=>OS:Service_6C>
+#EndTable

@@ -1,0 +1,16 @@
+DragAnObject_Start  (&49C40)
+#Prefix DragAnObject_
+#Parent DragAnObject_
+{f25}Þ{f}	R0 =	<flags>
+	R1 =	renderer called to render the object
+	 	(SWI number or pointer to C/assembler function)
+	R2 =	pointer to block holding registers for SWI / function parameters
+	R3 =	pointer to 16-byte block containing drag <box>
+	R4 =	pointer to optional block containing bounding <box>
+{f25}Ü{f}	Registers are preserved
+#line
+This SWI starts dragging an object. It uses the given function to render the object into a masked image.
+
+You may dispose of any workspace used by the rendering function as soon as this call returns.
+#Line
+See <PRM 5a-512=>PRM-5a:512>.

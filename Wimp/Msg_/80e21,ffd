@@ -1,19 +1,69 @@
 Message_OLEOpenSession  (&80E21)
 #Parent MSG_
-+ 20	Unique Name (16 byte, padded with zeros)
-+ 36	Window handle
-+ 40	x
-+ 44	y
-+ 48	Session type :
++20	<Unique Name=>.unique> (16 byte, padded with zeros)
++36	Window handle
++40	x
++44	y
++48	Session type:
+	<0 = try to edit=>.try>
+	<1 = run and edit=>.run>
+	<2 = reedit=>.reedit>
++52	<Session number=>MiscSWIs:OLE_sessionnumber>
++56	/depends on session type/
+#line
+This message requests a server to edit some data. The normal procedure is to
+use <session type zero=>.try> initially, then if that bounces <type one=>.run>. If the server already exists, <type two=>.reedit> is used.
+#line;tab
+See also:	<OLE specs=>#url http://micros.hensa.ac.uk/local/riscos/programming/b129.arc?&fn=b129.arc> (arc file)
+#
+#subpage unique
+OLE Unique Name
+A unique name in OLE terms means the name of the server which claims that
+it can handle a given data type.
 
-	if type = 0 or 1 (edit file)
- + 52	Session number
- + 56	Filetype
- + 60	Full pathname
+This can be obtained from a system variable. In the case of text files, for example, one would find what the contents of OLEServer$Type_FFF.
 
-	if type = 2 (re-edit file)
- + 52	Session number
+This variable's contents, if it exists, will look something like:
+#fCode;indent 2
+-N Zap -R raFS::Apps.$.!Zap
+#indent;f
+To extract the name <OS_ReadArgs=>OS:OS_ReadArgs> is recommended.
+#
+#subpage try
+Session Type 0
++48 =	0
++52 =	<Session number=>MiscSWIs:OLE_sessionnumber>
++56 =	<Filetype=>filetypes:!Root>
++60 =	full pathname (not a pointer to it)
+#line
+This message is used initially. If it bounces when broadcast to all tasks then the client should prepare for and use <type one=>.run> instead.
+#
+#subpage run
+Session Type 1
++48 =	1
++52 =	<Session number=>MiscSWIs:OLE_sessionnumber>
++56 =	<Filetype=>filetypes:!Root>
++60 =	full pathname (not a pointer to it)
+#line
+If a message of session <type zero=>.try> failed, then the application should try to <run the server=>.runtheserver> and then broadcast the same message as for the type zero, but with the type (at offset 48) changed to 1. If this returns then the server is either not started or is not capable of handling the request.
+#
+#subpage reedit
+Session Type 2
++48 =	2
++52 =	<Session number=>MiscSWIs:OLE_sessionnumber>
+#line
+Session type 2 is used when a link already has already been established. If it fails, then one should go back to session <type zero=>.try> and start again.
+#
+#subpage runtheserver
+Running an OLE server
+To run an OLE server (ie. your program is a client and wishes to have some data edited but the editor is not present) one must first find out what the appropriate editor for the file type is.
 
-Session type 0 is used initially/normally. If this returns unanswered, then client should try to run the server, and then send this message again, but with type 1. If this also returns the server was either not started or is not capable of handling the request.
+This can be obtained from a system variable. In the case of text files, for example, one would find what the contents of OLEServer$Type_FFF.
 
-Session type 2 is used when a link already is established.
+This variable's contents, if it exists, will look something like:
+#fCode;indent 2
+-N Zap -R raFS::Apps.$.!Zap
+#indent;f
+To extract the path to the application <OS_ReadArgs=>OS:OS_ReadArgs> is recommended.
+
+If the OLEServer$Type_### variable does not exist, then use the Alias$@RunType_### variable for the file type, but don't expect the client to work (however the <OLESupport=>MiscSWIs:OLE_> module generally gets OLE unaware applications to work properly).

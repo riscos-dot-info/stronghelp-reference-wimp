@@ -1,0 +1,32 @@
+DragAnObject flags
+Bits	Meaning
+#Line
+1,0	Horizontal location of sprite in box:
+	 00	Left
+	 01	Centre
+	 11	Right
+3,2	Vertical location of sprite in box:
+	 00	Bottom
+	 01	Centre
+	 10	Top
+5,4	Drag bounding box is:
+	 00	Whole screen
+	 01	Display area of window that the pointer is over
+	 10	User specified (see R4)
+6	Bounding box applies to:
+	 0	The box
+	 1	The pointer
+7	Control of drop shadow:
+	 0	don't do drop shadow
+	 1	make a drop shadow
+8	Control of dithering:
+	 0	dither the dragged object
+	 1	don't dither the dragged object
+9-15	Reserved for future use, should be set to 0.
+16	Rendering is done by:
+	 0	a <SWI=>DragAnObject_withSWI>
+	 1	a <C/assembler function=>DragAnObject_withFN>
+17	If the renderer is a function, it is called in:
+	 0	User mode
+	 1	SVC mode
+18-31	Reserved for future use, should be set to 0.

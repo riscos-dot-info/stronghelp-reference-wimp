@@ -1,0 +1,7 @@
+DragAnObject_Stop  (&49C41)
+#Parent DragAnObject_
+No parameters
+
+This SWI terminates any current drag operation and releases any DragAnObject workspace claimed to do a drag. It is expected that this SWI will be called when the <User Drag Box=>Wimp_Poll7> reason is received by the application.
+#Line
+See <PRM 5a-515=>PRM-5a:515>.

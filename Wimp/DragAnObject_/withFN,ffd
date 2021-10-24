@@ -1,0 +1,4 @@
+DragAnObject [function renderer]
+When calling DragAnObject with a C/assembler function as the renderer, the function is called in an APCS-conformant manner. The block pointed to by R2 should be 4 words long. These words are loaded into R0-R3 (a1-a4) and passed as parameters to the function. sl, sp and lr are all set correctly.
+
+If the renderer function is in a module, also set bit 17 of the flags word, as this allows access to statics.

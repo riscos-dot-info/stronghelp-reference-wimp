@@ -18,7 +18,7 @@ Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
 For comments, suggestions and submissions for these, please mail iain truskett <\<koschei@eh.org\>=>#URL mailto:koschei@eh.org> who is currently moderating the collection. The primary location for these manuals will be <http://eh.org/~koschei/manuals/=>#url>, with another copy at <http://freenet.barnet.ac.uk/manuals/=>#URL>.
 #line
-<This page=>.hist107> gives history and credits.
+<This page=>.hist108> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -126,5 +126,20 @@ History for Wimp v.1.07
 è	<Wimp_AutoScroll> typo fixed.
 è	<Wimp_SendMessage> modified with RISC OS 4 information.
 è	<Free_Register>, and <Free_Unregister> have been reformatted, updated with corrections and also 64 bit routine info.
+#tab;line
+<Previous history=>.hist106>	<Next history=>.hist108>
+#subpage hist108
+History for Wimp v.1.08
+#align right
+{/}26th November, 1999{/}
+#align left
+#line
+è	Wimp <services> list updated.
+è	<DragAnObject=>DragAnObject_> added.
+è	Extra mouse click info in Poll <Mouse_Click=>Wimp_Poll6> added.
+è	Extra information on obtaining task names via <TaskManager_TaskNameFromHandle> and <Message_TaskInitialise=>Msg_400c2> added to each page.
+è	<Message_OLEOpenSession=>Msg_80e21> made slightly more clear.
+è	<Message_AppControl=>Msg_15> also made clearer.
+è	Minor changes to <Wimp_Initialise> and <Wimp_GetWindowInfo>.
 #tab;line
 <Previous history=>.hist106>

@@ -2,11 +2,11 @@ Wimp_Initialise  (&400C0)
 #Parent Wimp_
 =>	R0 =	Last <Wimp version known=>.known> × 100
 	R1 =	"TASK" (&4B534154)
-	R2 !	Short description for taskmanager
-(Version 3.00) :
-	R3 !	<List=>.list300> of acceptable <user messages=>Msg_>.
-(Version 3.10 or later) :
-	R3 !	<List=>.list310> of acceptable <user messages=>Msg_>.
+	R2 =	pointer to short description for taskmanager
+(Version 3.00):
+	R3 =	pointer to <list=>.list300> of acceptable <user messages=>Msg_>.
+(Version 3.10 or later):
+	R3 =	pointer to <list=>.list310> of acceptable <user messages=>Msg_>.
 
 <=	R0 =	Current Wimp version * 100
 	R1 =	task handle
