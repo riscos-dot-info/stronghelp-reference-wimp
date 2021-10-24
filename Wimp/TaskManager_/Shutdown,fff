@@ -1,0 +1,19 @@
+TaskManager_Shutdown  (&42682)
+#Parent TaskManager_
+=>	R0 =	<Shutdown flags=>.flags>
+
+This call initialises a desktop shutdown. The actions preformed are controlled by the shutdown flags.
+#Line
+See <PRM 3, page 317=>PRM-3:317>.
+#Subpage flags
+TaskManager_Shutdown types
+Bit	Meaning when set
+#Line
+0	don't display restart dialogue
+1	don't broadcast <Message_PreQuit=>Msg_8>
+2	flag in <CMOS=>OS:OS_ByteCMOS> as portable PowerDown
+3	send a <Message_Shutdown=>Msg_D>
+4	reject <OS_Upcall 1 and 2=>OS:OS_UpCallreasons>
+5-31	must be zero
+
+If bit 2 is set, then it is flagged in CMOS that the last shutdown was forced by a low battery, and message reporting this is at issued next Desktop start.

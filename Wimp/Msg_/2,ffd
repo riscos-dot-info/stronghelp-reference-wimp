@@ -1,0 +1,13 @@
+Message_DataSaveAck (2)
+#Parent MSG_
++ 20	destination	window handle
++ 24	 		icon handle
++ 28	 		screenx
++ 32	 		screeny
++ 36	estimated size, or -1 if 'unsafe'
++ 40	<filetype=>Filetypes:!Root> of data
++ 44	full pathname (or "\<Wimp$Scrap\>")
+
+Words at 20 to 32 are preserved from <DataSave=>Msg_1> message. This is usually followed by a <DataLoad=>Msg_3> message.
+#Line
+See <PRM 3, page 253=>PRM-3:253>.

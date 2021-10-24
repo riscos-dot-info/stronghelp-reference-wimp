@@ -1,0 +1,22 @@
+Wimp_ReportError  (&400DF)
+#Parent Wimp_
+=>	R0 =	pointer to standard <SWI errorblock=>OS:swi_errorblock>
+	R1 =	<flags=>wimp_reporterror0>
+	R2 =	pointer to application name (or title if bit 4 set), or 0 for simply 'Error'
+	R3 =	sprite name (if bit 8 set)
+	R4 =	sprite <block=>OS:OS_SpriteOp_area> (if bit 8 set)
+	R5 =	pointer to <extra buttons string=>.buttons> (if bit 8 set)
+
+<=	R1 =	0 if nothing selected, 1 if OK selected and 2 if Cancel, 3-5 if extra buttons
+	 	Return gives default, Escape the alternate
+	R0 corrupt
+        
+This SWI opens a standard, non-multitasking, errorbox on the screen. Avoid, if possible. It is boring and, as stated above, non-multitasking. However, the RO3.5 extensions make the use of error boxes much more appealing to the programmer.
+#Line
+See <PRM 3, page 179=>PRM-3:179>.
+#
+#subpage buttons
+Wimp_ReportError extra buttons string
+{f24}j{f}	The list of buttons is comma seperated
+{f24}j{f}	Limit of buttons is 4 (3.98-), or 8 (4.00+)
+{f24}j{f}	Buffer size is 64 (3.98-) or 256 (4.00+) characters.

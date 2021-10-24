@@ -1,0 +1,17 @@
+Message PrintFile  (&80140)
+#Parent MSG_
++ 20	destination	window handle
++ 24	 		icon handle
++ 28	 		screenx
++ 32	 		screeny
++ 36	estimated size
++ 40	<filetype=>Filetypes:!Root> of data
++ 44	proposed leafname, 0-terminated
+
+This message is sent by !Printers when it receives a DataSave or PrintSave message. The task can do the following :
+
+  *	Ignore. !Printers will send <DataSaveAck=>Msg_2>, to save the file for later printing.
+  *	Respond with <WillPrint=>Msg_80141>, to send data to Printer:
+  *	Put data in Printer$Temp and send <DataLoad=>Msg_3>.
+#Line
+See <PRM 3, page 261=>PRM-3:261>.

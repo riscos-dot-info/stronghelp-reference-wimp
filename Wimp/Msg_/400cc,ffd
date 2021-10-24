@@ -1,0 +1,8 @@
+Message_WindowInfo  (&400CC)
+#Parent MSG_
+ + 20	window handle
+ + 24	reserved (0)
+ + 28	sprite name (minus the ic_ bit)
+ + 36	title to use (as short as possible)
+ 
+This message is sent by the iconiser when one of your windows is iconised, to find out which sprite and name to give the icon.

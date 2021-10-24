@@ -1,0 +1,49 @@
+Message_AlarmSet (&500)
+#Parent MSG_
+(Format from application to !Alarm)
+
++ 20	0	<set alarm (local time)=>.0>
+	1	<set alarm (UTC)=>.1>
+	2	<cancel alarm=>.2>
++ 24	depends on reason at + 20
+
+This message can be used to set/cancel alarms. If the message is sent recorded then !Alarm acknowledges with 0 if successful or a null terminated error string. Presumably this is in the message block at + 20, but the PRM is not clear. This would mean that the message block format is inconsistent, depending on whether it is to or from the application. D'oh.
+ 
+Oddly this message is not available in RISC OS 2, but it would seem that it had been planned as <502=>Msg_502> and <503=>Msg_503> are present in RISC OS 2.
+
+Note that <Message_AlarmSet 0=>.0> is capable of adding out-of-range alarms to the database, which !Alarm will fault on redraw (but not fault on save!).
+
+When the task alarm goes off !Alarm broadcasts <Message_AlarmGoneOff=>MSG_501>, which your application should acknowledge.
+#Line
+See <PRM 3, page 243=>PRM-3:243>.
+#Subpage 1
+Message_AlarmSet 1
++ 20		1 (set UTC alarm)
++ 24		5 byte UTC time
++ {*}30{*}	name of application (null terminated)
++ /n/	application's identifier (null terminated)
+
+This message instructs !Alarm to set an alarm. Name and identifier must each be 40 or less bytes.
+#Subpage 0
+Message_AlarmSet 0
++ 20	0 (set local time alarm)
++ 24	year as low-byte, high byte
++ 26	month, Janauary is 1
++ 27	date
++ 28	hour
++ 29	minute
++ 30{*}	name of application (null terminated)
++ /n/	application's identifier (null terminated)
+
+This message instructs !Alarm to set an alarm. Name and identifier must each be 40 or less bytes. !Alarm performs range checks (so an hour of 30 gives 6am the next day) but will happily add alarms out of the range (roughly \< 1900 or > 2247), and then quit with an error when it attempts to display them. By keeping this window closed, and saving the alarms file when quitting !Alarm, it is possible to write these illegal alarms to a file. Fortunately they can be deleted with <Message_AlarmSet 2=>.2>.
+
+Note that the 6 byte block from + 24 is how !Alarm stores times in the current file format.
+# Gerph> An amazingly badly planned thing IMO. Why not use the 5byte time
+#        block used by the rest of the system ?
+#Subpage 2
+Message_AlarmSet 2
++ 20	2 (cancel alarm)
++ 24	name of application (null terminated)
++ /n/	application's identifier (null terminated)
+
+This message instructs !Alarm to delete an alarm that exactly matches both the name and identifier.

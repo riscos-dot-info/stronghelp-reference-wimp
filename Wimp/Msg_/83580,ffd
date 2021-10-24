@@ -1,0 +1,74 @@
+NewsBase_Command (&83580)
++20	<Command code=>.codes> + Reference number
+	rest of block as defined by code
+
+The command code is one 16-bit fields, and the reference number is the top 16 bits (to be supplied by the client application). The reference will be preserved by NewsBase in replies. This permits overlapping command-reply sequences issued by a client to be identified and followed.
+#Subpage codes
+NewsBase command codes
+#Wrap Off
+General Purpose Commands
+#Indent 2
+0	<NewsBase_StartUp=>Msg_NB_Com0>
+10	<NewsBase_ShutDown=>Msg_NB_Com10>
+20	<NewsBase_SetUser=>Msg_NB_Com20>
+30	<NewsBase_SiteInfo=>Msg_NB_Com30>
+40	<NewsBase_SetSiteInfo=>Msg_NB_Com40>
+#Indent
+
+Newsgroup oriented commands
+#Indent 2
+100	<NewsBase_ListGroups=>Msg_NB_Com100>
+110	<NewsBase_NewGroups=>Msg_NB_Com110>
+120	<NewsBase_AddGroup=>Msg_NB_Com120>
+130	<NewsBase_RemoveGroup=>Msg_NB_Com130>
+140	<NewsBase_ExpireGroup=>Msg_NB_Com140>
+150	<NewsBase_CreateFolder=>Msg_NB_Com150>
+#Indent
+
+Article oriented commands
+#Indent 2
+200	<NewsBase_ListArts=>Msg_NB_Com200>
+210	<NewsBase_ListArtsInfo=>Msg_NB_Com210>
+220	<NewsBase_GetArticle=>Msg_NB_Com220>
+230	<NewsBase_LockArticle=>Msg_NB_Com230>
+240	<NewsBase_UnLockArticle=>Msg_NB_Com240>
+250	<NewsBase_DeleteArticle=>Msg_NB_Com250>
+260	<NewsBase_MoveArticle=>Msg_NB_Com260>
+270	<NewsBase_CopyArticle=>Msg_NB_Com270>
+280	<NewsBase_CancelArticle=>Msg_NB_Com280>
+290	<NewsBase_GroupOverview=>Msg_NB_Com290>
+#Indent
+
+Posting/mailing commands
+#Indent 2
+300	<NewsBase_PostArticle=>Msg_NB_Com300>
+310	<NewsBase_MailArticle=>Msg_NB_Com310>
+320	<NewsBase_SetReturnPath=>Msg_NB_Com320>
+#Indent
+
+User oriented commands
+#Indent 2
+400	<NewsBase_ListUsers=>Msg_NB_Com400>
+410	<NewsBase_AddUser=>Msg_NB_Com410>
+420	<NewsBase_DeleteUser=>Msg_NB_Com420>
+430	<NewsBase_ModifyUser=>Msg_NB_Com430>
+440	<NewsBase_GetUserInfo=>Msg_NB_Com440>
+450	<NewsBase_ExamineForwarding=>Msg_NB_Com450>
+460	<NewsBase_ExamineVacation=>Msg_NB_Com460>
+#Indent
+
+Transport oriented commands
+#Indent 2
+500	<NewsBase_ListTransports=>Msg_NB_Com500>
+#Indent
+
+Queue control commands
+#Indent 2
+800	<NewsBase_ReEdit=>Msg_NB_Com800>
+#Indent
+
+Miscellaneous commands
+#Indent 2
+900	<NewsBase_ClientPresent=>Msg_NB_Com900>
+1000	<NewsBase_ScriptCommand=>Msg_NB_Com1000>
+#Indent

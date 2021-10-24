@@ -1,0 +1,6 @@
+NewsBase_ListArts (200)
++24	first article number (0=first)
++28	last article number (0=last)
++32	group name
+
+Returns a list of article numbers with associated "From", "Subject", "Message-ID" and "Date" header fields. Intended for display of article catalogues.

@@ -1,0 +1,14 @@
+Wimp_GetCaretPosition  (&400D3)
+#Parent Wimp_
+=>	R1 =	pointer to block
+
+<=	R0 corrupt
+	block contains :
+	  0	window handle (-1 if off)
+	  4	icon handle, or -1
+	  8	x offset
+	  12	y offset
+	  16	<height + flags=>wimp_carethf>, or -1
+	  20	index into string, or -1
+#Line
+See <PRM 3, page 154=>PRM-3:154>.

@@ -1,0 +1,12 @@
+Message_MenuWarning  (&400C0)
+#Parent MSG_
++ 20	'Submenu pointer' from menu item
++ 24	x coord of top left new submenu
++ 28	y coord of top left new submenu
++ 32	Selection list (as in <MenuSelection=>wimp_poll9>)
+
+You receive this message when pointer moves over the submenu arrow in a menu entry with the 'generate message' bit set.
+
+You can use the 'submenu pointer' and/or the selection list, to decide which window or menu to open with <Wimp_CreateSubMenu>. The submenu you actually open doesn't have to be the same as the one passed to you at +20. However, if you wish the submenu to be re-opened when the Wimp recreates the menu you should store the new handle at +20.
+#Line
+See <PRM 3, page 239=>PRM-3:239>.

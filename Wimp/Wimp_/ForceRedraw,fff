@@ -1,0 +1,21 @@
+Wimp_ForceRedraw  (&400D1)
+#Parent Wimp_
+=>	R0 =	window handle, -2 for iconbar, or -1 for absolute co-ordinates
+	R1 =	minimum x
+	R2 =	minimum y
+	R3 =	maximum x
+	R4 =	maximum y
+<=	R0 corrupted
+
+This SWI marks area of screen as invalid, and to be redrawn later. If you are doing some kind of animation, or other temporary changes, then you should use <Wimp_UpdateWindow> instead.
+
+Under the nested Wimp it is possible to force a redraw of windows which do not belong to the application. An <extended version=>.nested> is available
+#Line
+See <PRM 3, page 150=>PRM-3:150>.
+#Subpage nested
+Wimp_ForceRedraw (nested version)
+=>	R0 =	window handle
+	R1 =	"TASK" (&4B534154)
+	R2 =	3 - update the title bar
+
+This call can be used to update the title bar, rather than any other form.

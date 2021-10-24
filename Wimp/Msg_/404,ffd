@@ -1,0 +1,7 @@
+Message FilerAddSelection (&404)
+#Parent MSG_
++ 20	null terminated space separated list of leafnames
+
+Sending this message to a <Filer_Action=>FilerAction_> task adds the leafnames to the task's list of leafnames to act upon. The leafnames are for files in the directory which has already been specified with <Message_FilerSelectionDirectory=>MSG_403>.
+#Line
+See <PRM 3, page 236=>PRM-3:236>.

@@ -1,0 +1,15 @@
+Filter_DeRegisterPostFilter  (&42643)
+#Parent Filter_
+=>	R0 =	pointer to zero terminated filter name
+	R1 =	addresss of <filter code=>Filter_filtercode>
+	R2 =	value to be passed in R12
+	R3 =	task handle of task to which filter was applied
+	R4 =	event <mask=>Wimp_pollmask>
+	
+<=	all registers preserved
+
+This SWI removes a post-filter from the list of post-filters.
+
+Note: All values must be the same as those passed to <Filter_RegisterPostFilter>
+#Line
+See <PRM 3, page 311=>PRM-3:311>.

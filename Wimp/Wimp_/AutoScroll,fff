@@ -1,0 +1,51 @@
+Wimp_AutoScroll (&400FD)
+#Parent Wimp_
+{f25}Þ{f}	R0 =	<flags=>.inflags>
+		{/}If R0 bits 0 or 1 are set,{/}
+		R1 !	<block=>.r1>
+{f25}Ü{f}	R0	<new flags=>.newflags>
+#line
+This call controls how the Wimp automatically scrolls an application's windows.
+#
+#subpage r1
+Wimp_AutoScroll block
+/Offset/	/Meaning/
+0	Window handle of window to scroll
+4	Left pause zone width (in OS units), eg. 80, ignored if flag bit 0 is clear
+8	Bottom pause zone height (in OS units), eg. 80, ignored if flag bit 1 is clear
+12	Right pause zone width (in OS units), eg. 80, ignored if flag bit 0 is clear
+16	Top pause zone height (in OS units), eg. 80, ignored if flag bit 1 is clear
+20	Pause duration (in centiseconds), or 0 for no pause, or -1 for configured pause length
+24	State change handler:
+ 	 	0	none
+ 	 	1	use inbuilt Wimp pointer shape routine
+ 	 		Other values are interpreted as a pointer to a routine.
+28	Value to pass in R12 to state change handler routine (if applicable)
+#
+#subpage inflags
+Wimp_AutoScroll R0 entry flags
+/Bit/	/Meaning/
+0	Enable horizontal autoscrolling
+1	Enable vertical autoscrolling
+2	Delegate window repositioning to task (send <Scroll_Requests=>wimp_poll10> rather than <Open_Window_Requests=>wimp_poll2>
+7	Just read the current states of all flags.
+Other bits are reserved.
+#
+#subpage newflags
+Wimp_AutoScroll R0 exit flags
+/Bits/	/Meaning/
+0-2	are preserved or read, according to <bit 7=>.inflags> on entry.
+7	is cleared
+8	set	Autoscrolling has commenced (this bit is set after a pause is completed, and remains set when a scroll has "hit the stops", but is cleared again when the pointer re-enters the centre zone)
+9	set	Pointer is outside the window's visible area
+10	set	Pointer is within one or two pause zones
+11	set	Pointer is within the centre zone
+12	set	Pointer is left of the centre zone
+13	set	Pointer is below the centre zone
+14	set	Pointer is right of the centre zone
+15	set	Pointer is above the centre zone
+16	set	There is work area to the left of the visible area (always cleared if <bit 0=>.inflags> is clear)
+17	set	There is work area below the visible area (always cleared if <bit 1=>.inflags> is clear)
+18	set	There is work area to the right of the visible area (always cleared if <bit 0=>.inflags> is clear)
+19	set	There is work area above the visible area (always cleared if <bit 1=>.inflags> is clear)
+Other bits must be ignored.

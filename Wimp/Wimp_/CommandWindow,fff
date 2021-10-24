@@ -1,0 +1,20 @@
+Wimp_CommandWindow  (&400EF)
+#Parent Wimp_
+=>	R0 =	operation
+<=	R0 corrupt
+
+#Tab
+Operations
+ -1	Command window is closed whether it is was used or not.
+  0	Same as -1, but if output, do a "Press SPACE or click mouse to continue"
+  1	Command window is set to 'active'
+ >1	Pointer to title. Command window is set to 'pending', and next time VDU4 output is generated, the window will open.
+
+This SWI opens a textwindow in which VDU4-type output can be displayed.
+
+When the Wimp starts a task, it does a
+{fCode}  SYS "Wimp_CommandWindow","program name"{f}
+When <Wimp_Initialise> is reached, it does
+{fCode}  SYS "Wimp_CommandWindow",-1{f}
+#Line
+See <PRM 3, page 212=>PRM-3:212>.

@@ -1,0 +1,5 @@
+NewsBase_ExpireGroup (140)
++24	expiry time in days (-1 = default)
++32	group name or pattern
+
+Causes newsbase to perform an expiry run on the specified group(s). Normally this function is performed automatically by NewsBase, but a command interface is included for completeness.

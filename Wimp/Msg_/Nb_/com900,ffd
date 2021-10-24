@@ -1,0 +1,6 @@
+NewsBase_ClientPresent (900)
+no extra data
+
+This is sent by a client in reply to a <NewsBase_Reply ClientPresent=>Msg_NB_Rep900> message - broadcast by newsbase prior to starting a newsreader.
+
+This should be sent if you wish to prevent the client from loading.

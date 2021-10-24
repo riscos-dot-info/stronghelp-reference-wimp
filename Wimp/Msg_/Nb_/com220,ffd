@@ -1,0 +1,13 @@
+NewsBase_GetArticle (220)
++20	article number
++24	<flags=>.flags>
++32	group name
++32+n	Message-ID
+
+This command will either return the filename of the full article, or request that the full article be fetched.
+#Subpage flags
+GetArticle flags
+Bit	Meaning if set
+#Line
+0	Request Message-ID to be fetched, otherwise return a valid filename
+	Note: The filename returned may not be valid across <Wimp_Poll>s

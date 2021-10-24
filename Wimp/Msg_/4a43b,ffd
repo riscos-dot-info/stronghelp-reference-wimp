@@ -1,0 +1,7 @@
+Message_PopupHelp_SendHelp (&4A43B)
+#Parent MSG_
++ 20	zero terminated help string
+ 
+This message is sent by an application in reply to a <PopupHelp_RequestHelp=>MSg_4A43C> message.
+
+Max length is 256-20-1 = 235 chars.

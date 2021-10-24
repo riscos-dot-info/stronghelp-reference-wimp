@@ -1,0 +1,13 @@
+Message_PlugIn_Notify  (&4D54E)
+#Parent Msg_PlugIn_
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	URL accessed (<string_value=>msg_plugin_string_value>)
++36	Reason for notify:
+	  0:	Stream finished successfully
+	  1:	Stream finished due to an error
+	  2:	Stream finished due to user intervention
++40	Notify data
+
+This message is sent to indicate the completion of a URL access.

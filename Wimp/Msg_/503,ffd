@@ -1,0 +1,12 @@
+Message_HelpReply (&503)
+#Parent MSG_
++ 20	zero terminated help-string
+
+This message is sent by an application in reply to a <HelpRequest=>Msg_502> message.
+
+# Eh? Control terminated or Null terminated... ah
+Max length = 256-20-1 = 235 chars. <Escape codes=>Msg_503Codes> may be used under RISC OS 3 !Help or equivalent.
+
+The current !Help implementation passes the message block direct to <OS_GSTrans=>OS:OS_GSTrans> before checking for "\\" escape codes - hence passing CR or LF terminated strings and using "|" codes other than {fCode}|M{f} is undocumented.
+#Line
+See <PRM 3, page 245=>PRM-3:245>.

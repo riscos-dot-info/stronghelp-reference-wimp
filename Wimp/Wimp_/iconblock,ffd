@@ -1,0 +1,10 @@
+Format of a Icon block
+#Parent Wimp_CreateIcon
+Offset	Contents
+#Line
+0	Minimum x of icon bounding box
+4	Minimum y
+8	Maximum x
+12	Maximum y
+16	<Icon flags=>Wimp_iconflags>
+20	12 bytes of <icon data=>Wimp_icondata>

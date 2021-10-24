@@ -1,0 +1,31 @@
+Message FilerSelection (&407)
+#Parent MSG_
++ 20	selection bounding box	x0 (screen coords)
++ 24	 			y0
++ 28	 			x1
++ 32	 			y1
++ 36	width of each selected item
++ 40	height
++ 44	<view mode=>.viewmode>
++ 48	start column of selection in window
++ 52	start row
++ 56	end column
++ 60	end row
+
+This message is sent from the filer to an application when a selection has been dragged, just before the application recieves the multiple <DataLoad=>Msg_3> messages.
+#Line
+See <PRM 3, page 238=>PRM-3:238>.
+#Subpage viewmode
+FilerSelection viewmode flags
+Bits	Value	Meaning
+#Line
+0-1	0	Large icons
+	1	Small icons
+	2	Full info
+	3	reserved
+2-3	0	Sort by name
+	1	Sort by type
+	2	Sort by size
+	3	Sort by date
+
+PRM page 3-238 description of bits 2-3 is probably wrong.

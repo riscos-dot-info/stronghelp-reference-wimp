@@ -1,0 +1,16 @@
+NewsBase_ArtInfo (210)
++24	article number
++28	<data type=>.types>
++32	header data
+
+Returns in a stream of messages, one per article. End of list is signalled by article number 0.
+#Subpage types
+ArtInfo types
+Type	Header info returned
+#Line
+0	reference header
+1	date header
+2	from header
+3	subject header
+4	message-id header
+5	x-ref header

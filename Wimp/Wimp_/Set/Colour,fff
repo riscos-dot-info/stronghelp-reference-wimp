@@ -1,0 +1,9 @@
+Wimp_SetColour  (&400E6)
+#Parent Wimp_
+=>	R0 :	bits	0-3 Wimp colour
+	 	bits	4-6 GCOL action
+	 	bit	7	0 for foreground,
+	 	 	 	1 for background
+<=	R0 corrupt
+#Line
+See <PRM 3, page 194=>PRM-3:194>.

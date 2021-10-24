@@ -1,0 +1,26 @@
+ColourPicker
+#Parent !Root
+#Prefix ColourPicker_
+#Table Columns 2
+RegisterModel
+DeregisterModel
+<OpenDialogue>
+<CloseDialogue>
+<UpdateDialogue>
+<ReadDialogue>
+SetColour
+<HelpReply>
+ModelSWI
+#EndTable
+
+Messages :
+#Indent 3
+#Table Columns 2
+<47700 ColourChoice=>Msg_47700>
+<47701 ColourChanged=>Msg_47701>
+<47702 CloseRequest=>Msg_47702>
+<47703 OpenParent=>Msg_47703>
+<400C9 MenusDeleted=>Msg_400C9>
+#EndTable
+#indent;line
+*Note*:	If you use the ColourPicker, then you *must* listen to <Message_MenusDeleted=>Msg_400C9> (in the list specified in R3 of <Wimp_Initialise=>Wimp_Initialise>. The picker requires this message to detect when transient dialogues have been deleted. If it isn't aware of the deletion of the previous transient and another is opened then things fall down.

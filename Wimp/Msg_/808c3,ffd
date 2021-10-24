@@ -1,0 +1,5 @@
+TaskWindow_Morio  (&808C3)
+#Parent MSG_
+This message is sent to parent when child exits. 
+#Line
+See <PRM 3, page 266=>PRM-3:266>.

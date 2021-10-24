@@ -1,0 +1,5 @@
+Redraw Window Request (1)
+Returned block contains :
+   0  Window handle
+
+This indicates that some of the window is out of date, and needs to be redrawn. You should enter an update loop: First call <Wimp_RedrawWindow>, and then call <Wimp_GetRectangle> until done.

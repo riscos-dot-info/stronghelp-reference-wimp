@@ -1,0 +1,11 @@
+Wimp_CloseDown  (&400DD)
+#Parent Wimp_
+=>	R0 =	Taskhadle returned by <Wimp_Initialise>
+	R1 =	"TASK" (&4B534154)
+<=	R0 corrupt
+
+This must be called immediately before the task terminates by calling <OS_Exit=>OS:OS_Exit>. If it is not, then the task has a last chance to trap its shutdown by means of the <WimpCloseDown service=>OS:service_53> (which will also be called if the task exits normally).
+
+Task handle and magic word are only required if closing a task which is not presently paged in (eg a module).
+#Line
+See <PRM 3, page 175=>PRM-3:175>.

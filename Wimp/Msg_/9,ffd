@@ -1,0 +1,7 @@
+Message_PaletteChange (9)
+#Parent Msg_
+This message is broadcasted by the palette utility when the RGB value for one or more physical colours have changed. <Message_ModeChange=>MSG_400C1> is broadcast *instead* of this message at a mode change.
+
+In 256 colour modes, it is not the physical colour which changes, but only the mapping from logical to physical colour. In that case the palette utility itself forces a redraw of the whole screen.
+#Line
+See <PRM 3, page 232=>PRM-3:232>.

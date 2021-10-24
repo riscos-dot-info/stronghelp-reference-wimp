@@ -1,0 +1,7 @@
+Wimp_AddMessages  (&400F6)
+#Parent Wimp_
+=>	R0 =	Pointer to array of <message codes=>Msg_> (terminated with 0 word)
+
+Extends the set of user messages that the task gets. The inital set is given by R3 in <Wimp_Initialise>. See also <Wimp_RemoveMessages>.
+#Line
+See <PRM 3, page 226=>PRM-3:226>.

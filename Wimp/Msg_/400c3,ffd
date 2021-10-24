@@ -1,0 +1,7 @@
+Message_TaskCloseDown (&400C3)
+#Parent MSG_
++ 4	Task handle
+
+This message is broadcast when a task calls <Wimp_CloseDown>. The fields are set so that it appears to originate from the dying task.
+#Line
+See <PRM 3, page 241=>PRM-3:241>.

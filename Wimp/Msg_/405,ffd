@@ -1,0 +1,74 @@
+Message FilerAction (&405)
+#Parent MSG_
++ 20	operation:
+# N> Gumby brain surgeon.
+# Gerph> I really have gone mad haven't I ?
+	  0 <Copy=>.0>
+	  1 <Move (rename)=>.1>
+	  2 <Delete=>.2>
+	  3 <Set access=>.3>
+	  4 <Set type=>.4>
+	  5 <Count=>.5>
+	  6 <Move (by copying/deleting)=>.6>
+	  7 <Copy local (within directory)=>.7>
+	  8 <Stamp files=>.8>
+	  9 <Find file=>.9>
++ 24	<options=>FilerAction_options>
++ 28	operation specific data
+
+Sending this message to a <Filer_Action=>FilerAction_> task both specifies and starts the operation to perform on the list of leafnames sent with <Message_FilerAddSelection=>MSG_404>.
+# Gerph> I have this amazing feeling of deja vu - I've seen this list before,
+#        haven't I ?
+#Line
+See <PRM 3, page 236=>PRM-3:236>.
+#Subpage 0
+FilerAction 0 (Copy)
++ 20	0 (Copy)
++ 24	<options=>FilerAction_options>
++ 28	null terminated destination directory
+#Subpage 1
+FilerAction 1 (Rename)
++ 20	1 (Rename)
++ 24	<options=>FilerAction_options>
++ 28	null terminated destination directory
+#Subpage 2
+FilerAction 2 (Delete)
++ 20	2 (Delete)
++ 24	<options=>FilerAction_options>
+#Subpage 3
+FilerAction 3 (Set access)
++ 20	3 (Set access)
++ 24	<options=>FilerAction_options>
++ 28	value of access bits to set
++ {*}30{*}	mask
+
+#tab
+New access =	(Old access {fCode}BIC{f} mask) {fCode}ORR{f} (value {fCode}AND{f} mask)
+#Subpage 4
+FilerAction 4 (Set type)
++ 20	4 (Set type)
++ 24	<options=>FilerAction_options>
++ 28	numeric <filetype=>Filetypes:!Root>
+#Subpage 5
+FilerAction 5 (Count)
++ 20	5 (Count)
++ 24	<options=>FilerAction_options>
+#Subpage 6
+FilerAction 6 (Move)
++ 20	6 (Move)
++ 24	<options=>FilerAction_options>
++ 28	null terminated destination directory
+#Subpage 7
+FilerAction 7 (Copy local)
++ 20	7 (Copy local)
++ 24	<options=>FilerAction_options>
++ 28	null terminated destination object name
+#Subpage 8
+FilerAction 8 (Stamp)
++ 20	8 (Stamp)
++ 24	<options=>FilerAction_options>
+#Subpage 9
+FilerAction 9 (Find)
++ 20	9 (Find)
++ 24	<options=>FilerAction_options>
++ 28	null terminated name to find

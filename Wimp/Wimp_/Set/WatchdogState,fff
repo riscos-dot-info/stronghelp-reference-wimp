@@ -1,0 +1,6 @@
+Wimp_SetWatchdogState  (&400FA) (3.5)
+#Parent Wimp_
+=>	R0 =	0 to turn Watchdog off, 1 to turn it on
+	R1 =	codeword (must be the same for off as for on)
+
+Switches Watchdog protection (Alt-Break) on and off.

@@ -1,0 +1,11 @@
+Gain Caret  (12)
+Returned block contains :
+
+  0	Window handle which gains focus
+  4	icon handle, or -1
+  8	x offset
+  12	y offset
+  16	<height + flags=>wimp_carethf>, or -1
+  20	index into string, or -1
+
+This message is sent to window's owner when caret moves into the mentioned window. It is not generated if caret moves around inside the same old window.

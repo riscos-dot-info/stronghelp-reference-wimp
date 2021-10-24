@@ -1,0 +1,53 @@
+Wimp_Initialise  (&400C0)
+#Parent Wimp_
+=>	R0 =	Last <Wimp version known=>.known> × 100
+	R1 =	"TASK" (&4B534154)
+	R2 !	Short description for taskmanager
+(Version 3.00) :
+	R3 !	<List=>.list300> of acceptable <user messages=>Msg_>.
+(Version 3.10 or later) :
+	R3 !	<List=>.list310> of acceptable <user messages=>Msg_>.
+
+<=	R0 =	Current Wimp version * 100
+	R1 =	task handle
+
+If a list of user messages is given the task will not be polled in for other messages - swapping the memory associated with tasks is time consuming, so not having to do this for a message that the task will only ignore gives a large speedup. The task can alter this list if necessary with <Wimp_AddMessages> and <Wimp_RemoveMessages>. Before the program terminates, it should call <Wimp_CloseDown>.
+#Line
+See <PRM 3, page 87=>PRM-3:87>.
+#subpage known
+Known Wimp version
+Value	Meaning
+#Line
+200	RISC OS 2 WindowManager
+	No use of pollwords, indirected menu titles, menu help, validation strings R, K and P, only <Wimp_ReadSysInfo> 0 supported, sprites in icons do not use colour translations, messages may not be 'filtered' with <Wimp_AddMessages>, etc
+300	RISC OS 3.00 WindowManager
+	Message 'filtering' is broken, <Wimp_ReadSysInfo> 1 to 7 supported
+310	RISC OS 3.10 WindowManager
+	Message 'filtering' fixed. No use of <Wimp_TextOp>, <Wimp_SetWatchdogState>, <Wimp_ResizeIcon>.
+350	RISC OS 3.5-7 WindowManager
+	<Wimp_ReadSysInfo> 8 to 10 supported, <Wimp_ReportError> may have extra buttons
+	*nb*: not recognised as an official version
+380	Softloadable nested WindowManager
+	Nestable windows added, <validation string C=>Wimp_validationstring.C> added, h option in <validation string L=>Wimp_validationstring.L> implemented, 'partial' full size windows implemented, windows may now be opened or forceably redrawn by other tasks
+
+Within this list it is assumed that the features not present in higher versions of the WindowManager are also not present in lower versions.
+
+In the event of the version given being later than the version of the Wimp available, then an error will be generated.
+#
+#subpage list300
+Wimp_Initialise R3 (RISC OS 3.00)
+In RISC OS 3.00, but not later versions, R3 on entry to <Wimp_Initialise> should contain a list of acceptable <user messages=>Msg_>, terminated by a 0 word.
+
+If R3 = 0 then all messages are classified as important.
+
+In R3 contains a pointer to a list containing merely the 0 word then *no* messages are important.
+
+{/}[most of this is speculation. anyone care to fill in the details?]{/}
+#
+#subpage list310
+Wimp_Initialise R3 (RISC OS 3.10+)
+In RISC OS 3.10 or later, R3 on entry to <Wimp_Initialise> should contain a list of acceptable <user messages=>Msg_>, terminated by a 0 word.
+
+In R3 = 0 then no messages are classified as important except for the 'Quit' message.
+
+In R3 contains a pointer to a list containing merely the 0 word then *all* messages are classified as important.

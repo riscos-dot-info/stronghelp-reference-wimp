@@ -1,0 +1,12 @@
+Open Window Request (2)
+Returned block contains :
+  0	Window handle
+  4	Visible area minimum x
+  8	----------"--------- y
+  12	Visible area maximum x
+  16	----------"--------- y
+  20	Scroll x offset
+  24	Scroll y offset
+  28	Handle to open window behind
+
+This message is returned when window size, or scrollbars are altered. You should call <Wimp_OpenWindow> using this block. If you have panes, then you should also use the block to find their new position, and use Wimp_OpenWindow on them too.

@@ -1,0 +1,21 @@
+ColourPicker_UpdateDialogue (&47704)
+#Parent ColourPicker_
+#Prefix ColourPicker_
+=>	R0 =	<flags=>.flags>
+	R1 =	dialogue handle
+	R2 =	<colour picker block=>colourpicker_block>
+
+This call updates some or all contents of the colour picker whose handle is given.
+#subpage flags
+ColourPicker_UpdateDialogue Flags
+Bit	Part of dialogue to update when set
+#Line
+0	whether the dialogue has a None button
+1	whether the None button is selected
+2	where <Message_ColourPickerColourChanged=>Msg_47701> is issued for
+3	the visible area
+4	reserved (must be 0)
+5	the window title
+6	colour setting
+7	the colour model and setting (including optional data)
+8	whether the dialogue ignores <Message_HelpRequest=>Msg_502>

@@ -1,0 +1,3 @@
+InetSWIs manual
+#Parent !Root
+The StrongHelp InetSWIs manual details SWI calls which support internet applications. Together with the <InetSocket=>InetSocket:!Root> manual (which details the support calls that other modules provide) it should detail almost all of the internet stack. It can be obtained from iain truskett's <stronghelp website=>#url http://koschei.shada.com/manuals/>.

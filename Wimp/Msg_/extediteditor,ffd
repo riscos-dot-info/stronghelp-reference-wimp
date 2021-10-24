@@ -1,0 +1,14 @@
+External Edit editors
+The editor application is defined as that which accepts editing session messages, ie that within which the editing of the object takes place.
+
+Upon receipt of an external edit request broadcast (<EditRq=>Msg_45d80>), the editor checks the <data type=>Msg_ExtEditDatatypes>, and if it is able to edit the data, it opens a suitable window (on a 'blank' datafile) and replies to the  message (with <EditAck=>Msg_45d81>). 
+
+It will allow the user to edit the data (unless the request was for read-only data), and can also handle some extra functions:
+
+è If a data transfer is started by the client (<EditDataSave=>Msg_45d84>), it will insert the new data  into the ExtEdit data, at the current 'cursor' position (usually the end of the file).
+
+è If the client requests the data back (<EditReturn=>Msg_45d82>), or if the user chooses the 'save' menu option, a reverse data transfer will be initiated back to the client.
+
+è Closing the ExtEdit window should abort the transfer /without/ returning the data to the client.
+
+è If the client request a new selection to be highlighted (<EditCursor=>Msg_45d85>), then the editor should move to the location specified and display the higlighting as required.

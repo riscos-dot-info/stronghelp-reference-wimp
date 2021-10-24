@@ -1,0 +1,80 @@
+NewsBase_Reply (&83581)
++20	<Command response code=>.codes> + Reference number + <status=>.status>
+	rest of block as defined by code
+
+NewsBase replies to <NewsBase_Command=>Msg_83580> with this message, returning the same groups, but with the least significant digit of the response code indicating the status.
+#Subpage codes
+NewsBase command response codes
+General Purpose Commands
+#Indent 2
+0	<NewsBase_StartUpReply=>Msg_NB_Rep0>
+10	<NewsBase_ShutDown=>Msg_NB_Rep10>
+20	<NewsBase_SetUser=>Msg_NB_Rep20>
+30	<NewsBase_SiteInfo=>Msg_NB_Rep30>
+40	NewsBase_SetSiteInfo (success/failure only)
+#Indent
+
+Newsgroup oriented commands
+#Indent 2
+100	<NewsBase_GroupList=>Msg_NB_Rep100>
+110	<NewsBase_NewGroupList=>Msg_NB_Rep110>
+120	NewsBase_AddGroupOk (success/failure only)
+130	NewsBase_RemoveGroupOk (success/failure only)
+140	NewsBase_ExpireGroupOk (success/failure only)
+#Indent
+
+Article oriented commands
+#Indent 2
+200	<NewsBase_ArtList=>Msg_NB_Rep200>
+210	<NewsBase_ArtInfo=>Msg_NB_Rep210>
+220	<NewsBase_GetArticle=>Msg_NB_Rep220>
+230	NewsBase_LockArticleOk (success/failure only)
+240	NewsBase_UnLockArticleOk (success/failure only)
+250	NewsBase_DeleteArticleOk (success/failure only)
+260	NewsBase_MoveArticleOk (success/failure only)
+270	NewsBase_CopyArticleOk (success/failure only)
+280	NewsBase_CancelArticle (undocumented ?)
+290	<NewsBase_GroupOverview=>Msg_NB_Rep290>
+#Indent
+
+Posting/mailing commands
+#Indent 2
+300	NewsBase_ArticlePosted (success/failure only)
+310	NewsBase_MessageSent (success/failure only)
+#Indent
+
+User oriented commands
+#Indent 2
+400	<NewsBase_UserList=>Msg_NB_Rep400>
+410	NewsBase_AddUserOk (success/failure only)
+420	NewsBase_DeleteUserOk (success/failure only)
+430	NewsBase_ModifyUserOk (success/failure only)
+440	<NewsBase_GetUserInfo=>Msg_NB_Rep440>
+450	<NewsBase_ExamineForwarding=>Msg_NB_Rep450>
+460	<NewsBase_ExamineVacation=>Msg_NB_Rep460>
+#Indent
+
+Transport commands
+#Indent 2
+500	<NewsBase_ListTransports=>Msg_NB_Rep500>
+#Indent
+
+Queue control commands
+#Indent 2
+800	NewsBase_QueueEdit
+#Indent
+
+Miscellaneous commands
+#Indent 2
+900	<NewsBase_ClientPresent=>Msg_NB_Rep900>
+#Indent
+#Subpage status
+NewsBase_Reply status
+Status	Meaning
+#Line
+0	Command executed (data as described)
+1	Command ok, but cannot be performed for some reason
+2	Command ok, but cannot be performed just now (try later)
+9	Bad command
+
+In cases 1, 2 and 9 block+32 contains a descriptive message detailing the error.

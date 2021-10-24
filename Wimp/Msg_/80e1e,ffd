@@ -1,0 +1,10 @@
+Message_OLEFileChanged  (&80E1E)
+#Parent Msg_
++ 20	Message type :
+
+	if type = 0
++ 24	Session number
++ 28	Full pathname of data
+
+	if type = 1
++ 24	Session number (ie. pathname is unchanged)

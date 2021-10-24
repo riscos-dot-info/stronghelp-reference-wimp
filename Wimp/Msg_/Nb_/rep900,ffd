@@ -1,0 +1,4 @@
+NewsBase_ClientPresent (900)
+no extra data
+
+This Newsbase_Reply message is broadcast by newsbase before attempting to start a new client application. If a client is loaded and wishes to prevent another from being started, it should reply with <NewsBase_Command 900=>Msg_NB_Com900>.

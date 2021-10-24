@@ -1,0 +1,9 @@
+Wimp_CreateMenu  (&400D4)
+#Parent Wimp_
+=>	R1	=	pointer to <menu block=>Wimp_MenuBlock>, or -1 to close menu
+	R2,R3	=	x,y coordinate of top-left corner of top-level menu.
+<=	R0 corrupt
+
+If R1 is a window handle, then this window will be opened as a menu.
+#Line
+See <PRM 3, page 156=>PRM-3:156>.

@@ -1,0 +1,6 @@
+Wimp Write Directions
+#Parent Wimp_ReadSysInfo
+Value	Meaning
+#Line
+0	Left to right
+1	Right to left

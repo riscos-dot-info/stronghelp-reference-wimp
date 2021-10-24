@@ -1,0 +1,5 @@
+TaskWindow_Suspend  (&808C6)
+#Parent MSG_
+This message is sent by parent to suspend child.
+#Line
+See <PRM 3, page 267=>PRM-3:267>.

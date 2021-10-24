@@ -1,0 +1,20 @@
+Wimp_UpdateWindow  (&400C9)
+#Parent Wimp_
+=>	R1 =	Block :
+	 	  0	Window handle
+	 	  4	Work area rectangle	minx (incl)
+	 	  8	 			miny (incl)
+	 	  12	 			maxx (excl)
+	 	  16	 			maxy (excl)
+
+<=	Exits through <Wimp_GetRectangle>
+
+#Tab
+This SWI is similar to <Wimp_RedrawWindow>.
+Differences :
+  è	Not all of window has to be updated.
+  è	Rectangles are not cleared by Wimp.
+  è	Can be called at any time, not just in response to RedrawWindow message.
+  è	NOTE: This SWI does not remove rectangles from Wimp_RedrawWindows list of invalid rectangles. If the area is already invalid, then Wimp will send you redraw messages, even if you have updated the area.
+#Line
+See <PRM 3, page 131=>PRM-3:131>.

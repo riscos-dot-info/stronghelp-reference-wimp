@@ -1,0 +1,9 @@
+NewsBase_ArtList (200)
++24	article number
++28	article size in bytes, 0 if unknown, or -1 if only header present
++32	From: field
++32+n	Subject: field
++32+m	Message-ID: field (truncated to 70 characters)
++32+o	Date: field (truncated to 45 characters)
+
+Returns in a stream of messages, one per article. End of list is signalled by article number 0.

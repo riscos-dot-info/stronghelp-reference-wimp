@@ -1,0 +1,9 @@
+Free_DeRegister  (&444C1)
+#Parent Free_
+{f25}Þ{f}	R0 =	<filing system=>OS:fsys_ident>
+	R1 =	address of <routine=>Free_routine> to get free space info
+	R2 =	R12 on entry to routine
+#line
+This SWI is used to remove the support for the multi-tasking Free display previously installed with <Free_Register>.
+#Line;tab
+See also:	<PRM 2-516=>PRM-2:516>.

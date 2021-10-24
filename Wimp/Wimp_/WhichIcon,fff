@@ -1,0 +1,16 @@
+Wimp_WhichIcon  (&400D6)
+#Parent Wimp_
+=>	R0 =	Window handle
+	R1 =	Block to contain icon handles
+	R2 =	Bit mask
+	R3 =	Bit settings to match
+<=	R0 corrupt
+
+All icons with
+#Wrap Off
+  (icon flags AND R2) = (R3 AND R2)
+#Wrap On
+are added to the list in R1.
+The list is terminated by -1
+#Line
+See <PRM 3, page 162=>PRM-3:162>.

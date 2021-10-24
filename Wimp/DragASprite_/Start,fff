@@ -1,0 +1,11 @@
+DragASprite_Start  (&42400)
+#Parent DragASprite_
+=>	R0 =	Location <flags=>DragASprite_locflags>
+	R1 =	<Sprite area=>OS:OS_SpriteOp_Area> (0 for system, 1 for Wimp, otherwise an address)
+	R2 =	Pointer to sprite name
+	R3 =	Pointer to 16-byte block containing <drag box=>DragASprite_box>
+	R4 =	Pointer to optional block containing <bounding box=>DragASprite_box>
+
+This SWI starts dragging a sprite. The sprite you supply is copied, so you can dispose of your copy of the sprite if need be.
+#Line
+See <PRM 3, page 300=>PRM-3:300>.

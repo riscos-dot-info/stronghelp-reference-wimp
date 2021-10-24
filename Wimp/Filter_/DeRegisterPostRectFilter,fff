@@ -1,0 +1,14 @@
+Filter_DeRegisterPostRectFilter
+#Parent Filter_
+=>	R0 =	pointer to zero terminated filter name
+	R1 =	addresss of <filter code=>Filter_rectcode>
+	R2 =	value to be passed in R12
+	R3 =	task handle of task to which filter was applied
+	
+<=	all registers preserved
+
+This SWI removes a <Wimp_GetRectangle> post-filter from the list.
+
+Note: All registers must be the same as those passed to <Filter_RegisterPostRectFilter>.
+
+*Note:* This is still only a 'guess' at the way it works.

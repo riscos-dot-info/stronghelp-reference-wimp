@@ -1,0 +1,11 @@
+Message_Dragging  (&11)
+#Parent MSG_
++ 20	window handle
++ 24	icon handle
++ 28	x
++ 32	y
++ 36	<flags=>Msg_11_flags>
++ 40	bounding box
++ 56	list of filetypes, terminated with -1
+
+This message is sent continuously by the task which is doing the dragging. Initially it is broadcasted, but after a task claims the message, it is only sent to that. Claim by sending <DragClaim=>Msg_12> message

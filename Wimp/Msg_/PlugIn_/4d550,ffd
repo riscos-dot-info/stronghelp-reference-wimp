@@ -1,0 +1,21 @@
+Message_PlugIn_Busy  (&4D550)
+#Parent Msg_PlugIn_
++20	Flag bits:
+	  0:	Set; PlugIn is busy
+	 	Clear; PlugIn is not busy
+	  1:	Set; state at R1+32 has some meaning
+	 	Clear; ignore word at R1+32
+	  2-31:	reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	State:
+	  0: Stop
+	  1: Play
+	  2: Pause
+	  3: Fast Forward
+	  4: Rewind
+	  5: Record
+
+Requests that the parent display some indication of business (e.g. spinning logo, etc.).  If the plugin has set the busy bit in its <PlugIn_Opening=>Msg_Plugin_4D541> message then it should send this message with bit 0 clear when it has finished its loading.
+
+This is also used to notify the parent of any state change by the plugin in case it needs to update any user interface.

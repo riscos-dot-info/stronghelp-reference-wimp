@@ -1,0 +1,5 @@
+Message_ResetPrinter  (&80152)
+#Parent MSG_
+This message is sent to !Printers to ensure that the printer settings are correct for the currently selected printer.
+#Line
+See <PRM 3, page 264=>PRM-3:264>.

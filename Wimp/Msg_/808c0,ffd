@@ -1,0 +1,9 @@
+TaskWindow_Input  (&808C0)
+#Parent MSG_
++ 4	Child's task id
++ 20	Size
++ 24	Data...
+
+This message is used to give input data (key presses) to the child task. Larger amounts of data can be sent with the Data Transfer Protocol. Just send a DataSave message, and wait for RamFetch message.
+#Line
+See <PRM 3, page 266=>PRM-3:266>.

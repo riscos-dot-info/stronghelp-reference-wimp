@@ -1,0 +1,7 @@
+Message_PlugIn_Focus  (&4D546)
+#Parent Msg_PlugIn_
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
+
+This message is used to transfer the input focus between a plugin and its parent.  It can be sent in either direction.  If the recipient cannot or does not wish to accept the focus then it just ignores the messsage.  Otherwise it should acknowledge the message with message type 19 to prevent it being bounced back to the originator.

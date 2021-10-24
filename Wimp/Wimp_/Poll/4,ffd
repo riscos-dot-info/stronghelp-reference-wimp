@@ -1,0 +1,6 @@
+Pointer Leaving Window (4)
+Returned block contains :
+  0 Window handle
+
+This message is returned when the pointer, for some reason, suddenly finds itself no longer over this window. This can be because you moved it outside, but also because a menu has opened,or something similar
+Note : You will not receive this message when the window is deleted.

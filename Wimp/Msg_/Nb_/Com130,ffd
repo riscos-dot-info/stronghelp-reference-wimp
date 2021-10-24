@@ -1,0 +1,4 @@
+NewsBase_RemoveGroup (130)
++32	group name or pattern
+
+The inverse of the AddGroup command. May not be supported or appropriate for all transport types. Works ok for ka9q.

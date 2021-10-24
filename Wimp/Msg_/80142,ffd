@@ -1,0 +1,19 @@
+Message_PrintSave  (&80142)
+#Parent MSG_
++ 20	unused
++ 24	unused
++ 28	unused
++ 32	unused
++ 36	estimated size
++ 40	<filetype=>Filetypes:!Root> of data
++ 44	proposed leafname, zero terminated
+
+This message is sent to !Printers to initiate a print session. This should be sent recorded delivery (code 18), and if it bounces then you should complain that no printer driver is present.
+
+Printers will respond with one of :
+ è	<PrintError=>Msg_80144> if the printer is busy.
+ è	<PrintFile=>Msg_80140> (for compatability with RISC OS 2 applications).
+ è	<PrintTypeOdd=>Msg_80145> if it doesn't know how to print the file.
+ è	<DataSaveAck=>Msg_2> if the file should be saved for queueing (later, a PrintTypeOdd message will be broadcast).
+#Line
+See <PRM 3, page 262=>PRM-3:262>.

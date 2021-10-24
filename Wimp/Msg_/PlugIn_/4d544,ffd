@@ -1,0 +1,16 @@
+Message_PlugIn_Reshape  (&4D544)
+#Parent Msg_PlugIn_
++12	my_ref field from <Message_PlugIn_Reshape_Request=>Msg_Plugin_4d545> (if applicable)
+
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	Parent window handle
++36	Left	{/}(bounding box{/}
++40	Bottom	{/} in parent's{/}
++44	Right	{/} work area{/}
++48	Top	{/} co-ordinates){/}
+
+This message is sent by the browser to notify the plugin that it has been re-sized.
+
+If a plugin needs resizing it should not just do so, but it should ask using <Message_PlugIn_Reshape_Request=>Msg_Plugin_4d545>. The browser will then respond with this message to determine the new location.

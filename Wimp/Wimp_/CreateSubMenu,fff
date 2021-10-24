@@ -1,0 +1,9 @@
+Wimp_CreateSubMenu  (&400E8)
+#Parent Wimp_
+=>	R1	=	pointer to <submenu block=>wimp_menublock>, or window handle
+	R2,R3	=	x,y coordinate of top-left of submenu.
+<=	R0 corrupt
+
+This call is made when a <MenuWarning=>Msg_400C0> message is received. This message is sent by Wimp when pointer is over the submenu arrow of a menu item with the Generate Message bit set in the item flags.
+#Line
+See <PRM 3, page 199=>PRM-3:199>.

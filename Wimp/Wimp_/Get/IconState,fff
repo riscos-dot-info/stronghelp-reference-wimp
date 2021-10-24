@@ -1,0 +1,15 @@
+Wimp_GetIconState  (&400CE)
+#Parent Wimp_
+#Wrap Off
+=>	R1 =	pointer to block :
+	 	  0  Window handle
+	 	  4  Icon handle
+
+<=	R0 corrupt
+	On exit the block will also contain :
+	  8  32-byte <icon block=>wimp_iconblock>.
+#Wrap On
+
+If you want to search for an icon with particular flag settings, use <Wimp_WhichIcon>.
+#Line
+See <PRM 3, page 141=>PRM-3:141>.

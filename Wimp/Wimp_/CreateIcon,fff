@@ -1,0 +1,46 @@
+Wimp_CreateIcon  (&400C2)
+#Parent Wimp_
+=>	R0 =	if window is \< -3 : icon number, or <priority=>.priorities>
+	R1 =	Pointer to block :
+		0..3	Window handle, or <iconbar location=>.position>
+		4..31	<Icon block=>Wimp_iconblock>
+
+<=	R0 =	icon handle (unique within window)
+
+This SWI adds a new icon to a window.
+#Line
+See <PRM 3, page 96=>PRM-3:96>.
+#
+#Subpage position
+Iconbar positions
+Value	Meaning
+#Line
+-1	Right side of icon bar
+-2	Left side of icon bar
+-3	Left of icon R0
+-4	Right of icon R0
+-5	Left high priority
+-6	Left low priority
+-7	Right low priority
+-8	Right high priority
+
+The <priorities=>.priorities> are held in R0, and high priority icons will be shown closer to the edges.
+#
+#Subpage priorities
+Example priorities
+Application		Value
+#Line
+Task Manager		&60000000
+!Help			&40000000
+Palette Utility		&20000000
+Applications		0
+
+ADFS hard discs		&70000000
+ADFS floppy discs	&60000000
+'Apps' icon		&50000000
+RAM disc		&40000000
+Ethernet		&30000000
+Econet			&20000000
+Other filing systems	&10000000
+Printer drivers		&0F000000
+Tiny dir		&0E000000

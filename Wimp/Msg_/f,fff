@@ -1,0 +1,41 @@
+Message_ClaimEntity  (&F)
+#Parent MSG_
+20	<flags=>.flags>
+
+This message should be broadcast to all tasks when your application claims the caret/selection or clipboard.
+
+Part of the {/}<RISC OS Selection Model and Clipboard=>.clip>{/} protocol.
+#Subpage flags
+Message_ClaimEntity flags
+Bit	Meaning if set
+#Line
+0 and 1	caret or selection being claimed
+2	clipboard being claimed
+
+All other bits are reserved and must be set to zero.
+#subpage clip
+Clipboard protocol
+The clipboard protocol has been documented since 1995. It provides a means of inter-application file transfer in a similar way to some other operating systems.
+
+A number of applications support this protocol :
+#Line
+#Table Columns 3
+DataPower
+Zap
+StrongEd
+Messenger (mail reader)
+Pluto (mail reader)
+IRClient (IRC client)
+JFShared DispLib applications
+WritableUtils module (copies text from writable icons)
+IcnClipBrd (similar to above)
+Clipboard (application to save clipboard)
+Schema2 (spreadsheet?)
+Impression series
+Techwriter/Easiwriter (Word processor)
+AdvanceDP
+ARPlayer
+Ovation Pro (DTP)
+Cerilica Vantage (graphics package)
+Impression family (DTP)
+#EndTable

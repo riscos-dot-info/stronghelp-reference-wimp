@@ -1,0 +1,21 @@
+Wimp SWIs
+#Parent StrongHelp:!Menu
+#Postfix _
+#Align Centre;Wrap off;Indent 2
+#Table Columns 3
+<Wimp=>Wimp_!RootSWIs>
+<FilterManager=>Filter_>
+<TaskManager>
+<TaskWindow>
+<DragASprite>
+<FilerAction>
+<Free>
+<ColourPicker>
+<DDEUtils>
+#EndTable
+# <RedrawManager=>Redraw_>
+#Indent;Line
+#include topics
+#Line
+#align centre
+{/}<Wimp SWIs manual=>about>, v1.07, 17-Jun-1999{/}

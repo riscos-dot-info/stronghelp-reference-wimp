@@ -1,0 +1,13 @@
+Message_PlugIn_Close  (&4D542)
+#Parent Msg_PlugIn_
++20	<flags=>.flags>
++24	PlugIn instance handle to close
++28	Browser instance handle
+
+This message is sent to a plugin application if it wants an instance to be closed down. Plugins should reply with <Message_PlugIn_Closed=>Msg_PlugIn_4D543>.
+#Subpage flags
+PlugIn_Close flags
+Bit	Meaning if set
+#Line
+0	Browser would also like PlugIn to exit. Usually this means that the browser is attempting to reclaim as much memory as possible.
+others	reserved, must be zero

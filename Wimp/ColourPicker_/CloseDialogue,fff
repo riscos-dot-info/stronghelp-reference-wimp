@@ -1,0 +1,6 @@
+ColourPicker_CloseDialogue (&47703)
+#Parent ColourPicker_
+=>	R0 =	flags (reserved, must be 0)
+	R1 =	picker handle
+
+This SWI closes a dialogue and discards all cached information about it.

@@ -1,0 +1,6 @@
+NewsBase_NewGroupList (110)
++24	date group became available
++28	time group became available
++32	news group name
+
+Returns in a stream of messages, one per article. End of list is signalled by a null group name.

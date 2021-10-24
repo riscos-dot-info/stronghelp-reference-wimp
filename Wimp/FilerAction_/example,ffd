@@ -1,0 +1,14 @@
+Example of using Filer_Action
+#Parent FilerAction_
+Here is a BASIC example of how to use the Filer_Action module to Copy files with Verbose on via the multitasking Filer Action Window.
+
+{fcode}SYS "<Wimp_StartTask>","Filer_Action" TO taskhandle%
+SYS "<FilerAction_SendSelectedDirectory>",taskhandle%,sourcedirectorypathname$
+SYS "<FilerAction_SendSelectedFile>",taskhandle%,sourcefilesleafnames$
+SYS†"<FilerAction_SendStartOperation>",taskhandle%,0,1,targetdirectorypathname$+CHR$0,LEN(targetdirectorypathname$)+1
+{f}
+
+Note:
+The exact pathname of 'source/targetdirectorypathname$' will appear in the Filer Action window, so if you use a system variable in this then it looks untidy and the user will not be shown the true path being used.
+
+è	Remember that this is RISC OS 3 or above only.

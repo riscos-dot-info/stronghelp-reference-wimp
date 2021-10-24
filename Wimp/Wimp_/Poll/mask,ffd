@@ -1,0 +1,24 @@
+PollMask
+Bit	Meaning when bit set :
+#Line
+0	Don't return Null Reason.
+1	Don't return Redraw Window; Queue it.
+2-3	0
+4	Don't return Pointer Leaving Window.
+5	Don't return Pointer Entering Window.
+6	Don't return Mouse Click; Queue it.
+7	0
+8	Don't return Key Pressed; Queue it.
+9-10	0
+11	Don't return Lose Caret.
+12	Don't return Gain Caret.
+13	Don't return pollword nonzero
+14-16	0
+17	Don't return User Message.
+18	Don't return User Message Recorded.
+19	Don't return User Message Acknowledge.
+20-21	0
+22	R3 is pointer to pollword
+23	Scan pollword at high priority
+24	Save FP
+25-31	0

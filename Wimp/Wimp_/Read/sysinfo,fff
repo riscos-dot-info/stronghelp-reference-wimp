@@ -1,0 +1,38 @@
+Wimp_ReadSysInfo  (&400F2)
+#Parent Wimp_
+=>	R0 =	item index
+<=	R0 =	item value
+
+#Tab
+Currently defined values for R0 :
+0	Number of active tasks
+ 	(Is 0 if completely outside desktop)
+1	Wimp mode
+2	Sprite suffix
+3	<Desktop state=>Wimp_ReadSysInfo_State>
+4	<Write direction=>Wimp_ReadSysInfo_Direction>
+5	R0 =	Current task handle (0 if none)
+ 	R1 =	Version of WindowManager expected by task as given in <Wimp_Initialise>
+6	/Internal use only/
+# 6	Read swap information
+7	Version of WindowManager * 100
+8	R0 =	Fonthandle of "desktop font" (0 for system font)
+ 	R1 =	Fonthandle of "wimpsymbol font"
+9	Toolsprites <sprite area=>OS:OS_SpriteOp_Area>
+10	/Internal use only/
+# 10	Read iconbar window handle
+11	Application limit
+16	<Read WIMP sprite pools pointers=>.16> (RO4+)
+17	Read the configured auto-scroll pause delay in cs (RO4+)
+#Line
+See <PRM 3, page 218=>PRM-3:218>.
+#
+#subpage 16
+Wimp_ReadSysInfo SpritePools
+Reads both the WIMP sprite pools control block pointers
+
+=>	R0 =	16
+<=	R0 =	low priority <pool=>OS:OS_SpriteOp_Area>
+ 	R1 =	high priority <pool=>OS:OS_SpriteOp_Area>
+#line;align right
+RISC OS 4 or later.

@@ -1,0 +1,8 @@
+TaskManager_TaskNameFromHandle  (&42680)
+#Parent TaskManager_
+=>	R0 =	task handle
+<=	R0 =	pointer to taskname
+
+This SWI returns the description string which the task used when it called <Wimp_Initialise>, which is also the string shown in the task manager window. You should copy the string if you wish to keep it.
+#Line
+See <PRM 3, page 314=>PRM-3:314>.

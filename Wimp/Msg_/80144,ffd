@@ -1,0 +1,13 @@
+Message_PrintError  (&80144)
+#Parent MSG_
++ 20	<error number=>.errors>
++ 24	error message
+
+This message is sent by !Printers if an error occurs during printing. If the length of the block is 20 then you should assume that the printer is busy and give a message to that effect - this is only applicable to RISC OS 2.
+#Line
+See <PRM 3, page 262=>PRM-3:262>.
+#subpage errors
+PrintError errors
+Error	Meaning
+#Line
+1	Can only print from applications when a printer has been selected.

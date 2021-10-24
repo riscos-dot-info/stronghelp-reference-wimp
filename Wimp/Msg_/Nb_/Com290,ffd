@@ -1,0 +1,10 @@
+NewsBase_GroupOverview (290)
++24	first article number (0=first) {/}(assumed 0){/}
++28	last article number (0=last) {/}(assumed 0){/}
++32	group name
+
+Returns a filename for the group overview information. This file contains article header information in a standard format, and can provide a faster way of obtaining article information than the wimp-message lists from commands 200 & 210. The filename returned can be used to directly load or copy the data, but should not be stored across Wimp_Polls, as it may simply be a scrap file.
+
+Several polls may occur between sending this message and receiving the reply (in the case that a new overview file has to be generated).
+
+If first/last article numbers are supplied, then a subset overview file is created containing only those article numbers, and the filename returned is temporary (not yet supported).

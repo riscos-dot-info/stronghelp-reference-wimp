@@ -1,0 +1,15 @@
+Message_ANT_SendAction (&46005)
+#Parent MSG_
++ 20	reason code
+ 	/values/	/meaning/	{/}file in !InetSuite.Internet.bin{/}
+ 	0		connect to server	Connect
+ 	1		fetch and send mail	InetMail
+ 	2		send mail		InetMail [if modified]
+ 	3		fetch and send news	InetNews
+ 	4		send news		InetNews [if modified]
+ 	5		expire news		InetExpire
+ 	6		deliver mail		InetMTA
+#line
+This message is used by the ANT Internet Suite to facilitate automation. If you send it with the various reason codes, then the various actions will be performed.
+
+The files mentioned in the end column are ones which will broadcast such messages. Most of them could be easily modified to perform your own tricks.

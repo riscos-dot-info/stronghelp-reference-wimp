@@ -1,0 +1,5 @@
+TaskWindow_Resume  (&808C7)
+#Parent MSG_
+This message is sent by parent to resume a previously suspended child.
+#Line
+See <PRM 3, page 267=>PRM-3:267>.

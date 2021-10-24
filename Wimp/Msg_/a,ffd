@@ -1,0 +1,8 @@
+Message_SaveDesktop (10)
+#Parent MSG_
++20	file handle of desktop file being written as a word
++24	flags, at present reserved (must be 0)
+
+This message is broadcasted by the task manager when the user has selected "Save boot file", or on exit from desktop if the system variable SaveDesk$File has a value (a pathname..)
+#Line
+See <PRM 3, page 233=>PRM-3:233>.

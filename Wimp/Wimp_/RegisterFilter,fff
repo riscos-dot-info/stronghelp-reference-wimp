@@ -1,0 +1,6 @@
+Wimp_RegisterFilter  (&400F5)
+Used by the Filter Manager to communicate with the Wimp
+
+Do not use. Use the <FilterManager=>Filter_> SWIs instead.
+#Line
+See <PRM 3, page 224=>PRM-3:224>.

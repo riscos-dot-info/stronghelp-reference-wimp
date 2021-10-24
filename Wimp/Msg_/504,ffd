@@ -1,0 +1,7 @@
+Message_HelpEnable (&504) [4.0+]
++ 20	flags word
+	 	bit 0	set = disable interactive Help (put it into suspend state)
+	 	 	unset = enable help
+	 	bit 1	set = force Help to reread its configuration
+#line
+Used for the RISC OS 4 !Help application and allows configuration to be handled by another program.

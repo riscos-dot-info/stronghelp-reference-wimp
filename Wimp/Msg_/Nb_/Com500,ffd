@@ -1,0 +1,6 @@
+NewsBase_ListTransports (500)
++24	<item to return=>Msg_NB_Com500items>
++28	reserved (must be 0)
++32	transport or pattern
+
+Returns information about transports.

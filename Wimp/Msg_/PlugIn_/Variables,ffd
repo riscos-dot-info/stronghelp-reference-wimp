@@ -1,0 +1,41 @@
+Plugin system variables
+#Parent Msg_Plugin_
+#fH4:Required variables :
+#Tab fCode
+{/}plugin{/}$Dir		The application directory containing !Boot, !Run etc. files
+PlugIn$Type_{/}type{/}		Name of plug-in for browser menu
+Alias$@PlugInType_{/}type{/}	Command to run plug-in as a stand-alone application, no arguments
+
+#fH4:Optional variables :
+PlugIn$About_{/}type{/}	The directory containing plug-in <copyright details=>.copyright>
+
+File$Type_{/}type{/}	Up to 8 character name describing file format (as normal)
+Alias$@RunType_{/}type{/}	Command to run plug-in as a standalone application, takes filename as an argument (as normal)
+Alias$@HelperType_{/}type{/}	Command to run plug-in as a helper application
+
+If a file is embedded with APPLET, EMBED or OBJECT then the {fCode}Alias$@PlugInType_{/}type{/}{f} variable is used to start the application.
+
+If a file is pointed to with an anchor (eg \<A HREF="applets/myapplet.class"\>) then the file is downloaded and the {fCode}Alias$@Runtype_{/}type{/}{f} variable is used.
+
+<Example !Boot file=>.example>
+#Subpage example
+Plugin !Boot example
+#fCode;Wrap off
+Set Java$Dir         \<Obey$Dir\>
+Set File$Type_AE4    Java
+Set PlugIn$Type_AE4  Java
+Set PlugIn$About_AE4 \<Java$Dir\>.About
+
+SetMacro Alias$@RunType_AE4    /\<Java$Dir>.!RunImage -standalone %%*0
+SetMacro Alias$@PlugInType_AE4 /\<Java$Dir>.!RunImage -plug-in %%*0
+#subpage copyright
+Plugin 'About' directory
+A plug-in may display a logo and some associated text (e.g. copyright information) in a browser's window at the user's request. The suggested URL for this is 'about:'. The system variable {fCode}PlugIn$About_{/}type{/}{f} points to a directory containing text files with optional image (PNG, GIF or JPEG) files.
+
+Each file has a two digit reference number to allow a single plug-in to have multiple logos and copyright entries (e.g. each Replay codec). The file '{fCode}About{/}yy{/}{f}', where {/}yy{/} is the two digit reference number, contains the text suitable for inclusion inside a table cell of an HTML document.
+
+For each About file there is an optional image file, of the name '{fCode}{/}yywwwwhhhh{/}{f}', where {/}wwww{/} and {/}hhhh{/} are each four digits for the size that the image will be scaled to (usually the same as the actual image size). It is strongly recommended that the width and height are specified, but a filename of just '{fCode}{/}yy{/}{f}' is accepted.
+
+If the plug-in has a single copyright message and logo, the filename '{fCode}About{f}' can be used as a shortcut for '{fCode}About00{f}'. The optional logo must still be called '{fCode}00{/}wwwwhhhh{/}{f}' or '00'.
+
+It is the browser's responsibility to enumerate all the {fCode}PlugIn$About_*{f} system variables and compile an HTML document containing all available plug-in details.

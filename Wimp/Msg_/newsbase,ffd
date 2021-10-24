@@ -1,0 +1,11 @@
+NewsBase message protocol
+Three messages are defined:
+#Indent 2
+<NewsBase_Command=>Msg_83580>	used by a client to issue commands or requests to NewsBase
+<NewsBase_Reply=>Msg_83581>		used by newsbase to respond
+<NewsBase_Update=>Msg_83582>		broadcast by newsbase to inform clients of changes to the news database
+#Indent 0
+
+The commands implemented are based very loosely on the NNTP commands documented in RFC977 (more in spirit than in form). While the NewsBase commands are primarily designed to retrieve news from a locally-held news database managed by NewsBase, their nature should make it possible for future versions of newsbase to act as a mediator between a client reader and a directly-connected nntp server (through ethernet and Acorn TCP/IP, or whatever) - ie, one of the purposes of the command set is to act as an abstraction layer between the reader program and the source of news.
+
+(This data extracted from the Docs.Messages file in !NewsBase by Justin Fletcher)

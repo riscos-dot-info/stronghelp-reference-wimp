@@ -1,0 +1,9 @@
+Wimp_SetPalette  (&400E4)
+#Parent Wimp_
+=>	R1 =	pointer to 20-word <palette block=>Wimp_paletteblock>
+<=	R0 corrupt
+
+This SWI reprograms the Wimp-palette. In 16-colour modes, the video-palette is also reprogrammed, and in other modes the Wimp's colour lookup table may change.
+You must force a redraw of screen. It causes <Service_WimpPalette=>OS:Service_5D> to be issued.
+#Line
+See <PRM 3, page 190=>PRM-3:190>.

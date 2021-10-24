@@ -1,0 +1,9 @@
+Message FilerCloseDir (&401)
+#Parent MSG_
++ 20	<filing system number=>OS:fsys_ident>
++ 24	flag, bit 0 set to prevent canonicalisation of name before using.
++ 28	name of directory, zero terminated.
+
+All directories starting with given name will be closed.
+#Line
+See <PRM 3, page 233=>PRM-3:233>.

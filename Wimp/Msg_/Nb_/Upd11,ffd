@@ -1,0 +1,12 @@
+NewsBase Update type 11
++24	<Update type=>.types>
++28	reserved
++32	Transport name, which update applies to
+
+This is broadcast by Newsbase when a new outgoing mail or news file is queued. This is to permit external queue control applications to re-examine the queue and update their displays.
+#subpage types
+Debatch types
+Type	Meaning
+#Line
+0	mail
+1	news

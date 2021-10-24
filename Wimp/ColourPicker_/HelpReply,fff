@@ -1,0 +1,9 @@
+ColourPicker_HelpReply (&47707)
+#Parent ColourPicker_
+#Prefix ColourPicker_
+=>	R0 =	flags: all bits reserved
+	R1 =	pointer to <Message_HelpRequest=>Msg_502> message block, as returned from <Wimp_Poll=>Wimp_Poll>
+
+#wrap off
+This call makes the colour picker respond to a
+Message_HelpRequest with its own help text.

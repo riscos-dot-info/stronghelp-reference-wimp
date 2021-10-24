@@ -1,0 +1,11 @@
+Wimp_DeleteIcon  (&400C4)
+#Parent Wimp_
+=>	R1 =	pointer to :
+		  0  Window handle, or -2 for iconbar
+		  4  Icon handle
+
+This SWI removes the definition of the given icon. If it is the last icon in the windows list, the memory is reallocated, if not it is only marked as deleted.
+
+To update screen, you must call <Wimp_ForceRedraw>.
+#Line
+See <PRM 3, page 110=>PRM-3:110>.

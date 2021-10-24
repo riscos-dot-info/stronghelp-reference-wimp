@@ -1,0 +1,9 @@
+TaskWindow_Output  (&808C1)
+#Parent MSG_
++ 4	Child's task id
++ 20	size (max 232 bytes)
++ 24	data
+
+This message is sent when child has produced output data. Acknowledge message, and display data.
+#Line
+See <PRM 3, page 266=>PRM-3:266>.

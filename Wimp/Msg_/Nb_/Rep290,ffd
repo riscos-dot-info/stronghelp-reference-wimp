@@ -1,0 +1,10 @@
+NewsBase_GroupOverview (290)
++24	<flags=>.flags>
++32	filename
+
+The overview file returned should not be held open for too long, so that updates are allowed, and preferably not over <Wimp_Poll>s.
+#Subpage flags
+GetOverview flags
+Bit	Meaning if set
+#Line
+0	file returned is a scrap file and should be deleted after use

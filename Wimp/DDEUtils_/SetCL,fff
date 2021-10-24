@@ -1,0 +1,8 @@
+DDEUtils_SetCL  (&42582)
+#Parent DDEUtils_
+=>	R0 =	pointer to zero terminated command line
+<=	R0 preserved
+
+This SWI is used to set the command line of the length specified in <DDEUtils_SetCLSize>.
+
+Note:	The command line is actually terminated at the first *control* character. This is very annoying.

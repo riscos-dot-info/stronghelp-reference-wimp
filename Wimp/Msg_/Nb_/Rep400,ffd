@@ -1,0 +1,7 @@
+NewsBase_UserList (400)
++24	user's group number
++28	<flags=>Msg_NB_Rep400flags>
++32	username
++32+n	home directory
+
+Returned in a stream of messages, one per user. End of list indicated by 0,0,"",""

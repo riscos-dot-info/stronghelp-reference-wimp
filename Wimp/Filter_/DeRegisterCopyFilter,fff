@@ -1,0 +1,13 @@
+Filter_DeRegisterCopyFilter
+#Parent Filter_
+=>	R0 =	pointer to zero terminated filter name
+	R1 =	addresss of <filter code=>Filter_copycode>
+	R2 =	value to be passed in R12
+	
+<=	all registers preserved
+
+This SWI removes a <Wimp_BlockCopy> pre-filter from the list.
+
+Note: All registers must be the same as those passed to <Filter_RegisterCopyFilter>.
+
+*Note:* This is still only a 'guess' at the way it works.

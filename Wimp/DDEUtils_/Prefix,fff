@@ -1,0 +1,6 @@
+DDEUtils_Prefix  (&42580)
+#Parent DDEUtils_
+=>	R0 =	pointer to directory name, or 0 to clear
+<=	R0 preserved
+
+This SWI is used to set the current directory for this context, relative to the global curent directory.

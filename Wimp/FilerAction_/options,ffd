@@ -1,0 +1,9 @@
+Filer_Action option bits
+#Parent FilerAction_
+Bit	Meaning when set
+#Line
+0	Verbose
+1	Confirm
+2	Force
+3	Newer
+4	Recurse (only applies to set access)

@@ -1,0 +1,9 @@
+Wimp_OpenTemplate  (&400D9)
+#Parent Wimp_
+=>	R1 =	pathname of template file to open
+<=	R0 corrupt
+
+This call opens the said template file.
+Now you can do repeated calls to <Wimp_LoadTemplate>, and finally <Wimp_CloseTemplate>.
+#Line
+See <PRM 3, page 168=>PRM-3:168>.

@@ -1,0 +1,10 @@
+Wimp_PollIdle  (&4000E1)
+#Parent Wimp_
+=>	R0 =	<mask=>wimp_pollmask>
+	R1 =	256-byte block
+	R2 =	earliest time for return with Null Reason
+	R3 =	pointer to pollword *in RMA*
+
+This SWI does the same as <Wimp_Poll>, except that it will return to you as soon as possible after time stated in R2, with a Null Reason.
+#Line
+See <PRM 3, page 184=>PRM-3:184>.

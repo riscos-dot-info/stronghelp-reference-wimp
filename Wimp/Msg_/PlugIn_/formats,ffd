@@ -1,0 +1,51 @@
+PlugIn Protocol Data Formats
+#Parent Msg_PlugIn_
+The <Message_PlugIn_Open=>Msg_Plugin_4d540> contains a filename that refers to a file of parameters and attributes.  This plugin uses this information to locate the correct data, classes, implementation, etc.
+
+The file contains the concatenation of one or more binary records of the form:
+
+Bytes	Purpose
+#Line
+4	<type of data=>.types>
+4	size of record (without header):
+	(4+n+p) + (4+s+q) + (4+t+r) bytes
+4	size of name (unpadded)
+{/}n{/}	name, padded to word boundary
+4	size of data (unpadded)
+{/}s{/}	data, padded to word boundary
+4	size of MIME type (unpadded)
+{/}t{/}	MIME type, padded to word boundary
+
+Integers are stored un little-endian order.  Flags (parameters with void value whose presence or absence only is significant) are represented by a parameter of type DATA with zero length.
+
+The parameters include:
+#Indent 2
+è all the attributes of the OBJECT (or other) element that references this plugin
+è all the PARAM elements enclosed within it
+è <special parameters=>.special> created by the browser (rather than being part of the object element)
+#Indent
+
+These parameters are passed exactly as seen in the HTML without any conversions. The data/URL/ref distinction is as given in the DTD (or OBJECT attributes) or in the VALUETYPE attribute of the PARAM element.
+
+The plugin may implement its own URL fetching code, or it may have the browser fetch URLs on its behalf by issuing a <URLAccess=>Msg_Plugin_4D54D> message to the browser.
+#subpage types
+Plugin data types
+Value	Meaning
+#Line
+0	terminator (this is the last word in the file)
+1	data from PARAM
+2	URL from PARAM
+3	object ref from PARAM
+4	special parameter from browser
+# 5	data from OBJECT/APPLET
+# 6	URL from OBJECT/APPLET
+# Gerph> These two seem to have vanished from the specification
+#Subpage special
+Plugin special parameters
+Name	Meaning
+#Line
+BASEHREF	The full URL of the document containing this object.
+USERAGENT	The name of the browser.
+UAVERSION	Version number of the browser (user agent) in format 'x.y'.  If the plugin needs a specific browser feature, it may refuse to initialise if this version is not high enough.
+APIVERSION	Version number if the API in format 'x.y'.  Changes in x mean a major incompatible change in formats.  If the plugin doesn't understand this version it should refuse to initialise.  Changes in y mean some new functionality introduced in a backwards compatible way.
+BGCOLOR		The background colour of the page, which can be used by the plug-in as the default background colour. The colour is passed in as a string in the format 'BBGGRR00'.

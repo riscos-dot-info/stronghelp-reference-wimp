@@ -1,0 +1,23 @@
+Wimp_LoadTemplate  (&400DB)
+#Parent Wimp_
+=>	R1 =	pointer to userbuffer for template, or 0 to find required buffersize
+	R2 =	pointer to workspace for indirected data.
+	R3 =	pointer to end of workspace (+1?)
+	R4 =	pointer to 256-byte array for font ref, or -1 for no fonts
+	R5 =	pointer to (wildcarded) name to match (3 aligned words)
+	R6 =	position to search from, or 0 for the first call
+
+<=	R0 corrupt
+	R2 =	pointer to remaining workspace
+	R5	is overwritten with actual name
+	R6 =	pos of next entry, or 0 if template not found
+
+if R1 was 0, then :
+	R1 =	required size for window and icons
+	R2 =	required size for indirected data
+
+Note that R5 *must* point to a word aligned 12 byte buffer, which is used as workspace by the call. BASIC programmers converting to C or Assembler should be careful to set R6.
+
+Errors will not be returned if the template is not found. Instead R6 is set to 0.
+#Line
+See <PRM 3, page 170=>PRM-3:170>.

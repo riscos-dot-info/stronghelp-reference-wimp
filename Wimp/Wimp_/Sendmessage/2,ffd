@@ -1,0 +1,14 @@
+Receiving UserMessages (17,18,19)
+17	UserMessage			Doesn't expect a reply
+18	UserMessage_Recorded		If noone answers, it returns.
+19	<UserMessage_Acknowledge=>Wimp_SendMessage3>  	A UM_Recorded returns.
+
+Format of block :
+ 0	length of block
+ 4	Handle of sender
+ 8	my ref
+ 12	your ref
+ 16	<message code=>Msg_>
+ 20	..data..
+
+To acknowledge message, first set your_ref = my_ref, and then either just call Wimp_SendMessage,19 which stops the message from returning, or send any UserMessage back to the sender.

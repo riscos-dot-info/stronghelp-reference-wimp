@@ -1,0 +1,7 @@
+ColourPicker_CloseRequest (&47702)
+#Parent MSG_
++ 20	<picker handle=>ColourPicker_OpenDialogue>
+
+This message is sent by ColourPicker to inform you that the picker wishes to close, usually because the 'Ok' or 'Cancel' buttons have been pressed.
+
+The client should respond by calling <ColourPicker_CloseDialogue>.

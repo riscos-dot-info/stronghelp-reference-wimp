@@ -1,0 +1,19 @@
+Mode Specifier Blocks
+#Parent Wimp_SetMode
+Offset	Value
+#Line
+0	Mode selector flags
+	bit	0	= 1
+	bits	1-7	= 0 (format specifier)
+	bits	8-31	= 0 (reserved)
+4	x-resolution (pixels)
+8	y-resolution (pixels)
+12	<pixel depth=>Wimp_PixelDepth>
+16	frame rate (Hz) (-1 = use first match)
+20	optional pairs of words
+	<mode variable index=>OS:OS_ReadModeVariables>, value
+	mode variable index, value
+	Œetc
+	-1 terminator
+#line
+See also <Mode Specifier Strings=>Wimp_ModeString>

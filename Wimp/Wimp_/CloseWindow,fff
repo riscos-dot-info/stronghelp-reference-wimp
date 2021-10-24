@@ -1,0 +1,17 @@
+Wimp_CloseWindow  (&400C6)
+#Parent Wimp_
+=>	R1 =	pointer to block :
+	 	  0  Window handle
+
+This call removes the window from the list of active windows.
+
+The Wimp will issue any necessary redraw messages. The nested version is slightly <different=>.nested>.
+#Line
+See <PRM 3, page 114=>PRM-3:114>.
+#subpage nested
+Wimp_CloseWindow (nested version)
+=>	R1 =	pointer to block as <Wimp_CloseWindow>
+	R2 =	"TASK" (&4B534154)
+	R3 =	window handle of parent
+
+This call closes a window within another window. Only present on versions of the window manager later than 3.82.

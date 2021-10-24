@@ -1,0 +1,17 @@
+TaskWindow
+#Parent !Root
+#Prefix TaskWindow_
+<TaskInfo>
+
+Message :
+#Indent 3
+#Table 4 24
+<808C0 TW_Input=>Msg_808c0>
+<808C1 TW_Output=>Msg_808c1>
+<808C2 TW_Ego=>Msg_808c2>
+<808C3 TW_Morio=>Msg_808c3>
+<808C4 TW_Morite=>Msg_808c4>
+<808C5 TW_NewTask=>Msg_808c5>
+<808C6 TW_Suspend=>Msg_808c6>
+<808C7 TW_Resume=>Msg_808c7>
+#EndTable

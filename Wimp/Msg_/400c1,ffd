@@ -1,0 +1,8 @@
+Message_ModeChange (&400C1)
+<Wimp_SetMode> causes this message to be broadcasted. You should *not* acnowledge this message.
+
+After sending this message, the Wimp sends an Open_Window_Request event for each window.
+
+You must not delete any window. If you want to delete a window, then just mark it to be deleted, and do the deed when you receive the <Open window request=>wimp_poll2>.
+#Line
+See <PRM 3, page 240=>PRM-3:240>.

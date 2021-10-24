@@ -1,0 +1,12 @@
+Caret height and flags
+Bits	Meaning
+#Line
+0-15	Height of caret in OS units.
+16-23	Colour (if bit 26 is set)
+24	1 => Use VDU5 type caret.
+	0 => Use anti-aliased caret.
+25	1 => Caret is invisible.
+26	1 => Use bits 16-23 for colour.
+	0 => Use wimp colour 11.
+27	1 => 16-23 is untranslated col.
+	0 => 16-23 is wimp colour.

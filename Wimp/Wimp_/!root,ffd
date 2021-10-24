@@ -1,0 +1,9 @@
+Wimp
+# This is not an error - this page is accessed from the SWIs manual
+#Parent !Root
+#Prefix Wimp_
+#Include swis
+
+Related topics :
+#Indent 4
+#include topics

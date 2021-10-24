@@ -1,0 +1,7 @@
+Quit (0)
+#Parent MSG_
+On receiving this broadcast message, the task should tidy up, call <Wimp_CloseDown> and <OS_Exit=>OS:OS_Exit>.
+
+If task doesn't want to quit, it should have said so when it received the <PreQuit=>Msg_8> message.
+#Line
+See <PRM 3, page 230=>PRM-3:230>.

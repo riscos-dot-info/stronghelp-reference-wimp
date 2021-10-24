@@ -1,0 +1,9 @@
+Mouse Click (6)
+#Wrap Off
+Returned block contains :
+
+0	Mouse x		(Screen coord)
+4	Mouse y		(Screen coord)
+8	Buttons
+12	Window handle	(-1=background, -2=iconbar)
+16	Icon handle	(-1=workarea)

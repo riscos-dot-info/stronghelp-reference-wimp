@@ -1,0 +1,13 @@
+Palette block
+#Parent Wimp_SetPalette
+0	Wimp colour 0
+4	Wimp colour 1
+.
+.
+60	Wimp colour 15
+64	Border colour
+68	Pointer colour 0
+72	Pointer colour 1
+76	Pointer colour 2
+ 
+All entries have format &BBGGRR00

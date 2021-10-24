@@ -1,0 +1,4 @@
+NewsBase_Shutdown (10)
++32	descriptive string
+
+NewsBase also broadcasts this message if it shuts down due to an error or user request (ie Quit from the iconbar menu).

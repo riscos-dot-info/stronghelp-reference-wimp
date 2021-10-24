@@ -1,0 +1,7 @@
+DDEUtils_ThrowbackStart  (&42587)
+#Parent DDEUtils_
+<=	R4 corrupted
+
+This SWI is used to start a DDEUtils throwback session.
+
+Use <DDEUtils_ThrowbackSend> to put data in the buffer.

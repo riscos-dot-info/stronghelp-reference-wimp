@@ -1,0 +1,10 @@
+FilerAction
+#Parent !Root
+#Prefix FilerAction_
+#Table Columns 2
+<SendSelectedDirectory>
+<SendSelectedFile>
+<SendStartOperation>
+#EndTable
+
+<Example of use=>FilerAction_Example>

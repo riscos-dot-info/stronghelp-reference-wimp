@@ -1,0 +1,8 @@
+Message_PlugIn_Abort  (&4D552)
+#Parent Msg_PlugIn_
+R1+20	Flags, reserved (must be zero)
+R1+24	PlugIn instance handle
+
+This message is send by the browser when the user clicks on the Stop icon (or performs its equivalent).  The plugin should stop as much of its activity as possible.  Specifically, anything that updates the screen, anything that uses significant processor time and anything that accesses the network should be suspended.
+
+Note that this message is sent to each plugin instance individually and should be treated as such.

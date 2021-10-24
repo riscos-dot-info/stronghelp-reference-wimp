@@ -1,0 +1,79 @@
+Wimp_Extend (&400FB)
+#Parent Wimp_
+{f25}Þ{f}	R0 =	<reason code=>.reason>
+		Other registers depend on code
+{f25}Ü{f}	Depends on code
+#line;tab
+
+*Note*:	This call is only present for versions of WindowManagers after 3.80.
+#Subpage reason
+Wimp_Extend reason codes
+Reason	Meaning
+#Line
+0-5	Internal use only
+6	<Parent window=>.6789A>
+7	<Top child window=>.6789A>
+8	<Bottom child window=>.6789A>
+9	<Sibling immediately below=>.6789A>
+10	<Sibling immediately above=>.6789A>
+11	<Window information=>.11>
+#line
+For codes 6 to 10, a returned "-1" means "no window", or R1 was -1 on entry and R0 was not 7 or 8. Pane windows are not skipped.
+#subpage 6789A
+Wimp_Extend 6..10
+{f25}Þ{f}	R0 =	6	= return parent window handle
+ 	 	7	= top child window
+ 	 	8	= bottom child window
+ 	 	9	= sibling immediately below
+ 	 	10	= sibling immediately above
+	R1 =	window queried, or -1 for top level
+{f25}Ü{f}	R1 =	window handle, or -1 for none
+#line
+Returns information about the window stack.
+#
+#subpage 11
+Wimp_Extend 11 (&400FB, 11)
+{f25}Þ{f}	R0 =	11
+		R1 !	100-byte <block=>.preblock>
+		 	
+{f25}Ü{f}	R0 preserved
+		R1 preserved and <updated=>.postblock>
+#line
+All measurements are in OS units; size of pixel depends on screen mode.
+See <Ursula Wimp=>#url http://www.acorn.com/clan/private/underground/ursula/wimp.html> for more details.
+#
+#subpage preblock
+Wimp_Extend 11, R1 block on entry
+/Offset/	/Meaning/
+0	Window handle,	or 0 to return generic values for a window with line borders enabled
+#line
+On exit, the block is <updated=>.postblock>
+#
+#subpage postblock
+Wimp_Extend 11, R1 block on exit
+/Offset/	/Meaning/
+0	Preserved
+4	Left border width (1 pixel, or 0 if absent)
+8	Bottom border width (horizontal scroll height, or 1 pixel if no scroll, or 0 if absent)
+12	Right border width (vertical scroll width, or 1 pixel if no scroll, or 0 if absent)
+16	Top border width (title bar height, or 1 pixel if no title, or 0 if absent)
+20	Back width,	or 0 if absent
+24	Close width,	or 0 if absent
+28	Reserved for forwards compatibility - 0 for RISC OS 4 Wimp
+32	Title width,	or 0 if absent (corrupt if no window handle was given on entry)
+36	Reserved for forwards compatibility - 0 for RISC OS 4 Wimp
+40	Iconise width,	or 0 if absent (ie. no close, or configured off, or a child window)
+44	Toggle-size width,	or 0 if absent
+48	Toggle-size height,	or 0 if absent
+52	Vertical scrollbar upper-gap,	or 0 if no vertical scrollbar
+56	Up-arrow height, squashed if necessary,	or 0 if no vertical scrollbar
+60	Vertical scroll well height,	or 0 if no vertical scrollbar (corrupt if no window handle was given on entry)
+64	Down-arrow height, squashed if necessary,	or 0 if no vertical scrollbar
+68	Vertical scrollbar lower-gap,	or 0 if no vertical scrollbar
+72	Adjust-size or blank height,	or 0 if neither
+76	Adjust-size or blank width,	or 0 if neither
+80	Horizontal scrollbar right-gap,	or 0 if no horizontal scrollbar
+84	Right-arrow width, squashed if necessary,	or 0 if no horizontal scrollbar
+88	Horizontal scroll well width,	or 0 if no horizontal scrollbar (corrupt if no window handle was given on entry)
+92	Left-arrow width, squashed if necessary,	or 0 if no horizontal scrollbar
+96	Horizontal scrollbar left-gap,	or 0 if no horizontal scrollbar

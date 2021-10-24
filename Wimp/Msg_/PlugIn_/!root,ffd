@@ -1,0 +1,28 @@
+PlugIn Protocol Messages
+#Parent Msg_
+Message	Name
+#Line
+&4D540	<Message_PlugIn_Open=>Msg_Plugin_4D540>
+&4D541	<Message_PlugIn_Opening=>Msg_Plugin_4D541>
+&4D542	<Message_PlugIn_Close=>Msg_Plugin_4D542>
+&4D543	<Message_PlugIn_Closed=>Msg_Plugin_4D543>
+&4D544	<Message_PlugIn_Reshape=>Msg_Plugin_4D544>
+&4D545	<Message_PlugIn_Reshape_Request=>Msg_Plugin_4D545>
+&4D546	<Message_PlugIn_Focus=>Msg_Plugin_4D546>
+&4D547	<Message_PlugIn_Unlock=>Msg_Plugin_4D547>
+&4D548	<Message_PlugIn_StreamNew=>Msg_Plugin_4D548>
+&4D549	<Message_PlugIn_StreamDestroy=>Msg_Plugin_4D549>
+&4D54A	<Message_PlugIn_StreamWrite=>Msg_Plugin_4D54A>
+&4D54B	<Message_PlugIn_StreamWritten=>Msg_Plugin_4D54B>
+&4D54C	<Message_PlugIn_StreamAsFile=>Msg_Plugin_4D54C>
+&4D54D	<Message_PlugIn_URLAccess=>Msg_Plugin_4D54D>
+&4D54E	<Message_PlugIn_Notify=>Msg_Plugin_4D54E>
+&4D54F	<Message_PlugIn_Status=>Msg_Plugin_4D54F>
+&4D550	<Message_PlugIn_Busy=>Msg_Plugin_4D550>
+&4D551	<Message_PlugIn_Action=>Msg_Plugin_4D551>
+&4D552	<Message_PlugIn_Abort=>Msg_Plugin_4D552>
+
+<System variables=>Msg_Plugin_Variables>
+
+#fH4:Note:
+This protocol is constantly being developed. See the <Acorn website=>#URL http://www.acorn.com/browser/specs.html> for more details.

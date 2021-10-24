@@ -1,0 +1,24 @@
+Drag location flags
+Bits	Meaning
+#Line
+0-1	Horizontal location of sprite in box:
+	 00	Left
+	 01	Centre
+	 10	Right
+	 11	undefined
+2-3	Vertical location of sprite in box:
+	 00	Bottom
+	 01	Centre
+	 10	Top
+	 11	undefined
+4-5	Drag bounding box is:
+	 00	Whole screen
+	 01	Display area of window that the pointer is over
+	 10	User specified
+	 11	undefined
+6	Bounding box applies to:
+	 0	The box
+	 1	The pointer
+7	Use drop shadow
+8	Don't dither sprite (RISC OS 3.5 onwards)
+9-31	Reserved for future use, should be set to 0.

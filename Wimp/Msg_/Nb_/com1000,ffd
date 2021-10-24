@@ -1,0 +1,6 @@
+NewsBase_ScriptCommand (1000)
++24	reserved (must be 0)
++28	reserved (must be 0)
++32	command string
+
+This is sent by clients to execute a newsbase script.

@@ -1,0 +1,8 @@
+DDEUtils_GetCl  (&42584)
+#Parent DDEUtils_
+=>	R0 =	pointer to buffer for command line
+<=	R0 preserved
+
+This SWI is used to read the command line into a buffer. It also unsets DDEUtils copy of the command line.
+
+Note:	The case of letters used in the name DDEUtils_GetC{*}l{*} is inconsistent will all other DDEUtils SWIs.

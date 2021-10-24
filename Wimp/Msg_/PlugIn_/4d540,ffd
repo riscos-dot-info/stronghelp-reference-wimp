@@ -1,0 +1,26 @@
+Message_PlugIn_Open  (&4D540)
+#Parent Msg_PlugIn_
++20	<flags=>.flags>
++24	Reserved
++28	Browser instance handle (provided by the browser)
++32	Parent window handle
++36	Left	{/}(bounding box{/}
++40	Bottom	{/} in parent's{/}
++44	Right	{/} work area{/}
++48	Top	{/} co-ordinates){/}
++52	<File type=>Filetypes:!Root>
++56	Filename (<string_value=>msg_plugin_string_value>)
+
+This message is sent by the browser to create a plugin instance.
+
+The file specified contains a series of parameters in the form of name-value pairs.  This data is the list of attributes and parameters from the APPLET, OBJECT or EMBED tag - see their respective definitions.  <This data=>msg_plugin_formats> is used by the plugin to understand what is being requested of it.
+
+If bit 0 of the flags word is set then this is a request to open the file as a helper appliation.  i.e. external to the parent application.  In this case the bounding box (offset bytes 35 to 51) are invalid.  The parent window handle may be valid or 0 depending on how the file is launched.
+
+Usually a plugin application will respond with <Message_PlugIn_Opening=>Msg_PlugIn_4D541>.
+#Subpage flags
+PlugIn_Open flags
+Bit	Meaning if set
+#Line
+0	Open as a helper (otherwise as a plugin)
+others	reserved, must be 0

@@ -1,0 +1,21 @@
+# This is not an error, it is included from a few files
+#
+# I'm still working on re-organising this, if you have any ideas please
+# let me know !
+#Table Columns 3
+<Poll codes=>Wimp_Poll>
+<User messages=>Msg_>
+<Window block=>Wimp_windowblock>
+<Window flags=>Wimp_windowflags>
+
+<Menu block=>Wimp_MenuBlock>
+<Menu items=>Wimp_MenuBlock.item>
+<Menu flags=>Wimp_MenuBlock.flags>
+
+<Plug-in Protocol=>Msg_PlugIn_>
+<Icon block=>Wimp_iconblock>
+<Icon flags=>Wimp_iconflags>
+<Icon buttons=>Wimp_iconbutton>
+<Validation strings=>Wimp_validationstring>
+
+#EndTable

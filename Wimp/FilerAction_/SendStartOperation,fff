@@ -1,0 +1,97 @@
+FilerAction_SendStartOperation (&40F82)
+#Parent FilerAction_
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	reason code:
+	 	  0 <Copy=>.0>
+	 	  1 <Move (rename)=>.1>
+	 	  2 <Delete=>.2>
+	 	  3 <Set access=>.3>
+	 	  4 <Set type=>.4>
+	 	  5 <Count=>.5>
+	 	  6 <Move (by copying/deleting)=>.6>
+	 	  7 <Copy local (within directory)=>.7>
+	 	  8 <Stamp files=>.8>
+	 	  9 <Find file=>.9>
+# Gerph> Yes, I prefer this layout
+	R2 =	<options=>FilerAction_options>
+	R3 =	*pointer* to reason dependent data
+	R4 =	length of data (including terminating "\\0" for strings)
+
+This SWI sends any remaining leafnames with <Message_FilerAddSelection=>MSG_404>, then starts the selected operation by constructing and sending <Message_FilerAction=>MSG_405>. Reason dependent data is always a pointer, even for word sized data. Usually the data is a destination pathname.
+#Line
+See <PRM 2, page 506=>PRM-2:506>.
+#Subpage 0
+FilerAction 0 (Copy)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	0 (Copy)
+	R2 =	<options=>FilerAction_options>
+	R3 =	null terminated destination directory
+	R4 =	length (including terminating null)
+#Subpage 1
+FilerAction 1 (Rename)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	1 (Rename)
+	R2 =	<options=>FilerAction_options>
+	R3 =	null terminated destination directory
+	R4 =	length (including terminating null)
+#Subpage 2
+FilerAction 2 (Delete)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	2 (Delete)
+	R2 =	<options=>FilerAction_options>
+	R3 =	unused
+	R4 =	0
+#Subpage 3
+FilerAction 3 (Set access)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	3 (Set access)
+	R2 =	<options=>FilerAction_options>
+	R3 =	*pointer* to word giving access
+	R4 =	4
+
+The high 2 bytes of the word give the mask, the low 2 bytes the value.
+
+#tab
+New access =	(Old access {fCode}BIC{f} mask) {fCode}ORR{f} (Value {fCode}AND{f} mask)
+#Subpage 4
+FilerAction 4 (Set type)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	4 (Set type)
+	R2 =	<options=>FilerAction_options>
+	R3 =	*pointer* to word giving numeric <filetype=>Filetypes:!Root>
+	R4 =	4
+#Subpage 5
+FilerAction 5 (Count)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	5 (Count)
+	R2 =	<options=>FilerAction_options>
+	R3 =	unused
+	R4 =	0
+#Subpage 6
+FilerAction 6 (Move)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	6 (Move)
+	R2 =	<options=>FilerAction_options>
+	R3 =	null terminated destination directory
+	R4 =	length (including terminating null)
+#Subpage 7
+FilerAction 7 (Copy local)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	7 (Copy local)
+	R2 =	<options=>FilerAction_options>
+	R3 =	null terminated destination object name
+	R4 =	length (including terminating null)
+#Subpage 8
+FilerAction 8 (Stamp)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	8 (Stamp)
+	R2 =	<options=>FilerAction_options>
+	R3 =	unused
+	R4 =	0
+#Subpage 9
+FilerAction 9 (Find)
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	9 (Find)
+	R2 =	<options=>FilerAction_options>
+	R3 =	null terminated name to find
+	R4 =	length (including terminating null)

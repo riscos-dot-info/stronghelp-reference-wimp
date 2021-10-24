@@ -1,0 +1,14 @@
+NewsBase_SetUser (20)
++24	<Encryption type=>.encryption>
++32	Username (control-terminated)
++32+n	Password (or null string)
+
+Sets current username for the newsbase session.
+
+Password field is currently ignored but will be used for network versions of newsbase. Encryption type indicates whether the password field is encrypted. Initially only type 0 (none) will be supported, but encryption will be added to avoid passing plaintext passwords over a network.
+#Subpage encryption
+SetUser encryption types
+Type	Meaning
+#Line
+0	Un-encrypted string
+1	MD5 string digest

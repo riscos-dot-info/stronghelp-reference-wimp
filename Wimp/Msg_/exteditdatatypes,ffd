@@ -1,0 +1,6 @@
+Data type word
+The Data type word consists of two 16 bit values :
+  Bit 0-15	: Standard Acorn <Filetype=>Filetypes:!Root>
+  Bit 16-31	: "<Subtype=>Msg_ExtEditSubtypes>"
+
+Subtype 0 means that the filetype says it all, while subtypes &0001 to &04FF are reserved for the user. Applications for general distribution should request a proper allocation.

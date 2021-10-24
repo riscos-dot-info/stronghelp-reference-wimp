@@ -1,0 +1,7 @@
+NewsBase_MailArticle (310)
++24	flags
++28	reserved (must be 0)
++32	file name
++32+n	local file copy folder, - to prevent filing, or null for default
+
+Sends a mail message. The file should contain a message complete with RFC-compliant headers.

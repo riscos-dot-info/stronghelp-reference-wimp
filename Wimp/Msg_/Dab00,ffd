@@ -1,0 +1,7 @@
+Message_IRCSendData  (&DAB00)
+#Parent MSG_
++ 20	Pointer to command to send (zero terminated)
+
+This message is should be broadcast to send a command direct to IRClient to be executed as if it were typed in the input box.
+
+Note: This may not be an IRC window and care should be taken when using this call.

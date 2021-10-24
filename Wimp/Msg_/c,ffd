@@ -1,0 +1,11 @@
+Message_DeviceInUse  (12)
+#Parent MSG_
++ 20	<major device number=>Devices>
++ 24	<minor device number=>Devices>
++ 28	information string (zero-terminated)
+
+This message is sent in response to a <Message_DeviceClaim=>Msg_B>, if the receiver does not want the claimant to gain exclusive use of a device (i.e. it's already using it).
+
+The information string should be used to give information as to why the claim has failed, e.g. 'Printer is active'.
+#Line
+See <PRM 3, page 249=>PRM-3:249>.

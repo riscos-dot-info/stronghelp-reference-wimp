@@ -1,0 +1,9 @@
+NewsBase_GetUserInfo (440)
++24	<item to return=>Msg_NB_Com430items> or 0 for all information
++28	reserved (must 0)
++32	user name or pattern
++32+n	data string
+
+Returns information about a user.
+
+The data string is used to return the target filename via item 100.

@@ -1,0 +1,17 @@
+Filter Wimp_BlockCopy code
+#Parent Filter_RegisterCopyFilter
+#Wrap Off
+=>	R0 =	window handle
+	R2 =	source		minx (incl)
+	R3 =	 		miny (incl)
+	R4 =	 		maxx (excl)
+	R5 =	 		maxy (excl)
+	R6 =	destination	minx (incl)
+	R7 =	 		miny (incl)
+	R6 =	 		maxx (excl)
+	R7 =	 		maxy (excl)
+	R12 =	value of R2 when filter registered
+
+<=	all registers preserved
+
+This code is called before the standard Wimp_BlockCopy code.

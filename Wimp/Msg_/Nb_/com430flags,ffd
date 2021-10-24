@@ -1,0 +1,4 @@
+Users flags
+Bit	Meaning if set
+#Line
+0	Password is MD5 digest (otherwise unencrypted)

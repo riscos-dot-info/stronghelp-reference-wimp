@@ -1,0 +1,14 @@
+Wimp_GetPointerInfo  (&400CF)
+#Parent Wimp_
+=>	R1 =	pointer to block
+<=	R0 corrupted
+	Block contains :
+	  0	Mouse x
+	  4	Mouse y
+	  8	<Button state=>wimp_getpointerinfo0>
+	  12	Window handle (-1 for backgr, -2 for iconbar)
+	  16	<Icon handle=>wimp_getpointerinfo1>
+	  
+This would appear to return not the current mouse state but its state when the last <Wimp_Poll> was executed. This means that it is perfectly safe to use it after a long menu click delay to recreate the menu or as a means of dragging boxes.
+#Line
+See <PRM 3, page 143=>PRM-3:143>.

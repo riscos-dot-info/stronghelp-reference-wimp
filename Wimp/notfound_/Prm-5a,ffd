@@ -1,0 +1,9 @@
+PRM-5a
+#Parent !Root
+The Programmers Reference Manuals are a 'definitive' set of documents detailing the workings of RISC OS 3.1. Though it has many omissions and contains much that is apocryphal, or at least wildly inaccurate, it scores over this newer, more informal work in two important respects :
+
+First, it is slightly more detailed; and secondly it can be used to sit on if you are very short.
+
+They can be obtained from your Acorn dealer for around £100.
+
+Volume 5a covers versions of RISC OS above 3.1 and below, but including 3.6. It also includes a list of errata for the previous 4 volumes.

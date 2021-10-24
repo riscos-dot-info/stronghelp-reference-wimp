@@ -1,0 +1,6 @@
+NewsBase_DeleteArticle (250)
++24	first article number (0=first)
++28	last article number (0=last)
++32	group name
+
+Deletes one or more articles, if articles are not locked, and if deletion is enabled.

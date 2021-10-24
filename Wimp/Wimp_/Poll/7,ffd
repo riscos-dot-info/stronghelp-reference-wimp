@@ -1,0 +1,8 @@
+User Drag Box (7)
+Returned block contains:
+  0  Dragbox	min x
+  4		min y
+  8		max x
+  12		max y
+
+This message is returned when all buttons are released to finish a User_Drag operation. The block contains the final pos of the dragbox. To find out where the user dropped the box, call <Wimp_GetPointerInfo>

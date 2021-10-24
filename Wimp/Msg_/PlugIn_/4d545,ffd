@@ -1,0 +1,11 @@
+Message_PlugIn_Reshape_Request  (&4D545)
+#Parent Msg_Plugin_
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	Width	(in OS units)
++36	Height
+
+This message is sent by the PlugIn to request that it be resized in its parent. Plugins should use this to resize their windows rather than just issuing <Wimp_OpenWindow> every time they need to resize, although you might perform the Wimp_OpenWindow {/}as well{/} as this message. The effect of resizing prior to receiving the reply is something you will have to judge for yourself.
+
+The browser will respond with <Message_PlugIn_Reshape=>Msg_PlugIn_4d545>, but because the windows may be reformatted, this message may not arrive for a period.

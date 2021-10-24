@@ -1,0 +1,10 @@
+Pixel Depths
+#Parent Wimp_ModeSelect
+Value	Depth
+#line
+0	1 bpp
+1	2 bpp
+2	4 bpp
+3	8 bpp
+4	16 bpp
+5	24 bpp

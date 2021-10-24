@@ -1,0 +1,16 @@
+User flags
+Bit	Meaning if set
+#Line
+0	password is required
+16	keep mail is active
+17	keep news is active
+18	can post mail
+19	username is an alias
+20	hidded
+21	disabled
+22	can send mail
+23	can read mail
+24	can delete mail
+25	can read news
+26	can delete news
+27	is an administrator

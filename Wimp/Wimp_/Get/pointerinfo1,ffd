@@ -1,0 +1,16 @@
+Icon handle
+If positive, then it really is an icon handle.
+If negative, it means :
+ -1	Work area
+ -2	Back icon
+ -3	Close icon
+ -4	Title bar
+ -5	Toggle size icon
+ -6	Scroll up arrow
+ -7	Vertical scrollbar
+ -8	Scroll down arrow
+ -9	Adjust size icon
+ -10	Scroll left arrow
+ -11	Horizontal scrollbar
+ -12	Scroll right arrow
+ -13	The outer window frame

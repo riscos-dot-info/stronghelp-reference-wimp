@@ -1,0 +1,18 @@
+Window Button types
+#Wrap Off
+Bits 12-15	Meaning
+#Line
+0		Ignore all clicks
+1		Notify task continually, while pointer over workarea
+2		Click (auto-repeat)
+3		Click (no auto-repeat)
+4		Release over workarea notifies task
+5		Double click
+6		3 + drag.
+7		4 + drag. These Return button state * 16
+8		5 + drag.
+9		as 3
+10		Click (*256), Drag (*16), Double click (*1)
+11		Click (*1), Drag (*16)
+12-14		Reserved
+15		Mouse click causes window to gain caret.

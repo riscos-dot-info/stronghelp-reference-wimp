@@ -1,0 +1,7 @@
+Message_DataSavd (13)
+#Parent MSG_
+This message is sent back to the originator of a saved file if at some later time it becomes "safe" ({/}i.e.{/} on disc). You should compare the <your_ref=>Wimp_SendMessage1> in this message with the my_ref you stored when you sent the original <DataSave=>Msg_1> message - if they tally the file can now be marked as safe, unless the user had edited it in the meantime.
+
+Probably the best implementation is for your program to store the my_ref with the file, but zero it on any modification, as 0 will not be a valid your_ref. It appears that this message is designed for cases where one program saves a file to another program, and then that second program saves the unmodified file to disc.
+#Line
+See <PRM 3, page 254=>PRM-3:254>.

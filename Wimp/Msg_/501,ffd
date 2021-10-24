@@ -1,0 +1,8 @@
+Message_AlarmGoneOff (&501)
+#Parent MSG_
++ 20	name of application (null terminated)
++ /n/	application's identifier (null terminated)
+
+This message is broadcast by !Alarm when an application alarm goes off. If the message is not acknowledged !Alarm 'prompts' the user to start the application (with a non-multi-tasking error box), and defers the alarm for 1 minute, before restarting this message broadcast procedure.
+#Line
+See <PRM 3, page 244=>PRM-3:244>.

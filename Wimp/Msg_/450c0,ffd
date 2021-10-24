@@ -1,0 +1,9 @@
+Unknown message to connect  (&450C0)
+#Parent Msg_
++ 20	flags? (3 to ask for a connection, 2 to notify of an error)
++ 24	0 for a request, 8 for a response ?
++ 28	name of user
++ 44	? (offset to text ?) (1 if an error)
++ 48	URL requested
+
+This message is used by WebServe communicate with Connect.

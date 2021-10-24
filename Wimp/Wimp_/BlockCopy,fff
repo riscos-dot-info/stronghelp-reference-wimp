@@ -1,0 +1,19 @@
+Wimp_BlockCopy  (&400EB)
+#Parent Wimp_
+=>	R0 =	window handle
+	R1 =	source		minx (incl)
+	R2 =	 		miny (incl)
+	R3 =	 		maxx (excl)
+	R4 =	 		maxy (excl)
+	R5 =	destination	minx (incl)
+	R6 =	 		miny (incl)
+
+This SWI copies as much as possible of source-rectangle, to given dest. The rest is invalidated. This call cannot be made from inside a <redraw=>Wimp_RedrawWindow>/<update=>Wimp_UpdateWindow> loop.
+
+Note that ECF fills and tiling patterns can get out of step with this call (for an example watch the taskmanager in a 2 colour mode).
+# N> It screws up with the tiling sprite in 256 colour modes. But I guess not
+#    on an A5000
+# Gerph> Well, I don't tend to use 256 colours much. If I did I might have
+#        noticed. My RPC is a bit nicer though.
+#Line
+See <PRM 3, page 204=>PRM-3:204>.
