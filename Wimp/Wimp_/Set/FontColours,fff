@@ -1,0 +1,9 @@
+Wimp_SetFontColours  (&400F3)
+#Parent Wimp_
+=>	R1 =	font background colour
+	R2 =	font foreground colour
+<=	R0 corrupt
+
+This SWI sets up the anti-aliased font colours, from the two supplied wimp-colours. Font colours are not preserved across Wimp polls.
+#Line
+See <PRM 3, page 220=>PRM-3:220>.

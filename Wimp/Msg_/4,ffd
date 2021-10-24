@@ -1,0 +1,13 @@
+Message_DataLoadAck  (4)
+#Parent MSG_
++ 20	Dest window handle
++ 24	icon handle
++ 28	x coord
++ 32	y coord
++ 36	Estimated size
++ 40	<filetype=>Filetypes:!Root>
++ 44	full pathname
+
+This is sent as an answer to a <DataLoad=>Msg_3> message. All that should be done, is to change message type to 4, and fill in the your_ref field.
+#Line
+See <PRM 3, page 254=>PRM-3:254>.

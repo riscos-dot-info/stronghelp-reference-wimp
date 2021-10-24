@@ -1,0 +1,23 @@
+Wimp_GetWindowInfo  (&400CC)
+#Parent Wimp_
+=>	R1 =	pointer to block containing window handle
+<=	block contains
+	  0	Window handle
+	  4..	<Window block=>wimp_windowblock>
+
+This SWI returns complete details of the given windows state, including any icons created after the window itself. If bit 0 of R1 is set, then the icons are *not* returned.
+
+Under the nested window manager, the form is slightly <different=>.nested>.
+#Line
+See <PRM 3, page 137=>PRM-3:137>.
+#Subpage nested
+Wimp_GetWindowInfo (nested version)
+=>	R1 =	pointer to block containing window handle
+<=	block in R1 contains :
+	  0	Window handle
+	  4..	<Window block=>wimp_windowblock>
+	R2 =	"TASK" (&4B534154)
+	R3 =	window handle of parent, or -1 for the top-level
+	R4 =	<nesting flags=>.flags>
+	
+This call reads information about the window in the same way as the original, but also returns the nesting information used in <Wimp_OpenWindow>. Only present on versions of the Window Manager later than 3.80.

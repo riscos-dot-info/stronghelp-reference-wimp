@@ -1,0 +1,7 @@
+Message_PrintInit  (&80143)
+#Parent MSG_
+This message is sent by !Printers when it has loaded. All other printer drivers should quit quietly on receiving this message.
+
+The PRM's do not specify what should happen if the active printer driver is 'actively' printing. I would recommend that such drivers should complain and send <PreQuit=>Msg_8> followed by <Quit=>Msg_0> to the originator of such messages.
+#Line
+See <PRM 3, page 262=>PRM-3:262>.

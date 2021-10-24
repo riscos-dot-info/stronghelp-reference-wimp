@@ -1,0 +1,13 @@
+Wimp_SetPointerShape  (&400D8)
+#Parent Wimp_
+=>	R0 =	shape number (0 to turn off)
+	R1 =	pointer to shape-data, or -1 for no change
+	R2 =	width in pixels (multiple of 4)
+	R3 =	height in pixels
+	R4 =	active point x offset
+	R5 =	active point y offset
+<=	R0 corrupt
+
+This SWI is obsolete. New programs should use <Wimp_SpriteOp>,36.
+#Line
+See <PRM 3, page 166=>PRM-3:166>.

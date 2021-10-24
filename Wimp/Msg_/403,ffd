@@ -1,0 +1,7 @@
+Message FilerSelectionDirectory (&403)
+#Parent MSG_
++ 20	null terminated directory name
+
+Sending this message to a <Filer_Action=>FilerAction_> task sets the directory to act on, and clears the list of leafnames.
+#Line
+See <PRM 3, page 235=>PRM-3:235>.

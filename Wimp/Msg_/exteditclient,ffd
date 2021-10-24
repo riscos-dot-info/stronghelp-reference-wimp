@@ -1,0 +1,14 @@
+External Edit clients
+The client application is defined as that which initiates the editing session, ie that which asks the editor for a new session.
+
+The client application decides (usually at the request of the user) that some data needs to be edited. Unable to supply this function itself, it broadcasts to all other applications requesting an External Editing session (<EditRq=>Msg_45d80>).
+
+If no reply is recieved (the message bounces), then the client may take any appropriate action (for example, run an editor (Using the <Alias variable=>Msg_ExtEditVariable>) and then re-broadcast the request), but if the edit is not possible, the client will inform the user with an error message indicating that the edit is not possible.
+
+If a reply is received (<EditAck=>Msg_45d81>), then a window will have been opened, and the user may now edit the (blank) data in this window. The client now has the following options:
+
+è	By starting a data transfer to the editor (<EditDataSave=>Msg_45d84>), the client can insert some data at the êcurrent  positionë in the edited data; this can be done at any time, but is mainly intended to supply an initial chunk of data to be edited. For example, a compiler might make Edit display a source code file if an error has been found during compilation.
+
+è	By sending an appropriate message (<EditCursor=>Msg_45d85>), the client can set a selection or cursor position in the edited data. For example, the compiler might highlight the line of code containing the error.
+
+è	Another message (<EditReturn=>Msg_45d82>) may be sent by the client at any time to request that the data be returned. For example, the compiler could include a button/menu option somewhere which says 'recompile', which will automatically retrieve the code being edited and recompile it.

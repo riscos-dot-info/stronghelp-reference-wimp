@@ -1,0 +1,16 @@
+TaskWindow_NewTask  (&808C5)
+#Parent MSG_
++ 20	Command to execute
+
+This message is broadcasted by the Taskwindow module when a *TaskWindow command has been executed without proper -task and -txt flags. If receiving task can support taskwindows, it should acknowledge this message, and Wimp_StartTask
+
+#Indent 2;Tab
+"\<String at +20> xxxxxxxx yyyyyyyy "
+
+xxxxxxxx	: Your task handle   (hex)
+yyyyyyyy	: Unique texthandle  (hex)
+#Indent
+
+Note the extra space after texthandle.
+#Line
+See <PRM 3, page 267=>PRM-3:267>.

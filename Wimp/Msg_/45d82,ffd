@@ -1,0 +1,9 @@
+Message_EditReturn  (&45D82)
+#Parent MSG_
++ 20	<Data type word=>Msg_ExtEditDatatypes> (filetype + subtype)
++ 24	<Job handle=>Msg_ExtEditJobHandle>
++ 28	<Flag word=>Msg_ExtEditFlags>
+
+This message is sent by the "client" when it wants its data back. Editor should respond with an <EditDataSave=>Msg_45d84> message.
+
+This message is part of the "<External Edit=>Msg_ExtEdit>" protocol.

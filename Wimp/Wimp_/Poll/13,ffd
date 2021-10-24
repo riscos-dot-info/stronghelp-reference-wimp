@@ -1,0 +1,7 @@
+PollWord NonZero (13)
+#Parent Wimp_Poll
+Returned block contains :
+  0 Address of poll word
+  4 Contents of poll word
+
+This message is returned when the poll word becomes non-zero. If bit 23 of the <Wimp_Poll mask=>Wimp_Pollmask> is set then this may be before messages and redraw requests have been returned (for example <Message_ModeChange=>Msg_400C1>) which allows tasks to make updates to data which affect the contents of windows *before* the windows have been redrawn with out of date contents. With the bit clear this message is received at lower priority than user messages and redraw requests.

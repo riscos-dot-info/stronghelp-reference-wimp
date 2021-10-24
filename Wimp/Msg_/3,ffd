@@ -1,0 +1,15 @@
+Message_DataLoad  (3)
+#Parent MSG_
++ 20	Dest window handle
++ 24	icon handle
++ 28	x coord
++ 32	y coord
++ 36	Estimated size
++ 40	<filetype=>Filetypes:!Root>
++ 44	full pathname
++ /n/	column of file in current selection
++ /n/ + 4	row of file in current selection
+
+Receiver of message should load, and answer with <DataLoadAck=>Msg_4> if success. The column and row information stored word aligned after the pathname is not present in RISC OS 2.
+#Line
+See <PRM 3, page 253=>PRM-3:253>.

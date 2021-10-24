@@ -1,0 +1,5 @@
+NewsBase_SetSiteInfo (40)
++24	<item number=>Msg_NB_Com30items>
++32	new value string
+
+Sets a value in the NewsBase settings - {*}This is not implemented.{*}

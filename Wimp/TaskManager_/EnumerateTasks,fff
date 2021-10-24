@@ -1,0 +1,25 @@
+TaskManager_EnumerateTasks  (&42681)
+#Parent TaskManager_
+=>	R0 =	0 for first call, or value from previous
+	R1 =	pointer to buffer
+	R2 =	size of buffer
+
+<=	R0 =	value to use for next call, or \< 0 for no more
+	R1 =	pointer to end of buffer filled
+	R2 =	bytes not used
+
+This SWI returns information about the running tasks. This is necessarily the same list as TaskManager displays. For each task a 4 word block is returned :
+
+#Tab
+0	Task handle
+4	Task name (which should be copied if you use it)
+8	Slot size (K)
+12	<Flags=>.flags>
+#Line
+See <PRM 3, page 315=>PRM-3:315>.
+#Subpage flags
+Task flags
+Bit	Meaning if set
+#Line
+0	module task (otherwise application task)
+1	slot bar can be dragged (otherwise it can't)

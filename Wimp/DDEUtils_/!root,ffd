@@ -1,0 +1,35 @@
+DDEUtils
+#Parent !Root
+#Prefix DDEUtils_
+#Table Columns 2
+<Prefix>
+<SetCLSize>
+<SetCL>
+<GetCLSize>
+<GetCl>
+<ThrowbackRegister>
+<ThrowbackUnRegister>
+<ThrowbackStart>
+<ThrowbackSend>
+<ThrowbackEnd>
+<ReadPrefix>
+#EndTable
+
+Throwback protocol :
+#Indent 4
+#Table 4 24
+<42580 ThrowbackStart=>Msg_42580>
+<42581 ProcessingFile=>Msg_42581>
+<42582 ErrorsIn=>Msg_42582>
+<42583 ErrorDetails=>Msg_42583>
+<42584 ThrowbackEnd=>Msg_42584>
+<42585 InfoForFile=>Msg_42585>
+<42586 InfoDetails=>Msg_42586>
+#EndTable
+
+#Indent 0
+DDE Make Protocol :
+#Indent 4
+#Table 2 24
+<81400 DDE_Flags changed=>Msg_81400>
+#EndTable

@@ -1,0 +1,26 @@
+Wimp_GetWindowState  (&400CB)
+#Parent Wimp_
+=>	R1 =	pointer to block which contains window handle.
+
+<=	Block in R1 contains :
+	  0	Window Handle (or -2 for icon bar)
+	  4	Visible area minimum x
+	  8	Visible area minimum y
+	  12	Visible area maximum x
+	  16	Visible area maximum y
+	  20	Scroll x offset
+	  24	Scroll y offset
+	  28	Handle to open window behind (-1=top, -2=bottom, -3=iconised)
+	  32	<Window flags=>wimp_windowflags>
+
+This call reads a windows visible state. The <nested version=>.nested> can be used to read the windows parent.
+#Line
+See <PRM 3, page 135=>PRM-3:135>.
+#subpage nested
+Wimp_GetWindowState (nested version)
+=>	R1 =	pointer to block containing window handle
+	R2 =	"TASK" (&4B534154)
+<=	R3 =	parent window handle, or -1 if top level
+	R4 =	<nesting flags=>Wimp_nestingflags>
+
+This version of the call returns not only the updated block but information about the window within which it is embedded.

@@ -1,0 +1,29 @@
+Nested window flags
+#Parent Wimp_OpenWindow
+Bit	Meaning
+#Line
+0	set window flags from block for child window
+16-17	<child's left=>.values>
+18-19	<child's bottom=>.values>
+20-21	<child's right=>.values>
+22-23	<child's top=>.values>
+24-25	<child's x scroll offset=>.values>
+26-27	<child's y scroll offset=>.values>
+others	reserved, must be zero
+
+#Tab
+Note:	This call is now drawn from Acorn's documentation; it is no longer documented from experimental evidence.
+
+# Example:
+# #Indent 2
+# A window has a tool bar at the top of the screen, and a status bar at the bottom of the window. The tool bar would use bits 16, 19, 21 and 23, and the status bar would use bits 16, 18, 21, and 22. You might also have the document view as a nested window with bits 16, 18, 21, 23, 24 and 26 set.
+# #Indent
+Nesting windows and attaching them correctly is not an easy task; an amount of experimentation will be required before you can achieve the desired result.
+#Subpage values
+Nesting values
+Bits	Meaning
+#line
+00	linked to the work area of the parent
+01	linked to the lower bound of the parent (left or bottom)
+10	linked to the upper bound of the parent (top or right)
+11	reserved

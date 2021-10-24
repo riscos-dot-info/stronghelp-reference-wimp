@@ -1,0 +1,5 @@
+Close Window Request (3)
+Returned block contains :
+   0  Window handle
+
+The user has clicked on the close icon of window. If close is OK by you, then call <Wimp_CloseWindow>, using the returned block. If not, notify the user. ('File is altered. Do you want to quit?..')

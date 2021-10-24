@@ -1,0 +1,5 @@
+DDEUtils_ThrowbackEnd  (&42589)
+#Parent DDEUtils_
+<=	R4 corrupted
+
+This SWI is used to end a DDEUtils throwback session.

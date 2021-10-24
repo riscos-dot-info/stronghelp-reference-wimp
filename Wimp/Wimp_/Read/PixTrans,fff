@@ -1,0 +1,19 @@
+Wimp_ReadPixTrans  (&400ED)
+#Parent Wimp_
+=>	R0 =	&0xx if sprite in system area
+	 	&1xx if sprite in user area, and R2 = name
+	 	&2xx if sprite in user area, and R2 = pointer
+	R1 =	pointer to <spritearea=>OS:OS_SpriteOp_Area> (0 for system, 1 for wimp)
+	R2 =	pointer to sprite name, or <sprite=>OS:OS_SpriteOp_Ptr> itself
+	R6 =	Block to receive scale factors
+	R7 =	Block to receive translation table (2,4 or 16 bytes long)
+
+<=	R0 corrupt
+	Block at R6 contains <scale factors=>OS:OS_scalefactors>
+	Block at R7 contains <translation table=>OS:ColourTrans_pixtrans>
+
+This SWI gives info of how the Wimp would plot this icon.
+
+Under RISC OS 2 sprite cannot be 256-colour.
+#Line
+See <PRM 3, page 208=>PRM-3:208>.

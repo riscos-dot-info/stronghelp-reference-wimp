@@ -1,0 +1,6 @@
+NewsBase_UnLockArticle (240)
++24	first article number (0=first)
++28	last article number (0=last)
++32	group name
+
+Unlocks one or more articles to allow expiry.

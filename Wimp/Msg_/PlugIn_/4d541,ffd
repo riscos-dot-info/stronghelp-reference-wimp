@@ -1,0 +1,23 @@
+Message_PlugIn_Opening  (&4D541)
+#Parent Msg_PlugIn_
++12	my_ref field from <Message_PlugIn_Open=>Msg_PlugIn_4D540>
+
++20	<flags=>.flags>
++24	PlugIn instance handle (invented by the PlugIn)
++28	Browser instance handle (copied from Message_PlugIn_Open)
+
+This message is sent by a plugin application in response to a PlugIn_Open request.
+
+{*}Note:{*} You may open as a helper, even if the browser requested an embeded window.
+#subpage flags
+PlugIn_Opening flags
+Bit	Meaning if set
+#Line
+0	plugin can accept input focus (otherwise it cannot)
+1	plugin wants code resources fetched (otherwise it will fetch code itself)
+2	plugin wants data resources fetched (otherwise it will fetch data itself)
+3	plugin will delete the parameter file itself (otherwise the parent should)
+4	plugin has more work to do, keep showing busy indicator (otherwise it is loaded)
+5	plugin understands <PlugIn_Action=>Msg_PlugIn_4D551> message beyond the /stop/ reason code (otherwise only /stop/ is understood)
+6	plugin task has opened a helper window (otherwise plugin has embedded itself)
+others	reserved, must be zero

@@ -1,0 +1,8 @@
+Window locations
+#Parent Wimp_WindowBlock
+Value	Meaning
+#Line;wrap off
+-1	top of the stack
+-2	bottom of the stack, behind all others
+-3	iconised - not visible
+x	behind the window with handle x

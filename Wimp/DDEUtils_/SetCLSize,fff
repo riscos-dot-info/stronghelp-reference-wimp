@@ -1,0 +1,8 @@
+DDEUtils_SetCLSize  (&42581)
+#Parent DDEUtils_
+=>	R0 =	length of command line buffer
+<=	R0 corrupt
+
+This SWI is used to set up the size of the command line buffer when <DDEUtils_SetCL> is called.
+
+Note:	There is only one extended command line for the entire machine. This means a potential race condition exists, if two tasks are both using extended command lines. This seems naïve considering that the DDEUtils module partially implements a per-task current directory.

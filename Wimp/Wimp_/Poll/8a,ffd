@@ -1,0 +1,22 @@
+Character code
+{*}Key{*}		{*}Alone{*}		{*}+Shift{*}	{*}+Ctrl{*}		{*}+Ctrl Shift{*}
+#line
+Backspace	&008		&008		&008		&008
+Return		&00D		&00D		&00D		&00D
+Escape		&01B		&01B		&01B		&01B
+Home		&01E		&01E		&01E		&01E
+Delete		&07F		&07F		&07F		&07F
+Print		&180		&190		&1A0		&1B0
+F1-F9		&181-&189	&191-&199	&1A1-&1A9	&1B1-&1B9
+Tab		&18A		&19A		&1AA		&1BA
+Copy		&18B		&19B		&1AB		&1BB
+Left		&18C		&19C		&1AC		&1BC
+Right		&18D		&19D		&1AD		&1BD
+Down		&18E		&19E		&1AE		&1BE
+Up		&18F		&19F		&1AF		&1BF
+Page down	&19E		&18E		&1BE		&1AE
+Page up		&19F		&18F		&1BF		&1AF
+F10-F12		&1CA-&1CC	&1DA-&1DC	&1EA-&1EC	&1FA-&1FC
+Insert		&1CD		&1DD		&1ED		&1FD
+Win Logo	&1C0		&1D0		&1E0		&1F0
+Win Menu	&1D0		&1D1		&1E1		&1F1

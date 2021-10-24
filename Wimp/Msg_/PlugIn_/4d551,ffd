@@ -1,0 +1,20 @@
+Message_PlugIn_Action  (&4D551)
+#Parent Msg_PlugIn_
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	New state:
+	  0: Stop
+	  1: Play
+	  2: Pause
+	  3: Fast Forward
+	  4: Rewind
+	  5: Record
+	  6: Mute
+	  7: Unmute
+
+This message is used for sending specific commands to a plugin.  Not all plugins will understand the commands sent.
+
+The new state sent it the state the plugin should enter.  If it is already in that state, then it should ignore the message.
+
+After entering the state, it should send back a <PlugIn_Busy=>Msg_Plugin_4D550> message giving the new state except for the Mute and Unmute actions.

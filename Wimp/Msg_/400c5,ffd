@@ -1,0 +1,10 @@
+SetSlot (&400C5)
+#Parent MSG_
++ 20	New slotsize
++ 24	Owner's taskhandle
+
+This message is broadcast when the user tries to alter a task's slot size by dragging the "memorybar" in the task manager. If a task can cope with this, it should first check the taskhandle, acknowledge the message and then call <Wimp_SlotSize>.
+
+This message is also sent by the task manager when the task is started. If this, or any later message, is *not* acknowledged, the task will get a green memorybar in the task manager (instead of a red one) and will not receive this message again; it will not be possible for the user to alter the task's slotsize.
+#Line
+See <PRM 3, page 241=>PRM-3:241>.

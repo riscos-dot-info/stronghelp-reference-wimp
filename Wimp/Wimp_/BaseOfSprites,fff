@@ -1,0 +1,17 @@
+Wimp_BaseOfSprites  (&400EA)
+#Parent Wimp_
+<=	R0 =	pointer to ROM sprites area
+	R1 =	pointer to RMA sprites area
+
+This SWI gives you the two areas that make up the Wimp sprite pool. Note that the RMA area may move around (when sprites are added) and that WindowManagers >= 3.5 actually use a dynamic area instead of the RMA.
+
+You can use these addresses with <OS_SpriteOp=>OS:OS_SpriteOp>, but you should always use <Wimp_SpriteOp>.
+
+The only real use for this SWI is for saving the ROM sprites to a file :
+
+#Wrap off; fCode
+  SYS "Wimp_BaseOfSprites" TO ROMBase%,RMABase%
+  SYS "OS_SpriteOp",12,ROMBase%,"filename"
+#f; wrap
+#Line
+See <PRM 3, page 203=>PRM-3:203>.

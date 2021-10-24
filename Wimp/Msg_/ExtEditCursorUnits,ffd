@@ -1,0 +1,16 @@
+Unit meanings
+#Wrap Off
+Filetype			Unit represents
+#Line
+<Text=>Filetypes:FFF>		Character
+<Command=>Filetypes:FFE>	Character
+<TaskObey=>Filetypes:FD7>	Character
+<TaskExec=>Filetypes:FD6>	Character
+<Obey=>Filetypes:FEB>		Character
+<BasicTxt=>Filetypes:FD1>	Character
+<Data=>Filetypes:FFD>		Byte offset
+<BASIC=>Filetypes:FFB>		Byte offset
+<Sprite=>Filetypes:FF9>		Sprite number
+<Palette=>Filetypes:FED>	Colour number as index into standard file format
+<DrawFile=>Filetypes:AFF>	Draw object
+<ARMovie=>Filetypes:AE7>	Animation frame number

@@ -1,0 +1,14 @@
+NewsBase_SiteInfo items
+Item	Meaning
+#Line
+0	fully-qualified hostname
+1	organization
+2 	unqualified hostname
+3 	domain name
+4 	timezone
+5 	remote hostname
+6 	mail hostname (can be different from 0)
+20 	current transport name
+21 	current transport type (either "batch" or "direct")
+100 	username control status
+101 	default expiry time

@@ -1,0 +1,13 @@
+Message_PSPrinterQuery  (&8014C)
+#Parent MSG_
++ 20	buffer address, or zero
++ 24	buffer size
+
+This message is sent by !FontPrint to !Printers to ask for information. If the buffer size is not zero then the data placed in the buffer should be :
+è	Current printer name
+è	Current printer type
+è	Pathname to printer font file
+
+!Printers should always respond by placing the size of the buffer in the block and sending <PSPrinterAck=>Msg_8014D>.
+#Line
+See <PRM 3, page 263=>PRM-3:263>.

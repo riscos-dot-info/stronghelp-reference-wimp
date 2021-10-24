@@ -1,0 +1,7 @@
+NewsBase_PostArticle (300)
++24	flags
++28	reserved (must be 0)
++32	file name
++32+n	local file copy folder, - to prevent filing, or null for default
+
+Posts an article. The file should contain an article complete with RFC-compliant headers.

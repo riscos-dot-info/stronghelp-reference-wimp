@@ -1,0 +1,21 @@
+Mode Specifier Strings
+#Parent Wimp_ModeSelect
+A mode specifier string can contain the following elements, with space between:
+ 
+Xnnnn	X resolution (nnnn 3-4 digits)
+Ynnnn	Y resolution (nnnn 3-4 digits)
+Cccc	Colours (ccc=2,16,256,32K,16M)
+Gccc	Greys (ccc=4,16,256)
+EXn	X eigenfactor (0-3)
+EYn	Y eigenfactor (0-3)
+Ffff	Frame rate (fff 2-3 digits)
+#line
+Examples:
+#indent 2
+{fCode}MODE X640,Y480,C256{f}
+	VGA in 256 colours
+{fCode}MODE X800,Y600,C32K{f}
+	SVGA in 32768 colours
+#indent 0
+#line
+See also <Mode Specifier Blocks=>Wimp_ModeSelect>.

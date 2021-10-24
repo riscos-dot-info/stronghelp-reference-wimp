@@ -1,0 +1,13 @@
+'String_value' in the Plugin Protocol
+#Parent Msg_PlugIn_
+Many of the strings passed around in this protocol are of unspecified size and may, especially in the case of URL's, be larger than could fit within the body of a wimp message. Therefore, they are defined in this spec as {fCode}string_value{f}s.
+
+These are also used in the Browser spec and are defined as being either :
+#Indent 2
+è	if \< 256, offsets from the start of the message body (+20 in messages)
+è	if \> 256, pointers to data held in shared memory (eg the RMA or a dynamic area).
+#indent
+
+It is always the responsibility of the sender to free the memory used for any pointers after they are no longer requied.
+
+The protocol is defined in such a way that there should always be a reply received or the message will be bounced by the Wimp. In either case it is then safe for the sender to free the memory allocated. 

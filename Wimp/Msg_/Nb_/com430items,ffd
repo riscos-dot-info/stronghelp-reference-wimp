@@ -1,0 +1,17 @@
+NewsBase User fields
+Field	Contents
+#Line
+1	password
+2	user number {/}(unused at present){/}
+3	group number
+4	real name
+5	home directory
+6	forwarding address
+7	new mail script command (end of batch)
+8	new mail script command (per message)
+9	reply to address
+10	outgoing mail folder ('Email.\<user\>.outgoing.mail' if unset)
+11	outgoing news folder ('Email.\<user\>.outgoing.news' if unset)
+12	comment field
+99	filename for 'vacation' message, or null to clear
+100	store general purpose resource file. New value has format '\<target file\> \<source file\>'

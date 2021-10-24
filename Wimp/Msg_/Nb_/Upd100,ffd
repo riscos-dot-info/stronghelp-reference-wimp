@@ -1,0 +1,11 @@
+NewsBase Update type 100
++24	<message type=>.types>
++28	reserved
++32	message text
+
+This is broadcast to notify clients of major miscellaneous events.
+#Subpage types
+Message types
+Bit	Meaning if set
+#Line
+0	Message is important (might sound bell)

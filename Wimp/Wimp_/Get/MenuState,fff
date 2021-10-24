@@ -1,0 +1,21 @@
+Wimp_GetMenuState  (&400F4)
+#Parent Wimp_
+#Wrap Off
+=>	R0 =	0	to return the current menu tree state
+	 	1	report tree leading up to, but not including, a window/icon pair
+	R1 =	buffer for result.
+	R2 =	window handle of menu, if R0 = 1
+	R3 =	icon handle of entry in menu, if R0 = 1
+
+<=	R0 =	corrupted
+	R1 =	filled buffer
+#Wrap
+
+If there are no errors the buffer is filled with a list of numbers in, same as the one you get after a <menu selection=>wimp_poll9>.
+
+This list returned will be null, ie. buffer+0 = -1, if;
+
+ if R0 = 1 and the Window/icon in R2/R3 is not in the tree, or
+ if R0 = 0 and the menu is owned by a different application, or has been closed
+#Line
+See <PRM 3, page 222=>PRM-3:222>.

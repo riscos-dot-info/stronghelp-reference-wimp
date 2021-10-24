@@ -1,0 +1,11 @@
+Lose Caret  (11)
+Returned block contains :
+
+  0	Window handle that had focus
+  4	icon handle, or -1
+  8	x offset
+  12	y offset
+  16	<height + flags=>wimp_carethf>, or -1
+  20	index into string, or -1
+
+This message is sent to window's owner when caret moves away from current window.

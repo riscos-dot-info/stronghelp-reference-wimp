@@ -1,0 +1,10 @@
+Notify (&40040)
+#Parent MSG_
++ 20	Sending station number
++ 21	Its network number
++ 22	Five-byte real time on reciept
++ 27	Message
+
+This message is broadcasted by the NetFiler to enable some task to display a *Notify command. If no one acknowledges the message, the NetFiler will display it using <Wimp_ReportError>.
+#Line
+See <PRM 3, page 238=>PRM-3:238>.

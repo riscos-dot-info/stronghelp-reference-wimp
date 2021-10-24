@@ -1,0 +1,11 @@
+NewsBase_ListUsers (400)
++24	<flags=>.flags>
++28	reserved (must be 0)
++32	pattern, or null for all
+
+Returns a list of valid usernames, with their group numbers and home directories. The home directory is a directory specific to that user which can be used to store configuration information, eg record of subscribed groups or read articles.
+#Subpage flags
+ListUsers flags
+Bit	Meaning if set
+#Line
+0	list all users (otherwise just those who aren't hidden)

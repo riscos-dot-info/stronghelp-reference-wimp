@@ -1,0 +1,3 @@
+Wimp manual
+#Parent !Root
+The StrongHelp Wimp manual is a companion of the <OS=>OS:!Root> manual. Together, they document almost all SWI calls available in RISC OS 2 through to RISC OS 3.7. The Wimp manual deals primarily with the operation of parts of the OS directly related to the desktop. It can be obtained from iain truskett's <stronghelp website=>#url http://koschei.shada.com/manuals/>.

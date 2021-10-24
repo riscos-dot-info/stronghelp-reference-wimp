@@ -1,0 +1,4 @@
+Message_FontChanged (&400CF)
+#Parent MSG_
+On receiving this broadcast message the window manager re-reads the <configured WimpFont setting=>OS:OS_Bytecmos140> and redraws the whole screen. If any error is encountered with the configured font System font is used.
+# N> This page brought to you by empirical research.

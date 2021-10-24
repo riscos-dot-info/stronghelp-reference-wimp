@@ -1,0 +1,38 @@
+Wimp_OpenWindow  (&400C5)
+#Parent Wimp_
+=>	R1 =	Pointer to block :
+	 	   0	Window handle {/}[does not have to belong to task (3.98+)]{/}
+	 	   4	Visible area minimum x
+	 	   8	Visible area minimum y
+	 	  12	Visible area maximum x
+	 	  16	Visible area maximum y
+	 	  20	Scroll x offset
+	 	  24	Scroll y offset
+	 	  28	Handle to open window behind
+	 	 	(-1=top, -2=bottom, -3=hide/iconise)
+<=	R1 + [4..24] updated to indicate new location. This is now an official effect.
+
+#Tab
+This call updates the list of active windows. It is used
+  1)	When you open a window for the first time, and
+  2)	When the window moves, scrolls or resizes.
+
+The Wimp will issue redraw messages to you, if necessary. Under the nested Wimp, its use is slightly <different=>.nested>.
+
+#tab
+Note:	Prior to the nested Wimp you could not open windows belonging to other tasks. You were (and still are) able to send other tasks <open window requests=>Wimp_Poll2>.
+#Line
+See <PRM 3, page 112=>PRM-3:112>.
+#subpage nested
+Wimp_OpenWindow (nested version)
+=>	R1 =	pointer to block as <Wimp_OpenWindow>, plus
+	 	  32	<Window flags=>wimp_windowflags> (if b0 of nesting flags set)
+	 	or 0 to flush all pending opens to the screen
+	R2 =	"TASK" (&4B534154)
+	R3 =	window handle of parent, or -1 for the top-level
+	R4 =	<nesting flags=>Wimp_nestingflags>
+
+This call opens a window within another window. Only present on versions of the Window Manager later than 3.80.
+
+#tab
+Note:	Under the nested Wimp you *may* move windows belonging to other clients with either the extended or normal versions of this call.

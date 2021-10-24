@@ -1,0 +1,13 @@
+Device numbers
+#Wrap off
+Port	Major device	Minor device
+#Line
+Parallel port	1	0
+Serial port	2	0
+Screen palette	3	0
+MIDI interface	4	-1	(all ports)
+		 	0-3	(port number)
+Floppy discs	5	-1	(all floppy discs)
+		 	0-3	(drive number)
+Sound system	6	0	(whole sound system)
+#Wrap

@@ -1,0 +1,5 @@
+NewsBase_ListTransports (500)
++24	<item type=>Msg_NB_Com500items>
++28	transport flags
++32	transport name
++32+n	item string

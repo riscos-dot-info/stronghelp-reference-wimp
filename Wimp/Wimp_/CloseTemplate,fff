@@ -1,0 +1,7 @@
+Wimp_CloseTemplate  (&400DA)
+#Parent Wimp_
+<=	R0 corrupt
+
+This call closes the currently open template file, previously opened by <Wimp_OpenTemplate>.
+#Line
+See <PRM 3, page 169=>PRM-3:169>.

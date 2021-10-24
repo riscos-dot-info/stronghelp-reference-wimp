@@ -1,0 +1,20 @@
+NewsBase_Update (&83582)
++20	<type of update=>.types>
+	rest of block as defined by code
+
+This is broadcast by NewsBase whenever one of the sections of the database is altered.
+#subpage types
+Newsbase update types
+Type	Meaning
+#Line
+0	<Group created=>Msg_NB_Upd0-1>
+1	<Group deleted=>Msg_NB_Upd0-1>
+2	<Article created=>Msg_NB_Upd2>
+3	<Article deleted=>Msg_NB_Upd3>
+4	<User added=>Msg_NB_Upd4-6>
+5	<User deleted=>Msg_NB_Upd4-6>
+6	<User modified=>Msg_NB_Upd4-6>
+10	<Debatch finished=>Msg_NB_Upd10>
+11	<Queues updated=>Msg_NB_Upd11>
+12	<Expiry finished=>Msg_NB_Upd12>
+100	<Message=>Msg_NB_Upd100>

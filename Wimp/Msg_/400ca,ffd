@@ -1,0 +1,9 @@
+Message_WindowIconize  (&400CA)
+# Part of the iconiSe protocol.
+# Hey, and YouThoughtStudlyCapsWereBad
+#Parent MSG_
+ + 20	window handle
+ + 24	task handle of owner
+ + 28	20 bytes of title string (last part of first word)
+ 
+This message is broadcast by the Wimp when a window's close icon is shift clicked. If an iconiser (sic) is absent nothing will happen. If one is present it will acknowledge the message, and send <Message_WindowInfo=>Msg_400CC> to the window.

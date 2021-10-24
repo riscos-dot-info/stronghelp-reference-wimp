@@ -1,0 +1,8 @@
+FilerAction_SendSelectedDirectory  (&40F80)
+#Parent FilerAction_
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	pointer to full pathname of source directory you wish to start an action on.
+
+This SWI sends <Message_FilerSelectionDirectory=>MSG_403> to the Filer_Action task.
+#Line
+See <PRM 2, page 504=>PRM-2:504>.

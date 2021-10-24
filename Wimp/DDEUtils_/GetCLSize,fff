@@ -1,0 +1,5 @@
+DDEUtils_GetCLSize  (&42583)
+#Parent DDEUtils_
+<=	R0 =	size of command line buffer, or 0 if none set
+
+This SWI is used to read the size of the command line set by <DDEUtils_SetCLSize>.

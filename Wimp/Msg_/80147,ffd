@@ -1,0 +1,5 @@
+Message_SetPrinter  (&80147)
+#Parent MSG_
+This message is sent by !Printers to indicate that the printer settngs or selection has changed.
+#Line
+See <PRM 3, page 263=>PRM-3:263>.

@@ -1,0 +1,12 @@
+FilerAction_SendSelectedFile  (&40F81)
+#Parent FilerAction_
+=>	R0 =	handle of the task Filer_Action just started.
+	R1 =	pointer to leafnames of files to be acted upon.
+
+Each filename has to be separated by a single space - {/}e.g.{/} '{fCode}File1 File2 File3{f}'.
+
+This SWI buffers filenames until it fills a message block, at which point it sends them to the Filer_Action task using <Message_FilerAddSelection=>MSG_404>.
+
+To start the operation see <FilerAction_SendStartOperation> (which will first send any remaining buffered names to the task).
+#Line
+See <PRM 2, page 505=>PRM-2:505>.

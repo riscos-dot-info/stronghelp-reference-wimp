@@ -1,0 +1,15 @@
+Icon relative positions
+The position of an indirected text plus sprite icon is determined by the Horizontal, Vertical and Right justified bits (3,4 and 9):
+
+HVR	Horizontal adjust		Vertical adjust
+#Line
+000	Text & sprite left justified	Text at bottom, sprite at top
+001	Text & sprite right justified	Text at bottom
+010	Sprite at left, text > +6 units	Text & sprite centered
+011	Text at left, sprite at right	Text & sprite centered
+100	Text & sprite centered		Text at bottom, sprite at top
+101	Text & sprite centered		Text at top, sprite at bottom
+110	Text & sprite centered		Text & sprite centered
+111	Text at right, sprite at left	Text & sprite centered
+
+Note: If text and sprite overlaps, text will be on top.

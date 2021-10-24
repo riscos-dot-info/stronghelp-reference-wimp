@@ -1,0 +1,25 @@
+Message_DataSave (1)
+#Parent MSG_
+20	destination	window handle
+24	 		icon handle
+28	 		screenx
+32	 		screeny
+36	estimated size
+40	<filetype=>Filetypes:!Root> of data
+	&1000 for directory, &2000 for application, -1 for untyped.
+44	proposed leafname, 0-terminated
+
+This indicates that the sender wants to save data to the receiver
+
+Normal use:
+  è	User has terminated a drag.
+  è	You get the first four words with <Wimp_GetPointerInfo>
+  è	You send message to mentioned window.
+
+Possible responses from other task:
+  è	It sends <DataSaveAck=>Msg_2>
+  è	It sends <RamFetch=>Msg_6>
+
+You should store the my_ref of each data save message, to check against any future <DataSaved=>Msg_D> message you might recieve.
+#Line
+See <PRM 3, page 252=>PRM-3:252>.

@@ -1,0 +1,7 @@
+NewsBase_MoveArticle (260)
++24	first article number (0=first)
++28	last article number (0=last)
++32	group name
++32+n	destination folder name
+
+Moves an article from one group to another. The command is only valid for email articles; news articles cannot be moved. If the destination folder does not exist, it is created (folders can only be created in the Email or Folders hierarchies).

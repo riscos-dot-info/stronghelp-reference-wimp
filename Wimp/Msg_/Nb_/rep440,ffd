@@ -1,0 +1,5 @@
+NewsBase_GetUserInfo (440)
++24	<item type=>Msg_NB_Com430items>
++28	<flags=>Msg_NB_Com430flags>
++32	username
++32+n	information requested

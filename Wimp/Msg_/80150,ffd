@@ -1,0 +1,5 @@
+Message_PSPrinterDefaulted  (&80150)
+#Parent MSG_
+This message is sent by !Printers when the font list file has been reset. This is usually in response to <PSPrinterDefault=>Msg_8014F>.
+#Line
+See <PRM 3, page 264=>PRM-3:264>.

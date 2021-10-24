@@ -1,0 +1,40 @@
+External Edit Protocol    
+#Align Centre
+{*}Designed by <Jason Williams=>Msg_ExtEditModerator>{*}
+Version 1.02S, 30 Mar 1996 (from 1.02, 1 Jan 1993)
+#Align
+
+The protocol consists of these five messages :
+    
+   <Message_EditRq=>Msg_45d80>
+   <Message_EditAck=>Msg_45d81>
+   <Message_EditReturn=>Msg_45d82>
+   <Message_EditAbort=>Msg_45d83>
+   <Message_EditDataSave=>Msg_45d84>
+   <Message_EditCursor=>Msg_45d85>
+
+The purpose of the protocol is to allow one task (the "<Clients=>Msg_ExtEditClient>") to send its data to another task (the "<Editor=>Msg_ExtEditEditor>") for editing, without forcing the user to "drag things all over the place.."
+
+Applications supporting the protocol include :
+Clients :
+#Indent 2
+#Table Lines 2
+!OLRead
+!JFAddress
+!NoteIt
+!FidoMail
+!MakeARPC
+#EndTable
+#Indent
+
+Editors :
+#Indent 2
+#Table Lines 2
+!StrongED
+!Zap 1.20
+!DJF-JRF
+!FormEdExt
+#EndTable
+#Indent
+
+How useful this protocol will be, depends on how many tasks support it, both as "Client" and "Editors".

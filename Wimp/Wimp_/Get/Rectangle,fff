@@ -1,0 +1,23 @@
+Wimp_GetRectangle  (&400CA)
+#Parent Wimp_
+=>	R1 =	pointer to block containing window handle
+<=	R0 =	0 if no more
+	Block at R1 is <updated=>.block>
+
+This SWI returns info for the next rectangle to be redrawn. The graphics window is set to clip to the rectangle.
+#Line
+See <PRM 3, page 133=>PRM-3:133>.
+#
+#Subpage block
+Rectangle to be redrawn
+0	Window handle
+4	Visible area	minx (incl)
+8	 		miny (incl)
+12	 		maxx (excl)
+16	 		maxy (excl)
+20	Scrollx
+24	Scrolly
+28	Redraw rect	minx (incl)
+32	 		miny (incl)
+36	 		maxx (excl)
+40	 		maxy (excl)

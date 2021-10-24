@@ -1,0 +1,64 @@
+Format of a window block
+#Parent Wimp_CreateWindow
+#Wrap off
+Offset	Contents
+#Line
+0	Visible area minimum x
+4	Visible area minimum y
+8	Visible area maximum x
+12	Visible area maximum y
+16	Scroll x offset
+20	Scroll y offset
+24	<Handle to open window behind=>wimp_windowlocation>
+28	<Window flags=>wimp_windowflags>			Normal values
+32	Title foreground, and frame colour			7 Black
+	(&FF is a <special value=>.titlefore>)
+33	Title background					2 Grey
+34	Work area foreground
+35	Work area background (&FF means Wimp won't clear)
+36	Scrollbar outer colour					3 Mid grey
+37	Scrollbar inner colour					1 Light grey
+38	Title background when input focus			12 Cream
+39	Extra <flags=>.moreflags> byte.
+40	Work area minimum x
+44	Work area minimum y
+48	Work area maximum x
+52	Work area maximum y
+56	Title bar <icon flags=>wimp_iconflags>
+60	<Workarea 'button' flags=>wimp_workareabuttonflags>
+64	Sprite area control block pointer (+1 for wimp)
+68	Minimum width   (NB two bytes)
+70	Minimum height  (NB two bytes)
+72	<Title data=>Wimp_icondata>
+84	Number of icons in initial definition (0 or more)
+88	0 or more <icon blocks=>wimp_iconblock>, 32 bytes each
+#
+#subpage titlefore
+Title foreground, and frame colour
+The default colour for the title is 7 (black).
+If the colour given is &FF, then on pre-Wimp 3.80, then it means that the window will have no furniture (ie. no title bar, no scroll bars, no close, etc). If the Wimp is 3.80 or later, then the window will merely have no frame, but furniture will still be able to be present.
+#
+#subpage moreflags
+Window block, byte 39 flags.
+/Bit/	/Meaning/
+0	use <24-bit colour=>.win24> in title bar validation (4.00+)
+All other bits unspecified.
+#
+#subpage win24
+24-bit window colouring (4.00+)
+Set bit 0 of <byte 39=>.moreflags> in the window description block and the <validation string=>Wimp_icondata>. of the title bar will be checked for the 'C' option where C is:
+#indent 2
+#fcode
+C[title foreground]/
+#indent 3
+[title background]/
+[work area foreground]/
+[work area background]/
+[scroll bar outer]/
+[scroll bar inner]/
+[input focus title background]
+#f
+#indent;indent
+Each colour is in the order BBGGRR. If unspecified, conventional window colour bytes are used instead.
+
+Support for window flag bit 10 (use GCOL colour numbers) is withdrawn when 24-bit colour is used.

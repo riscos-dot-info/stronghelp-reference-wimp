@@ -1,0 +1,27 @@
+ColourPicker colour descriptor
+#Parent ColourPicker_
+Offset	Contents
+#line
+0	<palette entry=>OS:colourtrans_paletteentry>
+4	word containing size of extension data
+8	<type of extension data=>.types>
+12+	extension data
+#subpage types
+Descriptor extension types
+Type	Meaning
+#Line
+0	RGB data (16 bytes of extension data)
+	+12 = <red value=>OS:colourtrans_fixedpoint>
+	+16 = <green value=>OS:colourtrans_fixedpoint>
+	+20 = <blue value=>OS:colourtrans_fixedpoint>
+
+1	CMYK data (20 bytes of extension data)
+	+12 = <cyan value=>OS:colourtrans_fixedpoint>
+	+16 = <magenta value=>OS:colourtrans_fixedpoint>
+	+20 = <yellow value=>OS:colourtrans_fixedpoint>
+	+24 = <key value=>OS:colourtrans_fixedpoint>
+
+2	HSW data (16 bytes of extension data)
+	+12 = <hue angle=>OS:colourtrans_fixedpoint>
+	+16 = <saturation percentage=>OS:colourtrans_fixedpoint>
+	+20 = <value percentage=>OS:colourtrans_fixedpoint>

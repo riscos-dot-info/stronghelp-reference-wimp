@@ -1,0 +1,9 @@
+Message_PSPrinterAck  (&8014D)
+#Parent MSG_
++ 24	buffer size
+
+This message is sent by !Printers to !FontPrint to notify that it has either filled in the block required by <PSPrinterQuery=>Msg_8014c>, or to tell it the size of the block required.
+
+If !FontPrint does not receive this message then it should report an error as no printer is installed.
+#Line
+See <PRM 3, page 264=>PRM-3:264>.

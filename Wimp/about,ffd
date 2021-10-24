@@ -1,0 +1,130 @@
+Wimp SWIs manual
+#Align Centre
+{fh3}Wimp SWIs manual{f}
+#line;Align Left
+This manual is part of a collection comprising the main public domain programming reference. The other manuals in the series are :
+#Indent 2
+#Postfix :!Root
+<OS>		The base operating system stuff
+<Wimp>		The desktop part of the operating system
+<InetSWIs>	Internet based SWIs
+<InetSocket>	Internet socket calls
+<MiscSWIs>	Miscellaneous SWIs
+<VDU>		VDU commands
+<Toolbox>	Toolbox (by Neil Bingham)
+#Indent
+
+Thanks go to those mentioned in the <contributors=>OS:contributions> list.
+
+For comments, suggestions and submissions for these, please mail iain truskett <\<koschei@eh.org\>=>#URL mailto:koschei@eh.org> who is currently moderating the collection. The primary location for these manuals will be <http://eh.org/~koschei/manuals/=>#url>, with another copy at <http://freenet.barnet.ac.uk/manuals/=>#URL>.
+#line
+<This page=>.hist107> gives history and credits.
+#
+#Subpage hist100
+History for Wimp v1.00
+#Align Right
+{/}22 Sep 1997{/}
+#Align Left
+è	First release
+
+<Next history=>.hist101>
+#Subpage hist101
+History for Wimp v1.01
+#Align Right
+{/}10 Oct 1997{/}
+#Align Left
+è	Re-organised the !Root page to try to make a little more logical.
+è	Updated 'style' of message entries; should all include parent and use +x\<tab> to indicate the parameter block.
+
+#Tab
+<Previous history=>.hist100>	<Next history=>.hist102>
+#Subpage hist102
+History for Wimp v1.02
+#Align Right
+{/}15 Nov 1997{/}
+#Align Left
+è	Updates to minor sections (bug fixes after pre-release to IRC'ers)
+è	Device Claim, ClaimEntity and TaskStarted documented (Dave Thomas)
+
+#Tab
+<Previous history=>.hist101>	<Next history=>.hist103>
+#Subpage hist103
+History for Wimp v1.03
+#Align Right
+{/}07 Jan 1998 - 15 Jan 1998{/}
+#Align Left
+è	DDEUtils moved here from MiscSWIs; seems more logical to me
+è	URI moved to InetSWIs from here; attempting to make things more relevant.
+è	Wimp_GetMenuState updated (David McCormack)
+è	PlugIn protocol documentation (Dave Thomas; clan newsletter)
+
+#Tab
+<Previous history=>.hist102>	<Next history=>.hist104>
+#Subpage hist104
+History for Wimp v1.04
+#Align Right
+{/}22 Jan 1998-22 Mar 1998{/}
+#Align Left
+è	Wimp_SetFontColour and others changed (Nicholas Clark)
+è	Plugin protocol 'string_value' and others tidied up.
+è	Nested window manager calls updated with documentation from the Acorn site.
+è	DDEUtils SWIs finally added (!)
+è	Miscellaneous fixes for new calls
+è	Updates to DDEUtils (NC), other minor changes
+è	Updates to the FilterManager calls for 0.18 of the manager; mostly guesswork, but at least RegisterPostRectFilter works correctly.
+è	Update to Wimp_SendMessage regarding dynamic areas
+è	SWI numbers added to various calls
+è	FilerAction reorganised, example fixed (various)
+è	Miscellaneous cross-references and minor re-organisations
+è	Gramatical and spelling errors corrected.
+
+#tab
+<Previous=>.hist103>	<Next history=>.hist105>
+#Subpage hist105
+History for Wimp v1.05
+#Align Right
+{/}01 Apr 1998-?{/}
+#Align Left
+è	PRM references added to SWIs and User messages.
+è	Wimp_PlotIcon documentation updated (Rick Hudson)
+è	FilterManager documentation updated
+# Beta 1
+è	ColourPicker documentation added (well, bits!)
+è	Added 'notfound_{/}manual{/}' pages, for StrongHelp 2.60.
+è	Miscellaneous changes and corrections to the plugin protocol
+
+#tab
+<Previous=>.hist104>	<Next history=>.hist106>
+#Subpage hist106
+History for Wimp v1.06
+#Align Right
+{/}17th May, 1999{/}
+#Align Left
+# 29th April, 1999
+è	Moderator now iain truskett.
+è	<Wimp_Initialise> usage of R3 updated (Vincent Lefevre)
+è	<Wimp_ReadSysInfo> updated (Justin Fletcher = gerph)
+è	<Message 0x46005=>Msg_46005> added (iain truskett)
+è	<ColourPicker=>ColourPicker_> documentation expanded (Aad Bezemer and Darren Salt)
+è	<ColourPicker=>ColourPicker_> message requirements added (David Thomas)
+è	various little variances (gerph)
+# beta 1
+è	PopupHelp (by Jason Tribbeck) messages added (iain truskett)
+è	<Wimp_ReadSysInfo> 16 and 17 added (from OSLib)
+# 17th May, 1999
+è	Not found pages revised.
+è	Various minor additions and amendments.
+
+#tab
+<Previous=>.hist105>	<Next history=>.hist107>
+#subpage hist107
+History for Wimp v.1.07
+#align right
+{/}16th June, 1999{/}
+#align left
+#line
+è	<Wimp_AutoScroll> typo fixed.
+è	<Wimp_SendMessage> modified with RISC OS 4 information.
+è	<Free_Register>, and <Free_Unregister> have been reformatted, updated with corrections and also 64 bit routine info.
+#tab;line
+<Previous history=>.hist106>

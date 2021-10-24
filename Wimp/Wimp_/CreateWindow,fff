@@ -1,0 +1,8 @@
+Wimp_CreateWindow  (&400C1)
+#Parent Wimp_
+=>	R1 =	Pointer to <window block=>wimp_windowblock>
+<=	R0 =	Window handle
+
+This tells the Wimp what the characteristics of a window are. The Wimp takes a copy of this block, so you could throw it away afterwards.
+#Line
+See <PRM 3, page 89=>PRM-3:89>.

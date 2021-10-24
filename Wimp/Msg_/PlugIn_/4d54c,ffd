@@ -1,0 +1,15 @@
+Message_PlugIn_StreamAsFile  (&4D54C)
+#Parent Msg_PlugIn_
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
+
++32	PlugIn stream instance handle
++36	Browser stream instance handle
++40	URL of stream source/destination (<string_value=>msg_plugin_string_value>)
++44	End of stream in bytes, or 0 if unknown
++48	Last modified date of URL (in UNIX time format)
++52	Notify data
++56	File name of stream data (<string_value=>msg_plugin_string_value>)
+
+This message is sent when a stream is being passed as a temporary file.

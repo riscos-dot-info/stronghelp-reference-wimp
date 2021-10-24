@@ -1,0 +1,8 @@
+Button state
+Bit	Meaning when set
+#Line
+0	Right button pressed
+1	Middle button pressed
+2	Left button pressed
+
+3-31 are reserved

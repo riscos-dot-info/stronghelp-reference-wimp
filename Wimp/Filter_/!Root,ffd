@@ -1,0 +1,22 @@
+Filter
+#Prefix Filter_
+#Parent !Root
+#Table Columns 2
+<DeRegisterPostFilter>
+<DeRegisterPreFilter>
+<RegisterPostFilter>
+<RegisterPreFilter>
+#endtable
+#Line
+#table Columns 2
+<RegisterRectFilter>
+<DeRegisterRectFilter>
+<RegisterCopyFilter>
+<DeRegisterCopyFilter>
+<RegisterPostRectFilter>
+<DeRegisterPostRectFilter>
+<RegisterPostIconFilter>
+<DeRegisterPostIconFilter>
+#EndTable
+
+These calls are only available in versions of the FilterManager after 0.18.

@@ -1,0 +1,5 @@
+NewsBase_NewGroups (110)
++24	date
++28	time
+
+Returns all newly-created groups since date/time. Date and time follow NNTP convention of yymmdd and hhmmss, though in numeric rather than ascii form.

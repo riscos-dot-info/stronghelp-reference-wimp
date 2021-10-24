@@ -1,0 +1,21 @@
+Scroll Request (10)
+Returned block contains :
+  0	Window handle
+  4	Visible area minimum x
+  8	Visible area minimum y
+  12	Visible area maximum x
+  16	Visible area maximum y
+  20	Scroll x offset
+  24	Scroll y offset
+  28	Handle to open window behind
+  32	Scroll x direction
+  36	Scroll y direction
+
+Scroll directions :
+  -2	Page Left/Down
+  -1	Left/Down
+   0
+   1	Right/Up
+   2	Page Right/Up
+
+You use the scroll directions to update the scroll offsets, and then you do a <Wimp_OpenWindow>.

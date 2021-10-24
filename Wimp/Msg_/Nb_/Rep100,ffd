@@ -1,0 +1,29 @@
+NewsBase_GroupList (100)
+For database :
+#Indent 2
++24	lowest numbered article in group
++28	highest numbered article in group
++32	estimated number of articles in group
++36	news group name
++36+n	<extra information string=>.extra>
+
+Returns in a stream of messages, one per article. End of list is signalled by a null string and low/high articles set to zero. Otherwise, a first article number of zero indicates that no articles are present in the group.
+#Indent
+
+For newsfeed :
+#Indent 2
++24	reserved (must be 0)
++28	reserved (must be 0)
++32	reserved (must be 0)
++36	newsgroup name
+
+Returns in a stream of messages, listing each of the newsgroups.
+#Subpage extra
+GroupList extra information
+This is a space seperated list of information about the group. The following data is given :
+Code	Meaning
+#Line
+Lx	x = 0, article deletion allowed
+	x = 1, article deletion disallowed
+
+Tx12	x12 = creation time in format CeYrMnDy24Mi

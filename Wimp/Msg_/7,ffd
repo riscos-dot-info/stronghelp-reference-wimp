@@ -1,0 +1,8 @@
+Message_RamTransmit (7)
+#Parent MSG_
++ 20	pointer to buffer from RamFetch message
++ 24	amount of data written to the buffer
+
+After recieving a RamFetch message, you write data to buffer, using <Wimp_TransferBlock>, and then send back this message.
+#Line
+See <PRM 3, page 256=>PRM-3:256>.

@@ -1,0 +1,4 @@
+NewsBase_SetReturnPath (320)
++32	envelope 'From' address, or null to clear
+
+The Envelope "From" address may be provided should the Newsbase-supplied one be unsuitable (eg, for mailing list software). This command need only be sent once to set the value for a client, and it will be remembered for that session until altered or cleared.

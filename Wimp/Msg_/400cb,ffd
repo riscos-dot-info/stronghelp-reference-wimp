@@ -1,0 +1,5 @@
+Message_WindowClosed  (&400CB)
+#Parent MSG_
+ + 20	window handle
+ 
+This message is broadcast whjen a window is closed, so that the iconiser can remove the icon

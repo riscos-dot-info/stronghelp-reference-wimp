@@ -1,0 +1,10 @@
+Flag Word
+Bit	Meaning when Set
+#Line
+ 0	Continuous editing. Don't close after save.
+ 1	Selection. EditReturn : Send selection only.
+ 2	Read-Only.
+ 3	Immediate Playback. "Play sample & quit"
+ 4	Adjust selection.
+ 
+Bits 5 to 31 are reserved and should be set to 0.

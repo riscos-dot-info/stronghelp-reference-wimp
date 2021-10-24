@@ -1,0 +1,12 @@
+Wimp_ReadPalette  (&400E5)
+#Parent Wimp_
+=>	R1 =	pointer to 20-word <palette block=>Wimp_paletteblock>
+	R2 =	"TRUE" (&45555254) to return true colour (3.5+)
+<=	R0 corrupt
+	block contains palette definitions
+
+This SWI returns the current Wimp palette settings, in the form &B0G0R0LL, where L is the logical colour number used for the Wimp colour 0 to 15 (or %TTGGGGGG in 256 colour modes). Note that when even when the values are masked to give &B0R0G000 this is not correct for passing to ColourTrans.
+
+If 'TRUE' is used, then the true colour values are returned.
+#Line
+See <PRM 3, page 192=>PRM-3:192>.

@@ -1,0 +1,19 @@
+Message_OLEOpenSession  (&80E21)
+#Parent MSG_
++ 20	Unique Name (16 byte, padded with zeros)
++ 36	Window handle
++ 40	x
++ 44	y
++ 48	Session type :
+
+	if type = 0 or 1 (edit file)
+ + 52	Session number
+ + 56	Filetype
+ + 60	Full pathname
+
+	if type = 2 (re-edit file)
+ + 52	Session number
+
+Session type 0 is used initially/normally. If this returns unanswered, then client should try to run the server, and then send this message again, but with type 1. If this also returns the server was either not started or is not capable of handling the request.
+
+Session type 2 is used when a link already is established.

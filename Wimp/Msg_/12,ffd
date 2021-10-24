@@ -1,0 +1,6 @@
+Message_DragClaim  (&12)
+#Parent MSG_
++ 20	<flags=>Msg_12_flags>
++ 24	list of filetypes, terminated with -1
+
+This message is sent as a reply to a <Dragging=>Msg_11> message to inform the sender that we can receive data.

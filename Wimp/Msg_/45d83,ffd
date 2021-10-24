@@ -1,0 +1,8 @@
+Message_EditAbort  (&45D83)
+#Parent MSG_
++ 20	0
++ 24	<Job Handle=>Msg_ExtEditJobHandle>
+
+This message can be sent by both "client" and "editor". No questions should be asked. The sender of this message is responsible for any messages to the user.
+
+This message is part of the "<External Edit=>Msg_ExtEdit>" protocol.

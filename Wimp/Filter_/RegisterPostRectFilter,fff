@@ -1,0 +1,12 @@
+Filter_RegisterPostRectFilter
+#Parent Filter_
+=>	R0 =	pointer to zero terminated filter name
+	R1 =	address of <filter code=>Filter_rectcode>
+	R2 =	value to be passed in R12
+	R3 =	task handle of task to which filter is applied or 0 for all tasks
+
+<=	all registers preserved
+
+Adds a new <Wimp_GetRectangle> post-filter to the list of post-filters.
+
+The address pointed to by R1 will be called whenever the task who's handle is passed in R3 calls <Wimp_GetRectangle> with R12 equal to the value of R2 when this SWI is called.

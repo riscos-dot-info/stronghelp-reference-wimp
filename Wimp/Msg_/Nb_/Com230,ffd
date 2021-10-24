@@ -1,0 +1,6 @@
+NewsBase_LockArticle (230)
++24	first article number (0=first)
++28	last article number (0=last)
++32	group name
+
+Locks one or more articles to prevent expiry.

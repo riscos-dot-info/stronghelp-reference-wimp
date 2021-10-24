@@ -1,0 +1,26 @@
+Wimp_Poll  (&400C7)
+#Parent Wimp_
+=>	R0 =	<mask=>Wimp_Pollmask>		\<=	R0 = reason code
+	R1 =	pointer to 256 byte block	 	R1 = pointer to block of data
+	R3 =	pointer to pollword *in RMA*	 	R2 = senders task handle
+	 	(if R0 bit 22 set)
+
+Reason Codes :
+# Gerph> Thanks Nick, this is much nicer
+#Indent 2;Tab Align right, Align left, Align right, Align left
+0	No Reason				9	<Menu Selection=>Wimp_Poll9>
+1	<Redraw Window=>Wimp_Poll1>		10	<Scroll Request=>Wimp_Poll10>
+2	<Open Window=>Wimp_Poll2>		11	<Lose Caret=>Wimp_Poll11>
+3	<Close Window=>Wimp_Poll3>		12	<Gain Caret=>Wimp_Poll12>
+4	<Pointer Leaving Window=>Wimp_Poll4>	13	<Pollword non-zero=>Wimp_Poll13>
+5	<Pointer Entering Window=>Wimp_Poll5>	14	- 16 Reserved
+6	<Mouse Click=>Wimp_Poll6>		17	<User Message=>wimp_sendmessage2>
+7	<User Drag Box=>Wimp_Poll7>		18	<User Message Recorded=>wimp_sendmessage2>
+8	<Key Pressed=>Wimp_Poll8>		19	<User Message Acknowledge=>wimp_sendmessage2>
+#indent
+
+Priority : Highest: 17-19  Next: 1-6,8,9  Then: the rest  Lowest: 0
+
+Related SWIs : <Wimp_PollIdle>
+#Line
+See <PRM 3, page 115=>PRM-3:115>.

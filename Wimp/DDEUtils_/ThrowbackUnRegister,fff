@@ -1,0 +1,6 @@
+DDEUtils_ThrowbackUnRegister  (&42586)
+#Parent DDEUtils_
+=>	R0 =	task handle
+<=	R0 preserved
+
+This SWI is used to deregister the task handling all throwback requests.

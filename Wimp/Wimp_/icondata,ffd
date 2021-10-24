@@ -1,0 +1,24 @@
+Icon Data
+Intepretation varies according to these three bits :
+Indirected(8), Sprite(1) and Text(0).
+Text plus sprite icons also have a special <justification=>wimp_iconpositions>.
+
+IST	Data
+#Line
+000	Not used
+001	Text String. Max 12 characters long.
+010	Spritename.
+011	Text and Spritename
+100	Not used
+
+101	+0	Pointer to text buffer
+	+4	Pointer <validation string=>Wimp_validationstring>
+	+8	Buffer length
+
+110	+0	Pointer to <sprite=>OS:os_spriteop_ptr> or spritename.
+	+4	Pointer to <sprite area=>OS:os_spriteop_area>, or 1 for Wimp
+	+8	0 if (+0) is spritepointer, length if namepointer.
+
+111	+0	Pointer to text buffer
+	+4	Pointer <validation string=>Wimp_validationstring>, which can contain spritename.
+	+8	Buffer length

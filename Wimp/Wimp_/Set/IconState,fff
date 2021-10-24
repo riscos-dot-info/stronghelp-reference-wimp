@@ -1,0 +1,23 @@
+Wimp_SetIconState  (&400CD)
+#Parent Wimp_
+=>	R1 =	pointer to block :
+	 	  0	Window handle (-1,-2 for iconbar)
+	 	  4	Icon handle
+	 	  8	EOR word
+	 	  12	Clear word
+<=	R0 corrupt
+
+This SWI sets the icon's <flags=>wimp_iconflags> as follows :
+  new = (old BIC clear_word) EOR EOR_word
+
+#Tab
+ C	E	Effect
+#Line
+ 0	0	Preserve bit
+ 0	1	Toggle bit
+ 1	0	Clear bit
+ 1	1	Set bit
+
+This SWI also causes the icon to be redrawn, even if no bits are changed.
+#Line
+See <PRM 3, page 139=>PRM-3:139>.

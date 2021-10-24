@@ -1,0 +1,7 @@
+Message_DDEToolInfo  (&81400)
+#Parent Msg_
++ 20	handle as passed to setup program (parameter 3)
++ 24-35	program name (parameter 0), zero terminated
++ 36	command line options to use, zero terminated
+
+This message is sent by DDE applications when their options as used in the command line when launched has been changed.

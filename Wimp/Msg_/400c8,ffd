@@ -1,0 +1,5 @@
+Message_TaskStarted  (&400C8)
+#Parent MSG_
+This message is sent by the Filer once it has started up all of the desktop filers so that the Task Manager can 'renumber' it.  This is done so that during the SaveDesktop sequence the Filer's own commands can be performed after any network logons.
+#Line
+See <PRM 3, page 242=>PRM-3:242>.

@@ -1,0 +1,11 @@
+Message_EditAck  (&45D81)
+#Parent MSG_
++ 20	<Data type word=>Msg_ExtEditDatatypes> (filetype + subtype)
++ 24	<Job handle=>Msg_ExtEditJobHandle>
++ 28	<Flag word=>Msg_ExtEditFlags>
+
+This message is returned by the "editor" after receiving an <EditRq=>Msg_45d80> message from a "client". Editor sets the top 16 bits of the Job Handle to a unique value, and both tasks will from now on use the full 32 bit word as a unique job handle. Editor may also change some bits in the Flag Word.
+
+Editor should create and open an empty document. If the "client" wants to, it might fill the empty doc with data by sending an <EditDataSave=>Msg_45d84> message.
+
+This message is part of the "<External Edit=>Msg_ExtEdit>" protocol.

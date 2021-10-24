@@ -1,0 +1,5 @@
+NewsBase_StartUp (0)
++24	minimum version of NewsBase supported * 100
++28	minimum revision of NewsBase supported
+
+Broadcast by a client to indicate it requires support from newsbase. If no response received, the client may either complain, or attempt to start newsbase.

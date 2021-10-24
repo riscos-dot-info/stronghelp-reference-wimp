@@ -1,0 +1,7 @@
+NewsBase_GetArticle (220)
++24	article number
++28	article size, or -1 if article is only present in header form
++32	filename (control terminated)
++32+n	article flag string (control terminated)
+
+Currently, the locked status is the only flag returned - either "L0" or "L1" to indicate unlocked or locked.

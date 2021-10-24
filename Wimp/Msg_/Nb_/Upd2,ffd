@@ -1,0 +1,8 @@
+NewsBase Update type 2
++24	Article number
++28	Article date
++32	Name of newsgroup
++32+n	From field
++32+m	Subject field
++32+o	Message-ID field
++32+p	Date field

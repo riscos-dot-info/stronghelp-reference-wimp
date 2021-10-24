@@ -1,0 +1,13 @@
+Message_HelpRequest (&502)
+#Parent MSG_
++ 20	Mouse x
++ 24	Mouse y
++ 28	Button state
++ 32	Window handle, or -1 if no window
++ 36	Icon handle, or -1 if no icon
+ 
+The !Help application sends out this message.
+
+If you want to give some simple help on the given window/icon, then reply with a <HelpReply=>Msg_503> message.
+#Line
+See <PRM 3, page 244=>PRM-3:244>.

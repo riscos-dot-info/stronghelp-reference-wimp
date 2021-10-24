@@ -1,0 +1,7 @@
+Message_WillPrint  (&80141)
+#Parent MSG_
+This message is sent to !Printers on receipt of a <PrintFile=>Msg_80140> message to indicate that printing will occur directly to Printer:
+
+Use of this message is depreciated, and <PrintTypeOdd=>Msg_80145> protocol should be used in preference.
+#Line
+See <PRM 3, page 261=>PRM-3:261>.

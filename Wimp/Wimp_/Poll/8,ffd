@@ -1,0 +1,12 @@
+Key Pressed (8)
+Returned block contains :
+
+  0	Window handle with focus
+  4	Icon handle, or -1 if none
+  8	x-offset of caret	(relative to)
+  12	y-offset of caret	(window origin)
+  16	Caret height and flags
+  20	Index of caret into string (if icon)
+  24	<Character code=>wimp_poll8a> ( It's a Word! )
+
+If you're not interested in this keypress, then pass it on with <Wimp_ProcessKey>.

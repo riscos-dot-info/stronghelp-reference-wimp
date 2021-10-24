@@ -1,0 +1,43 @@
+Wimp_TextOp  (&400F9) (3.5)
+#Parent Wimp_
+=>	R0 =	reason code
+	 	 0	<set text colours=>.0>
+	 	 1	<calculate width of string=>.1>
+	 	 2	<plot text=>.2>
+other registers depend on R0
+
+Operations on text in the current desktop font. (Only for RISC OS 3.5 and later)
+
+See also: <Wimp_ReadSysInfo> with R0=8
+#
+#Subpage 0
+Wimp_TextOp 0 (&400F9)
+=>	R0 =	0
+	R1 =	foreground colour
+	R2 =	background colour
+
+Sets the text colours in the form &BBGGRR00.
+#
+#Subpage 1
+Wimp_TextOp 1 (&400F9)
+=>	R0 =	1
+	R1 =	Pointer to string
+	R2 =	Number of characters to scan, or 0 for whole string
+
+<=	R0 =	String width in OS units
+
+Calculates the width of a (sub)string, if plotted in the current desktop font. Desktop font can be outline font or old BBC-type font.
+#
+#Subpage 2
+Wimp_TextOp 2 (&400F9)
+=>	R0 =	2 + flags:
+	 	 	Bit	Meaning
+	 	 	30	Vertically justify, so baseline of characters is at same height as when using system font
+	 	 	31	Right-justify 
+	R1 =	Pointer to string
+	R2 =	-1 (?)
+	R3 =	-1 (?)
+	R4 =	X coordinate
+	R5 =	Y coordinate
+
+Plots a string in the current desktop font. Prior to plotting, the font colours are set (with <Wimp_SetColour>).

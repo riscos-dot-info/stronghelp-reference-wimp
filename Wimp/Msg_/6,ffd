@@ -1,0 +1,6 @@
+Message_RamFetch (6)
+#Parent MSG_
++ 20	pointer to buffer where receiver should put data
++ 24	size of buffer
+#Line
+See <PRM 3, page 256=>PRM-3:256>.

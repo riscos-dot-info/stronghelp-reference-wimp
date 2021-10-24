@@ -1,0 +1,10 @@
+Message_TaskInitialise (&400C2)
+#Parent MSG_
++ 4	task handle
++ 20	<currently active object pointer=>OS:OS_handlers_cao>
++ 24	slot size
++ 28	Task name given to Wimp_Initialise, *control* terminated
+
+This message is broadcast when a task calls <Wimp_Initialise>. The fields are set so that it appears to originate from the new task.
+#Line
+See <PRM 3, page 240=>PRM-3:240>.

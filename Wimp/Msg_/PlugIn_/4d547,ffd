@@ -1,0 +1,8 @@
+Message_PlugIn_Unlock  (&4D547)
+#Parent Msg_PlugIn_
++20	Flags, reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	URL for which to unlock the cache file (<string_value=>msg_plugin_string_value>)
+
+This message is reserved. Do not use it.

@@ -1,0 +1,11 @@
+Message_EditRq  (&45D80)
+#Parent MSG_
++ 20	<Data type word=>Msg_ExtEditDatatypes> (filetype + subtype)
++ 24	<Job handle=>Msg_ExtEditJobHandle>
++ 28	<Flag word=>Msg_ExtEditFlags>
++ 32	Name of parent	(max 20 chars including zero)
++ 52	Name of file	(max 20 chars including zero)
+
+This message is broadcasted by a "client" when it wishes someone to edit its data. If "editor" recognises filetype and subtype, it should acknowledge this message by sending an <EditAck=>Msg_45d81> message.
+
+This message is part of the "<External Edit=>Msg_ExtEdit>" protocol.

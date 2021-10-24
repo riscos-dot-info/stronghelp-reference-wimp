@@ -1,0 +1,10 @@
+NewsBase_ListGroups (100)
++24	<list type=>.type>
++32	group name or pattern
+
+A list of active groups matching the given pattern is returned. Most common use will be to return all active groups (pattern "*").
+#Subpage type
+ListGroup types
+Type	List to return
+0	database (those in !NewsDir)
+1	newsfeed (wildcard is ignored)

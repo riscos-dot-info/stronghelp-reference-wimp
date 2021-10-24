@@ -1,0 +1,5 @@
+Message_IRCSendRawData  (&DAB01)
+#Parent Msg_
++ 20	Pointer to data to send (zero terminated)
+
+This message should be broadcast to send raw data direct to the server. This will probably bypass /all/ of the internal processing which the scripts apply to its own output, but may be buffered.

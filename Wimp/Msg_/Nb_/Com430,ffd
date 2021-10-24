@@ -1,0 +1,7 @@
+NewsBase_ModifyUser (430)
++24	<item to modify=>Msg_NB_Com430items>
++28	<flags=>Msg_NB_Com430flags>
++32	user name
++32+n	new value of item
+
+Modifies the user database.

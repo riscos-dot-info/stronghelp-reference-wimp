@@ -1,0 +1,7 @@
+Block :
+#Wrap Off
+0	Window handle
+4	Bounding box	minx (incl)
+8	 		miny (incl)
+12	 		maxx (excl)
+16	 		maxy (excl)

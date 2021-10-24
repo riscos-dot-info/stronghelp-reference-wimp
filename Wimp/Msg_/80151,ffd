@@ -1,0 +1,5 @@
+Message_PSPrinterNotPS  (&80151)
+#Parent MSG_
+This message is sent by !Printers if it receives <PSPrinterQuery=>Msg_8014C> and the currently selected printer is not postscript.
+#Line
+See <PRM 3, page 264=>PRM-3:264>.

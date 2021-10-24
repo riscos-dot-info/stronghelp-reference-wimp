@@ -1,0 +1,20 @@
+Message_EditCursor (&45D85)
+#Parent MSG_
++ 20	reserved
++ 24	<Job handle=>Msg_ExtEditJobHandle>
++ 28	<Flag word=>Msg_ExtEditFlags>
++ 32	New cursor position*
++ 36	New start of selection*
++ 40	New end of selection*
++ 44	Old cursor* (reply only)
++ 48	Old start of selection* (reply only)
++ 52	Old end of selection* (reply only)
+
+This message is sent by a client who wishes the editor to position its cursor exactly. The reply is then returned by the editor to indicate the old cursor, start and end positions.
+
+All data has positions starting with the first unit as 1, the next as 2 and so on. To position a pointer before the start of the data use 0, and after the end use -2.
+
+{fH4}Special cursor meanings{f}
+To leave a field unchanged it should use -1, therefore three -1's will read the current position of the cursor. If there is no concept of cursor or selection then the appropriate fields must be set to -1 by the editor. The editor should never return -2 as a position.
+
+<Unit meanings=>Msg_ExtEditCursorUnits> differ depending on the filetype.

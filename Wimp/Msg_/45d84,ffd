@@ -1,0 +1,14 @@
+Message_EditDataSave (&45D84)
+#Parent MSG_
++ 20	<Job handle=>Msg_ExtEditJobHandle>
++ 24	reserved
++ 28	reserved
++ 32	reserved
++ 36	Estimated size
++ 40	<Filetype=>Filetypes:!Root> ({*}Not{*} Datatype)
++ 44	Proposed leafname
+
+This message is very similar to the standard <DataSave=>Msg_1> message, and from here on the standard Data Transfer Protocol is used. (ie: it is answered with <DataSaveAck=>Msg_2> or <RamFetch=>Msg_6>)
+Note that the "client" can send this message several times.
+
+This message is part of the "<External Edit=>Msg_ExtEdit>" protocol.

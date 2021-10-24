@@ -1,0 +1,5 @@
+ColourPicker_OpenParent (&47703)
+#Parent MSG_
++ 20	<picker handle=>ColourPicker_OpenDialogue>
+
+This message is sent by ColourPicker to ask you to open the parent of this window. This usually occurs when Adjust is pressed over the close icon.

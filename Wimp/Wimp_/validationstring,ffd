@@ -1,0 +1,142 @@
+Validation Strings
+#Prefix .
+Validation string can contain the following commands :
+(Commands can be separated by ";")
+
+#Indent 2
+<A>	Allowable characters.
+<C>	24-bit colours. (3.98+)
+<D>	Mask typed characters.
+<F>	Set font colours.
+<K>	Assign functionality to specific keys
+<L>	Text in icon will be formatted (split)
+<P>	Sets pointer shape and active point
+<R>	Border commands.
+<S>	Spritename.
+#
+#Subpage A
+Validation string 'A'
+*Use*:	Exclude/accept only certain characters into a writeable icon.
+
+*Syntax*:	{Fcode:A[char list][~exclusion list]}
+	Allow characters in 'char list'.
+	Disallow characters in 'exclusion list'
+
+*Examples*:	A0-9a-z~b	Allows 0..9, a, c..z
+	A~X		Allows all chars but X
+	A~\\~		Allows all chars but ~
+	A~		Allows all chars
+#
+#subpage C
+Validation string 'C' (3.98+)
+*Use*:	To allow 24-bit colours to be specified for icons.
+#line
+{/}{*}Wimp 3.98+{*}{/}
+*Syntax*:	{FCode:C\{BBGGRR\}[/\{BBGGRR\}]}
+	First BBGGRR is the foreground colour, the second is the backgound colour.
+	If either colour is not included, then colour is as the <flags word=>wimp_iconflags>
+#line
+{/}{*}Wimp 4.00+{*}{/}
+*Syntax*:	{fCode}C[foreground]/
+		 [background]/
+		 [slabbed-in background]/
+		 [moat]/
+		 [light 3D edge]/
+		 [dark 3D edge]{f}
+	All colours are in the form BBGGRR
+	If either colour is not included, then colour is as the <flags word=>wimp_iconflags>
+#line
+*Examples*:	{FCode:C008000/0080FF}	foreground mid green, background orange.
+	{FCode:CFF00FF}		foreground magenta, background as for flags word.
+	{FCode:C/00FFFF}	foreground as for flags word, background yellow.
+#
+#Subpage D
+Validation string 'D'
+*Use*:	The masking of the contents of icons. Usually used in password icons.
+
+*Syntax*:	{Fcode:Dchar}
+	Displays all typed chars as 'char'
+	Special characters must be preceded by a \\
+
+*Examples*:	{Fcode:D*}	Contents of the icon is displayed as a series of *'s.
+		{Fcode:D\-}	Contents displayed as a series of '-'s
+#
+#Subpage F
+Validation string 'F'
+*Use*:	The definition of outline font colours.
+
+*Syntax*:	{Fcode:Fxy}
+	x = Background
+	y = Foreground.
+	x and y are hexadecimal digits: 0..9,A..F
+
+*Notes*:	This call uses <Wimp_SetFontColours>.
+
+*Examples*:	{Fcode:FA3}	sets background to 10 and foreground to 3.
+	{Fcode:F07}	sets background to 0 and foreground to 7 (default).
+#
+#Subpage K
+Validation string 'K'
+*Use*:	Assigns functionality to specific keys.
+
+*Syntax*:	{Fcode:Koptions}
+
+*Options*:	R	Return moves caret to next writable icon. (Except for last.)
+	A	Up/Down arrow moves to prev/next writable
+	T	Tab moves to next, shift-Tab to previous
+	D	Deleting will also report the keypress
+	N	Task will be notified of all keypresses in icon
+
+*Examples*:	{Fcode:Ktarn}
+		{Fcode}Knd{f}
+#
+#Subpage L
+Validation string 'L'
+*Use*:	Formatting text to fit the icon as best as possible.
+
+*Syntax*:	{Fcode:Lh}
+	h is the vertical spacing between lines of text in OS units. If omitted, 40 units is used (a system font character is 32 OS units high).
+
+*Notes*:	This option can only be used with icons which are horizontally and vertically centred, and do not contain an anti-aliased font. The icon must not be writeable, since the caret would not be positioned correctly inside it.
+
+ 		The height will only take effect on Window Managers after 3.80.
+
+*Examples*:	{Fcode:L40}
+#
+#Subpage P
+Validation string 'P'
+*Use*:	The changing of the pointer shape and active point.
+
+*Syntax*:	{Fcode:Pspritename[,x,y]}
+	spritename is a sprite in the Wimp sprite pool.
+	x and y are the new active points for the pointer.
+
+*Examples*:	{Fcode:Pptr_write,4,4}	Pointer for writable icons.
+		{Fcode:Pptr_menu,6,5}	Pointer for pop-up menu icons.
+#
+#Subpage R
+Validation string 'R'
+*Use*:	Three dimensional borders for icons.
+
+*Syntax*:	{Fcode:Rtype[,pushcolour]}
+	pushcolour is used for when the icon is in a selected state for types 5 and 6.
+*Types*:	1	slab out
+	2	slab in
+	3	ridge
+	4	channel
+	5	action button
+	6	default action
+	7	writable
+
+*Examples*:	{Fcode:R5,3}	Action button which sinks down to colour 3 (Acorn approved type)
+ 		{Fcode:R4}	Acorn recommended border type.
+#
+#Subpage S
+Validation string 'S'
+*Use*:	Including sprites in indirected icons
+
+*Syntax*:	{Fcode:Sspritename[,<selected\>]}
+	selected is used for when the icon is in a selected state.
+
+*Examples*:	{Fcode}	Sswitcher
+		Soptoff,opton{F}

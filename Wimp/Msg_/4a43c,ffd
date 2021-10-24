@@ -1,0 +1,8 @@
+Message_PopupHelp_RequestHelp (&4A43C)
+#Parent MSG_
++ 20	Window handle
++ 24	Icon handle, or -1 if no icon
+ 
+The PopupHelp module sends out this message.
+
+If you want to give some simple help on the given window/icon, then reply with a <PopupHelp_SendHelp=>Msg_4A43B> message.

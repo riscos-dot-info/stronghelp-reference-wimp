@@ -1,0 +1,23 @@
+DDEUtils_ThrowbackSend  (&42588)
+#Parent DDEUtils_
+=>	R0 =	<type=>.type>
+	R2 =	filename of file
+	R3 =	line number in file, for type 1 and 2
+	R4 =	<seriousness=>.seriousness> for type 1, 0 for type 2, and ignored otherwise
+	R5 =	pointer to message, for type 1 and 2
+
+This SWI is used to send data from an application to the throwback handler.
+#subpage type
+DDEUtils_ThrowbackSend type
+Type	Meaning
+#Line
+0	Processing
+1	Error
+2	Information
+#subpage seriousness
+DDEUtils_ThrowbackSend seriousness
+Type	Meaning
+#Line
+0	Warning
+1	Error
+2	Serious Error

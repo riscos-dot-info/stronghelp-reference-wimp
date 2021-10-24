@@ -1,0 +1,25 @@
+ColourPicker block
+#Parent ColourPicker_OpenDialogue
+Offset	Contents
+#line
+0	<dialogue flags=>.flags>
+4	pointer to the title to be used, or 0 for a default title
+8	x coordinate of top left of the visible area of the dialogue
+12	reserved (must be &80000000)
+16	reserved (must be &7FFFFFFF)
+20	y coordinate of top left of the visible area of the dialogue
+24	reserved (must be 0)
+28	reserved (must be 0)
+32+	<colour descriptor=>colourpicker_descriptor>
+#subpage flags
+ColourPicker block flags
+Bit	Meaning if set
+#Line
+0	dialogue has a None button
+1	dialogue has the None button selected
+2-3	dialogue button type, defining when <ColourPicker_Changed=>msg_47701> is issued for it:
+	  0 =	never issued
+	  1 =	issued on any change, except during drags, which give a message at drag end
+	  2 =	issued on any change, including during drags
+	  3 =	reserved
+4	dialogue ignores <Message_HelpRequest=>Msg_503> messages

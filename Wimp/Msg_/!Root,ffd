@@ -1,0 +1,233 @@
+User messages
+#Parent !Root
+Misc :
+#Indent 4
+#Table Columns 3
+<0 Quit=>Msg_0>
+<8 PreQuit=>Msg_8>
+<9 PaletteChange=>Msg_9>
+<A SaveDesktop=>Msg_A>
+<B DeviceClaim=>Msg_B>
+<C DeviceInUse=>Msg_C>
+<E Shutdown=>Msg_E>
+<15 AppControl=>Msg_15>
+<400 FilerOpenDir=>Msg_400>
+<401 FilerCloseDir=>Msg_401>
+<402 FilerOpenDirAt=>Msg_402>
+<403 FilerSelectionDirectory=>Msg_403>
+<404 FilerAddSelection=>Msg_404>
+<405 FilerAction=>Msg_405>
+<406 FilerControlAction=>Msg_406>
+<407 FilerSelection=>Msg_407>
+<500 AlarmSet=>Msg_500>
+<501 AlarmGoneOff=>Msg_501>
+<502 HelpRequest=>Msg_502>
+<503 HelpReply=>Msg_503>
+<504 HelpEnable=>Msg_504>
+<40040 Notify=>Msg_40040>
+<400C0 MenuWarning=>Msg_400C0>
+<400C1 ModeChange=>Msg_400C1>
+<400C2 TaskInitialise=>Msg_400C2>
+<400C3 TaskCloseDown=>Msg_400C3>
+<400C4 SlotSize=>Msg_400C4>
+<400C5 SetSlot=>Msg_400C5>
+<400C6 TaskNameRq=>Msg_400C6>
+<400C7 TaskNameIs=>Msg_400C7>
+<400C8 TaskStarted=>Msg_400C8>
+<400C9 MenusDeleted=>Msg_400C9>
+<400CA Iconize=>Msg_400CA>
+<400CB WindowClosed=>Msg_400CB>
+<400CC WindowInfo=>Msg_400CC>
+400CD Swap
+400CE ToolsChanged
+<400CF FontChanged=>Msg_400CF>
+<400D0 IconizeAt=>Msg_400D0>
+#EndTable
+
+#Indent
+The block transfer model (Clipboard, Drag'n drop) :
+#Indent 4
+#Table Columns 2
+<F ClaimEntity=>Msg_F>
+<10 DataRequest=>Msg_10>
+<11 Dragging=>Msg_11>
+<12 DragClaim=>Msg_12>
+#EndTable
+# Gerph> 13 cannot be documented because it's not out of Acorn yet !
+
+#Indent
+Data Transfer protocol :
+#Indent 4
+#Table Columns 3
+<1 DataSave=>Msg_1>
+<2 DataSaveAck=>Msg_2>
+<3 DataLoad=>Msg_3>
+<4 DataLoadAck=>Msg_4>
+<5 DataOpen=>Msg_5>
+<6 RAMFetch=>Msg_6>
+<7 RAMTransmit=>Msg_7>
+<D DataSaved=>Msg_D>
+#EndTable
+
+#Indent
+<ColourPicker=>ColourPicker_> protocol :
+#Indent 4
+#Table Columns 2
+<47700 ColourChoice=>Msg_47700>
+<47701 ColourChanged=>Msg_47701>
+<47702 CloseRequest=>Msg_47702>
+<47703 OpenParent=>Msg_47703>
+#EndTable
+
+#indent
+<PlugIn protocol=>Msg_Plugin_> :
+#Indent 4
+#Table Columns 3
+<4D540 PlugIn_Open=>Msg_Plugin_4D540>
+<4D541 PlugIn_Opening=>Msg_Plugin_4D541>
+<4D542 PlugIn_Close=>Msg_Plugin_4D542>
+<4D543 PlugIn_Closed=>Msg_Plugin_4D543>
+<4D544 PlugIn_Reshape=>Msg_Plugin_4D544>
+<4D545 PlugIn_Reshape_Request=>Msg_Plugin_4D545>
+<4D546 PlugIn_Focus=>Msg_Plugin_4D546>
+<4D547 PlugIn_Unlock=>Msg_Plugin_4D547>
+<4D548 PlugIn_StreamNew=>Msg_Plugin_4D548>
+<4D549 PlugIn_StreamDestroy=>Msg_Plugin_4D549>
+<4D54A PlugIn_StreamWrite=>Msg_Plugin_4D54A>
+<4D54B PlugIn_StreamWritten=>Msg_Plugin_4D54B>
+<4D54C PlugIn_StreamAsFile=>Msg_Plugin_4D54C>
+<4D54D PlugIn_URLAccess=>Msg_Plugin_4D54D>
+<4D54E PlugIn_Notify=>Msg_Plugin_4D54E>
+<4D54F PlugIn_Status=>Msg_Plugin_4D54F>
+<4D550 PlugIn_Busy=>Msg_Plugin_4D550>
+<4D551 PlugIn_Action=>Msg_Plugin_4D551>
+<4D552 PlugIn_Abort=>Msg_Plugin_4D552>
+#EndTable
+
+#Indent
+Throwback protocol :
+#Indent 4
+#Table Columns 3
+<42580 ThrowbackStart=>Msg_42580>
+<42581 ProcessingFile=>Msg_42581>
+<42582 ErrorsIn=>Msg_42582>
+<42583 ErrorDetails=>Msg_42583>
+<42584 ThrowbackEnd=>Msg_42584>
+<42585 InfoForFile=>Msg_42585>
+<42586 InfoDetails=>Msg_42586>
+#EndTable
+
+#Indent
+Taskwindow protocol :
+#Indent 4
+#Table Columns 3
+<808C0 TW_Input=>Msg_808c0>
+<808C1 TW_Output=>Msg_808c1>
+<808C2 TW_Ego=>Msg_808c2>
+<808C3 TW_Morio=>Msg_808c3>
+<808C4 TW_Morite=>Msg_808c4>
+<808C5 TW_NewTask=>Msg_808c5>
+<808C6 TW_Suspend=>Msg_808c6>
+<808C7 TW_Resume=>Msg_808c7>
+#EndTable
+
+#Indent
+Print protocol :
+#Indent 4
+#Table Columns 3
+<80140 PrintFile=>Msg_80140>
+<80141 WillPrint=>Msg_80141>
+<80142 PrintSave=>Msg_80142>
+<80143 PrintInit=>Msg_80143>
+<80144 PrintError=>Msg_80144>
+<80145 PrintTypeOdd=>Msg_80145>
+<80146 PrintTypeKnown=>Msg_80146>
+<80147 SetPrinter=>Msg_80147>
+<8014C PSPrinterQuery=>Msg_8014C>
+<8014D PSPrinterAck=>Msg_8014D>
+<8014E PSPrinterModified=>Msg_8014E>
+<8014F PSPrinterDefaults=>Msg_8014F>
+<80150 PSPrinterDefaulted=>Msg_80150>
+<80151 PSPrinterNotPS=>Msg_80151>
+<80152 ResetPrinter=>Msg_80152>
+<80153 PSIsFontPrintRunning=>Msg_80153>
+#EndTable
+
+#Indent
+DDE Make protocol :
+#Indent 4
+#Table Columns 2
+<81400 DDE_ToolInfo=>Msg_81400>
+#EndTable
+
+#Indent
+URI protocol :
+#Indent 4
+#Table Columns 2
+<4E380 URI_MStarted=>InetSWIs:Msg_4E380>
+<4E381 URI_MDying=>InetSWIs:Msg_4E381>
+<4E382 URI_MProcess=>InetSWIs:Msg_4E382>
+<4E383 URI_MReturnResult=>InetSWIs:Msg_4E383>
+<4E384 URI_MProcessAck=>InetSWIs:Msg_4E384>
+#EndTable
+
+#Indent
+<External Edit=>Msg_ExtEdit> protocol :
+#Indent 4
+#Table Columns 3
+<45D80 EditRq=>Msg_45D80>
+<45D81 EditAck=>Msg_45D81>
+<45D82 EditReturn=>Msg_45D82>
+<45D83 EditAbort=>Msg_45D83>
+<45D84 EditDataSave=>Msg_45D84>
+<45D85 EditCursor=>Msg_45D85>
+#EndTable
+
+#Indent
+OLE protocol :
+#Indent 4
+#Table Columns 2
+<80E1E OLE_FileChanged=>Msg_80E1E>
+<80E21 OLE_OpenSession=>Msg_80E21>
+<80E22 OLE_OpenSessionAck=>Msg_80E22>
+<80E23 OLE_CloseSession=>Msg_80E23>
+#EndTable
+
+#Indent
+<NewsBase mail=>Msg_NewsBase> protocol :
+#Indent 4
+#Table Columns 2
+<83580 NewsBase_Command=>Msg_83580>
+<83581 NewsBase_Reply=>Msg_83581>
+<83582 NewsBase_Update=>Msg_83582>
+#EndTable
+
+#Indent
+IRClient protocol :
+#Indent 4
+#Table Columns 2
+<DAB00 IRC_SendData=>Msg_DAB00>
+<DAB01 IRC_SendRawData=>Msg_DAB01>
+#EndTable
+
+#Indent
+ANT Internet Suite protocol:
+#Indent 4
+#Table Columns 2
+<46005 ANT_SendAction=>Msg_46005>
+#EndTable
+
+#Indent
+PopupHelp module:
+#Indent 4
+#Table Columns 2
+<4A43B PopupHelp_SendHelp=>Msg_4A43B>
+<4A43C PopupHelp_RequestHelp=>Msg_4A43C>
+#EndTable
+
+#Indent
+Unknown messages :
+#Indent 4
+#Table Columns 2
+<450C0 'Connect'=>Msg_450C0>
+#EndTable

@@ -1,0 +1,14 @@
+Message_DataRequest  (&10)
+#Parent MSG_
++ 20	window handle
++ 24	internal handle
++ 28	x
++ 32	y
++ 36	= 4 (send clipboard)
++ 40	list of filetypes in order of preference, terminated by -1
+
+Receiver should ignore this message if bit 2 isn't set.
+
+This message is broadcasted by a task who wants to paste the contents of the clipboard into its own document. When the owner of the clipboard receives this message, it should choose the earliest filetype in the list that it can provide (or use native format if none) and reply with a <DataSave=>Msg_1> message.
+
+When the "Paster" receives this, it should check the filetype and just ignore the message if it can't handle it.

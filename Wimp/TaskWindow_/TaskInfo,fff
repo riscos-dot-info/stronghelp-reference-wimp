@@ -1,0 +1,8 @@
+TaskWindow_TaskInfo
+#Parent TaskWindow_
+=>	R0 =	0 (other reason codes are reserved)
+<=	R0 =	0 if not in TaskWindow, otherwise in a TaskWindow.
+
+This SWI is used to check if the program is currently running inside a TaskWindow.
+#Line
+See <PRM 3, page 322=>PRM-3:322>.

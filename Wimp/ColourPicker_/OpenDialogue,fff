@@ -1,0 +1,22 @@
+ColourPicker_OpenDialogue (&47702)
+#Parent ColourPicker_
+=>	R0 =	<flags=>.flags>
+	R1 =	pointer to <colour picker block=>colourpicker_block>
+<=	R0 =	picker handle
+	R1 =	window handle
+
+This SWI creates and displays a colour picker window. The block passed need not be static, and defines the initial values of the window.
+
+When using menu-like pickers you should always accept the MenusDeleted message (&400C9) otherwise things will break.
+# Gerph> Actually when this happens it is the /next/ instance of a colour
+#        picker which will kill the machine because the windowmanager tries
+#        to create the 'wrong' window.
+#subpage flags
+ColourPicker dialogue flags
+Bit	Meaning
+#Line
+0-1	0 =	normal dialogue
+	1 =	menu dialogue
+	2 =	toolbox dialogue (has close and back icons)
+	3 =	submenu dialogue
+other	reserved (must be 0)

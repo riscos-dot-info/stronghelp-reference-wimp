@@ -1,0 +1,9 @@
+TaskNameIs (&400C7)
+#Parent MSG_
++ 20	Handle of task
++ 24	Task's slotsize
++ 28	Taskname
+
+This message is sent by the task manager in response to a <TaskNameRq=>Msg_400C6> message. RISC OS 3 provides <TaskManager_TaskNameFromHandle>, which should be used in preference.
+#Line
+See <PRM 3, page 242=>PRM-3:242>.

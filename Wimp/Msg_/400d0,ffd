@@ -1,0 +1,15 @@
+Message_IconizeAt (&400D0) [4.0+]
+#Parent MSG_
+ + 20	window handle
+ + 24	task handle of window being iconised
+ + 28	x co-ordinate
+ + 32	y co-ordinate
+ + 36	<flags=>.flags>
+#line
+*Note*:	In the absence of this message, Pinboard will just position the window icon beneath the window's close button.
+#
+#subpage flags
+Message_IconizeAt flags
+/Bit/	/Meaning/
+0	Window was iconised with a shift-click on close button
+	thus êiconise at buttonë behaviour is able to work.

@@ -1,0 +1,9 @@
+SlotSize (&400C4)
+#Parent MSG_
++ 4	Task Handle which owns slot
++ 20	New slotsize
++ 24	New size of the Next slot
+
+This message is broadcast after <Wimp_SlotSize> is called. It is mainly used by the task manager to update its display. This message should not be acknowledged.
+#Line
+See <PRM 3, page 241=>PRM-3:241>.

@@ -1,0 +1,6 @@
+Message_OLECloseSession  (&80E23)
+#Parent MSG_
++ 20	Message type:	0 (all other values reserved for future expansion)
++ 24	Session number (-1 for all)
+
+This message informs one or all clients that one or all of the servers sessions are terminated (Task quit or click on close window)

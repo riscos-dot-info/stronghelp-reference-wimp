@@ -1,0 +1,7 @@
+Wimp States
+#Parent Wimp_ReadSysInfo
+Value	Meaning
+#Line
+#Wrap Off
+0	Command line
+1	In desktop

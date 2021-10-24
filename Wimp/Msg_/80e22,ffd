@@ -1,0 +1,9 @@
+Message_OLEOpenSessionAck  (&80E22)
+#Parent MSG_
+Same data as for <Message_OLEOpenSession=>Msg_80e21>
+
+The OLE server replies to OLE_OpenSession by changing message_id to OLE_OpenSessionAck, setting your_ref = my_ref, and sending it back. Client then knows which task is editing its file.
+
+It is returned in reply to an OLEOpenSession message. Server has loaded file, and has established the link.
+
+What should happen if server gets an error while reading file? (Protection or not enough memory) It should probably send this message immediately followed by an OLECloseSession message.

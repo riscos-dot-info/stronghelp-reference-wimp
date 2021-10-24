@@ -1,0 +1,6 @@
+NewsBase Update type 12
++24	reserved
++28	reserved
++32	newsgroup name
+
+This is broadcast when expiry has completed on a group.

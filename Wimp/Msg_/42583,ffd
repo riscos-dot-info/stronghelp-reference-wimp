@@ -1,0 +1,5 @@
+DDEUtils_ErrorDetails  (&42583)
+#Parent MSG_
++ 20	Linenumber
++ 24	0,1,2 for warning,error,serious
++ 28	Description (ctrl terminated)

@@ -1,0 +1,24 @@
+Icon flags
+Bits	Meaning when set
+#Line
+0	Icon contains text.
+1	Icon contains a sprite.
+2	Icon has a border.
+3	Contents centered horizontally.
+4	Contents centered vertically.
+5	Icon has a filled background.
+6	Text is anti-aliased font.
+7	Icon needs to be redrawn completely.
+8	Icon data is indirected.
+9	Text is right-justified.
+10	If selected with adjust, don't cancel others.
+11	Display sprite at half size.
+12-15	<Icon button type=>Wimp_iconbutton>.
+16-19	Exclusive Selection Group.
+20	Bit 20 is not in the ESG from RISC OS 3.10
+	onwards, and thus is reserved.
+21	Icon is selected by user, and is inverted.
+22	Icon is un-selectable (shaded)
+23	Icon is deleted.
+24-27	Foreground colour	\\ If bit 6 = 1 then this
+28-31	Background colour	/  is the fonthandle.

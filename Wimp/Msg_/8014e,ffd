@@ -1,0 +1,5 @@
+Message_PSPrinterModified  (&8014E)
+#Parent MSG_
+This message is sent by !FontPrint when the font list file has changed. The printer driver should re-read the file on receipt.
+#Line
+See <PRM 3, page 264=>PRM-3:264>.

@@ -1,0 +1,10 @@
+Message FilerControlAction (&406)
+#Parent MSG_
++ 20	control:
+	0	acknowledge control message
+	1	verbose on (show the action window)
+	2	verbose off (hide the action window)
+
+Sending this message to a <Filer_Action=>FilerAction_> task performs various controls. Control 0 can be used to see if the task is still busy.
+#Line
+See <PRM 3, page 237=>PRM-3:237>.

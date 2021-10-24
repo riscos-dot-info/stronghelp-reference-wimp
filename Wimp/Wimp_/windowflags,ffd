@@ -1,0 +1,52 @@
+Window flags
+Bits	Wimp	Meaning when set
+#Line
+0	Old	Has title bar
+1	 	Window is moveable (draggable).
+2	Old	Vertical scroll bar
+3	Old	Horizontal scroll bar
+4	 	Window can be drawn completely by Wimp.
+5	 	Window is a pane.
+6	 	Window can be opened/dragged outside screen.
+7	Old	Has no quit or back boxes
+8	 	Return Scroll Request with autorepeat.
+9	 	Return Scroll Request without autorepeat.
+10	 	Treat colours given as GCOL numbers {f25}Þ{f} 0Œ254
+11	 	Don't allow any window below this one.
+12	 	Trap keypresses.
+13	3.10	Force window to stay on screen
+14	3.10	Ignore right-extent when dragging size-box
+15	3.10	Ignore bottom-extent when dragging size-box
+16	 	Window is open.
+17	 	Window is fully visible.
+18	 	Window has been toggled to full size.
+19	 	Open Window Request, is caused by Toggle Size.
+20	 	Window has the input focus.
+21	3.10	Force window to screen on next <Wimp_OpenWindow>
+22	 	<Toggle method=>.toggle>
+23	3.98	Furniture window {/}[if child]{/}
+	4.00	Foreground window
+24	 	Window has Back icon
+25	 	Close icon
+26	 	Title Bar
+27	 	Toggle size icon
+28	 	Vertical scrollbar
+29	 	Adjust Size icon
+30	 	Horizontal Scrollbar
+31	 	1 for using new format, 0 for old
+#subpage toggle
+Window Flags - bit 22 - Toggle method
+This bit is overwritten by the Wimp and may be read using <Wimp_GetWindowState>. If set, it indicates that the window is, or /will be/, toggled to full size without covering the icon bar. Note that this behaviour is different to bit 18, which is set if the window is, or /has been/, toggled to full size including the icon bar.
+
+Toggling behaviour can only be properly resolved after <Wimp_Poll> returns an <Open_Window_Request=>Wimp_Poll2> reason code and before the subsequent call to <Wimp_OpenWindow>. Flags bit 19 is set, by definition; applications may distinguish between different types of toggle-size clicks using the following truth table:
+
+#indent 4
+Operation	Bit 22	Bit 21	Bit 18
+#line
+To full size		0	1	0
+From full size		0	0	1
+To semi-full size	1	1	0
+From semi-full size	0	0	0
+#indent
+
+These are the only values that can be returned in combination with bit 19 being set.

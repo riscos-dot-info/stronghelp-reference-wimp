@@ -1,0 +1,12 @@
+Exernal Edit Variable
+External editors use a variable similar to the Alias$@RunType_xxx variable which is currently in use for unknown file run requests.
+
+A client wishing to run an editor can then execute the command held in the most appropriate  Alias$@EditType_??? system variable, and then start broadcasting EditRq messages again.
+
+If no Alias$@EditType_??? variable is set, or if it fails for any reason to successfully launch an editor (your retried EditRqs will fail), then you should give up and report the problem to the user.
+
+It is important that this variable is initialised in the !Boot file of an application, for example :
+#fCode
+   Set Alias$@RunType_FFF Run \<Obey$Dir>.!Run %%*0
+   Set Alias$@EditType_FFF Run \<Obey$Dir>.!Run
+#f

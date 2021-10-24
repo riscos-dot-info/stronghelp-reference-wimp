@@ -1,0 +1,6 @@
+NewsBase_AddGroup (120)
++32	group name or pattern
+
+Adds group(s) to the active list. This is not the same as 'subscribing' a group for an individual user (which should be handled solely by the client program) - it adds the group(s) to the news feed. May not be supported or appropriate for all transport types.
+
+For ka9q, if more than one newsfeed is present (multiple xxxGroup files), the group(s) are added to the largest file (it is assumed that this is the primary server).

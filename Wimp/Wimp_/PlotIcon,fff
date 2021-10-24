@@ -1,0 +1,13 @@
+Wimp_PlotIcon  (&400E2)
+#Parent Wimp_
+=>	R1 =	<icon block=>wimp_iconblock>
+	R3 =	x offset, if outside redraw/update loop
+	R4 =	y offset, if outside redraw/update loop
+<=	R0 corrupt
+
+This SWI can be used to plot a 'virtual' icon during a window redraw/update loop. RISC OS 3 allows its use outside a window redraw/update loop with absolute screen coordinates.
+
+Note: If used outside the redraw/update loop, the graphic area will be reset to the current screen mode. This is not good if outputing to a sprite.
+# Gerph> Thanks Rick, this is a good-'un :-)
+#Line
+See <PRM 3, page 186=>PRM-3:186>.

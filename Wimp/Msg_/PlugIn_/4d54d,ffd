@@ -1,0 +1,22 @@
+Message_PlugIn_URLAccess  (&4D54D)
+#Parent Msg_PlugIn_
++20	Flag bits:
+	  0:	Set; return a <Message_PlugIn_Notify=>Msg_PlugIn_4D54E> message on completion
+	  1:	Set; POST to the URL
+	 	Clear; GET from the URL
+	If bit 1 is set :
+	  2:	Set; POST a file
+	 	Clear; POST a block of memory
+	Bits 3-31:	reserved (must be zero)
++24	PlugIn instance handle
++28	Browser instance handle
++32	URL to access (<string_value=>msg_plugin_string_value>)
++36	Window target (<string_value=>msg_plugin_string_value>), or 0 to return to the plugin.
++40	Notify data to be returned
++44	Length of data to be POSTed
++48	If bit 2 is set; filename (<string_value=>msg_plugin_string_value>)
+	If bit 2 is clear; pointer to data (<string_value=>msg_plugin_string_value>)
+
+This message is sent to a browser to perform various actions on a URL.
+
+If the window target is "" then the URL is fetched to the window containing the plugin. If the window target is "\<anything\>" then it will be fetched to the given window name. If the target value is actually 0 then a stream is opened and data is sent to the plugin.

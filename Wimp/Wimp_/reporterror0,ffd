@@ -1,0 +1,29 @@
+Flags for Wimp_ReportError
+Bit	Meaning when set
+#Line
+0	'OK' box
+1	'Cancel' box
+2	Highlight Cancel (or OK if no Cancel box)
+3	Don't do 'Press space or click mouse to continue'
+4	Don't prefix title with 'Error from '
+5	Return immediately with R1=0 and box open
+6	Simulate iconclick in box according to bits 0+1
+7	Don't beep
+8	Use categories
+9-11	<Category=>.Category>
+12-23	Reserved. Must be 0
+24-27	Number to return for "Continue" of "may have gone wrong" (4.00+)
+28-31	Number to return for "Quit" of "may have gone wrong" (4.00+)
+#subpage Category
+Wimp_ReportError categories
+\#	Meaning
+#Line
+1	Informational.
+2	Warning.
+3	Program (ie non-desktop) message (stop).
+4	Question; usually used with the button string.
+5	User icon 1 (ie undefined)
+6	User icon 2 (ie undefined)
+7	Program again (do not use)
+
+These define the type of error under RO3.5 and display the type of the error. Bit 8 must be set.

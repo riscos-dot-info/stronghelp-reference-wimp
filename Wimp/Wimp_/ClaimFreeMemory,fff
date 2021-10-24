@@ -1,0 +1,12 @@
+Wimp_ClaimFreeMemory  (&400EE)
+#Parent Wimp_
+{f25}Þ{f}	R0 =	1 to claim, 0 to release
+	R1 =	amount required
+
+{f25}Ü{f}	R0 corrupt
+	R1 =	amount available
+	R2 =	pointer to start address, or 0 if not enough
+#line
+This call is analogous to <OS_ClaimScreenMemory=>OS:OS_ClaimScreenMemory>. It claims all the memory in the free-pool. The memory must be accessed in SVC-mode, and <Wimp_Poll> should not be called while memory is reserved.
+#line
+*Deprecated* since RISC OS 3.5. See also <PRM 3-210=>PRM-3:210>.

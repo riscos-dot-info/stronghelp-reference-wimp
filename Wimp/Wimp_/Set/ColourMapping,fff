@@ -1,0 +1,15 @@
+Wimp_SetColourMapping  (&400F8)
+#Parent Wimp_
+=>	R1 =	pointer to palette to be used for converting Wimp colours to physical colours; or
+	 	-1	to use the default Wimp palette
+	 	0	to use the palette defined by <Wimp_SetPalette>
+	R2 =	pointer to 2-byte array for mapping 1bpp sprites to Wimp colours
+	R3 =	pointer to 4-byte array for mapping 2bpp sprites to Wimp colours
+	R4 =	pointer to 16-byte array for mapping 4bpp sprites to Wimp colours
+	R5, R6, R7 must be 0
+
+This call is used to change the way in which the Wimp maps its own colours to physical colours.
+
+The palette specified in R1 is 16 words long and in &BBGGRRxx format.
+#Line
+See <PRM 3, page 228=>PRM-3:228>.

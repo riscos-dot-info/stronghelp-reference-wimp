@@ -1,0 +1,14 @@
+Message_PrintTypeOdd  (&80145)
+#Parent MSG_
++ 40	<filetype=>Filetypes:!Root> of data
++ 44	filename
+
+This message is sent by !Printers when it doesn't know how to print the file. The filetype and filename cannot be relied on if we have just come from a <PrintSave=>Msg_80142> message, though why the PRM's state this, I'm not sure.
+
+If an application knows how to print that filetype (doh, how can you do this if you can't rely on it ?) then it should respond with <PrintTypeKnown=>Msg_80146> and either :
+ è	Print the file to Printer:
+ è	Output the file (does this mean print again ?) to Printer$Temp /before/ responding with PrintTypeKnown.
+
+If it does not know the type, then it should ignore the message and await a <DataSaveAck=>Msg_2> (which may never arrive if another application knows how to print the file) to queue the file for later printing.
+#Line
+See <PRM 3, page 263=>PRM-3:263>.

@@ -1,0 +1,8 @@
+ColourPicker_ReadDialogue (&47705)
+#Parent ColourPicker_
+=>	R0 =	flags (reserved, must be 0)
+	R1 =	<picker handle=>ColourPicker_OpenDialogue>
+	R2 =	pointer to <colour picker block=>colourpicker_block>, or 0 to read size
+<=	R1 =	required size of block, if queried
+
+This SWI reads the current state of the dialogue.

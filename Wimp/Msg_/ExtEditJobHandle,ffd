@@ -1,0 +1,6 @@
+Job Handle
+The Job Handle consists of two 16 bit values :
+  Bit 0-15	: "Client" handle
+  Bit 16-31	: "Editor" handle
+
+Both values should be non-zero.

@@ -1,0 +1,5 @@
+TaskWindow_Morite  (&808C4)
+#Parent MSG_
+This message is sent by parent to kill child. 
+#Line
+See <PRM 3, page 266=>PRM-3:266>.

@@ -1,0 +1,11 @@
+Wimp_GetWindowOutline  (&400E0)
+#Parent Wimp_
+=>	R1 = block containing window handle
+<=	R0 corrupt
+	Block at R1 <updated=>wimp_getwindowoutline0>
+
+This SWI returns the coordinates of a rectangle which completely covers the window, borders and all.
+
+Under the nested Wimp, this call will now work if the window has not been opened. See <Wimp_ForceRedraw> for details of how to redraw the titlebar under the nested Wimp.
+#Line
+See <PRM 3, page 182=>PRM-3:182>.

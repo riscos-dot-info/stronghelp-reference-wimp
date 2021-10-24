@@ -1,0 +1,17 @@
+Sending UserMessages (17,18,19)
+#Parent Wimp_SendMessage
+17	UserMessage			Doesn't expect a reply
+18	UserMessage_Recorded		If no-one answers, it returns.
+19	<UserMessage_Acknowledge=>Wimp_sendmessage3>  	Tell Wimp we'll handle it.
+
+Format of block :
+ 0	length of block, including header (maximum 256 bytes)
+ 12	your ref (0 for original message, not a reply)
+ 16	<message code=>Msg_>
+ 20	..data..
+
+<Wimp_SendMessage> fills out the following fields:
+ 4	Handle of sender
+ 8	my ref (A reply to this message will use this.)
+
+{*}Note:{*} In versions of the Window Manager prior to 4.00, message blocks in dynamic areas will not have their sender and my_ref fields filled.

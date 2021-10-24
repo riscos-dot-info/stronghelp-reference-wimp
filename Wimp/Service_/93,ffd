@@ -1,0 +1,5 @@
+Service_ColourPickerLoaded (&93)
+#Parent OS:service_index
+=>	R1 =	&B7 (reason code)
+
+This service is for internal use only.

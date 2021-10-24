@@ -1,0 +1,5 @@
+Message_PSIsFontRunning  (&80153)
+#Parent MSG_
+If !FontPrint is running it will acknowledge this message.
+#Line
+See <PRM 3, page 265=>PRM-3:265>.

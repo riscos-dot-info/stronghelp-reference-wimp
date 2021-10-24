@@ -1,0 +1,9 @@
+Flags
+Bit	Meaning when set
+#Line
+ 1	Sending data from selection
+ 2	Sending data from clipboard
+ 3	Source data will be deleted
+ 4	Do NOT claim this message
+
+All other bits reserved and 0.

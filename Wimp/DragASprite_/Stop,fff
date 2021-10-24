@@ -1,0 +1,7 @@
+DragASprite_Stop  (&42401)
+#Parent DragASprite_
+No params
+
+This SWI terminates any current drag operation and releases any drag-a-sprite workspace claimed to do a drag. It is expected that this SWI will be called when the <User Dragb Box=>Wimp_Poll7> reason is received by the application.
+#Line
+See <PRM 3, page 302=>PRM-3:302>.

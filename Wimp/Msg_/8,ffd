@@ -1,0 +1,16 @@
+Message_PreQuit (8)
+#Parent Msg_
++ 20	flag, 0 if closedown, not if single-quit
+	(check the block length - if \< 20 bytes assume a flag word of 0)
+
+This message is broadcasted when Ctrl-Shift F12 is pressed. It is also sent to a specific task, when the user tries to quit it from the task display menu.
+
+If you have no objections to being killed, then ignore this message, and you will eventually receive a <Quit message=>Msg_0>.
+
+If you object to being killed (unsaved data..), you should <acknowledge=>wimp_sendmessage3> this message, and then open a dialogue box asking the user what to do. If the user chooses to quit and the 'flag' was zero, you are supposed to restart the closedown sequence by emitting a Ctrl-Shift F12 (508), using <Wimp_ProcessKey>.
+
+The 'flag' is new under RO3. Under RO2 there was no way of knowing if only your task was being quit, or the whole desktop.
+
+Note that the protocol is still buggy, in that if closedown has been initiated by 'Exit' on the taskmanager menu, then it will be restarted by the program as 'Shutdown'
+#Line
+See <PRM 3, page 230=>PRM-3:230>.

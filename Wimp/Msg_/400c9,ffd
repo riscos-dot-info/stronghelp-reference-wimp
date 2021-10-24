@@ -1,0 +1,7 @@
+Message_MenusDeleted  (&400C9)
+#Parent MSG_
++ 20	Pointer to menu block (<Wimp_CreateMenu>)
+
+This message is sent when your menu was closed without a selection having been made. 
+#Line
+See <PRM 3, page 242=>PRM-3:242>.

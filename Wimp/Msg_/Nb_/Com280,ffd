@@ -1,0 +1,5 @@
+NewsBase_CancelArticle (280)
++32	group name(s)
++32+n	message-ID string
+
+Sends a cancel message for the given article ID.

@@ -1,0 +1,21 @@
+Message_PlugIn_Closed  (&4D543)
+#Parent Msg_PlugIn_
++12	my_ref field from <Message_PlugIn_Close=>Msg_PlugIn_4d542> (if applicable)
+
++20	<Flags=>.flags>
++24	PlugIn instance handle of the closed instance
++28	Browser instance handle of the closed instance
+
+If error flag is set:
++32	Error number
++36	Error message to be displayed by browser (zero-terminated)
+
+This message is sent by a plugin to indicate that an instance has been closed. Usually it is a reply to PlugIn_Close.
+#Subpage flags
+PlugIn_Closed flags
+Bit	Meaning if set
+#Line
+0	PlugIn will exit after this message
+1	this message is *not* in reply to Message_PlugIn_Close
+2	there is an error block at +32
+others	reserved (must be zero)

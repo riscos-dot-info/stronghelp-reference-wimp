@@ -1,0 +1,7 @@
+Message_Shutdown  (14)
+#Parent MSG_
++ 20	0 (all flags reserved)
+
+This message is broadcast when <TaskManager_Shutdown> is called with bit 3 of R0 set, to indicated a forced shutdown, for example due to power failure.
+#Line
+See <PRM 3, page 233=>PRM-3:233>.

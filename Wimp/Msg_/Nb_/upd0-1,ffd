@@ -1,0 +1,4 @@
+NewsBase Update type 0 and 1
++24	number of articles in group
++28	last article in group
++32	Name of newsgroup created or deleted

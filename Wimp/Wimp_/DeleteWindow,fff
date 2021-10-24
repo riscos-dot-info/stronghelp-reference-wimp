@@ -1,0 +1,8 @@
+Wimp_DeleteWindow  (&400C3)
+#Parent Wimp_
+=>	R1 =	pointer to block :
+	 	  0  Window handle
+
+This SWI closes the window if it is open, and then reallocates the memory used in Wimp workspace. (indirected data in Application workspace, is left alone of course).
+#Line
+See <PRM 3, page 108=>PRM-3:108>.

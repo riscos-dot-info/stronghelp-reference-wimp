@@ -1,0 +1,8 @@
+NewsBase Update type 4, 5 and 6
++24	user's group number
++28	<user flags=>Msg_NB_Rep400flags>
++32	user name
++32+n	home directory
++32+m	real name
+
+Message 6 (User Modified) is sent whenever a user {/}may{/} have been modified.

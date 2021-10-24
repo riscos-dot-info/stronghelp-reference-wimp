@@ -1,0 +1,5 @@
+DragASprite
+#Parent !Root
+#Prefix DragASprite_
+<Start>
+<Stop>

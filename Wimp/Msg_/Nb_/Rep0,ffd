@@ -1,0 +1,11 @@
+NewsBase_StartupReply (0)
++24	actual NewsBase version
++28	<flags=>.flags>
+
+This is returned by NewsBase to indicate that it is present. NewsBase will also broadcast this message automatically on startup.
+#Subpage flags
+Startup reply
+Bit	Meaning
+#Line
+0-7	patch level
+8-15	pre-release number (100 for standard release, \< 100 for development versions)
