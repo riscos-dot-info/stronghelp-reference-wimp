@@ -9,7 +9,7 @@ This SWI creates and displays a colour picker window. The block passed need not 
 
 When using menu-like pickers you should always accept the MenusDeleted message (&400C9) otherwise things will break.
 # Gerph> Actually when this happens it is the /next/ instance of a colour
-#        picker which will kill the machine because the windowmanager tries
+#        picker which will kill the machine because the Window Manager tries
 #        to create the 'wrong' window.
 #subpage flags
 ColourPicker dialogue flags

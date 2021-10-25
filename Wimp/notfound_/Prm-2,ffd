@@ -1,7 +1,7 @@
 PRM-2
 #Parent !Root
-The Programmers Reference Manuals are a 'definitive' set of documents detailing the workings of RISC OS 3.1. Though it has many omissions and contains much that is apocryphal, or at least wildly inaccurate, it scores over this newer, more informal work in two important respects :
+The Programmers Reference Manuals are a 'definitive' set of documents detailing the workings of RISC OS 3. Though it has many omissions and contains much that is apocryphal, or at least wildly inaccurate, it scores over this newer, more informal work in two important respects :
 
 First, it is slightly more detailed; and secondly it can be used to sit on if you are very short.
 
-They can be obtained from your Acorn dealer for around £100.
+They can be obtained from your RISC OS dealer for around £100.

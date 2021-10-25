@@ -14,4 +14,4 @@ Filter Wimp_BlockCopy code
 
 <=	R0, R1, R3-R10 preserved
 
-This code is called when the wimp is about to copy a rectangle across the screen. The current and previous graphics cursors describe the area to be copied, but the operation has not yet been performed.
+This code is called when the Wimp is about to copy a rectangle across the screen. The current and previous graphics cursors describe the area to be copied, but the operation has not yet been performed.

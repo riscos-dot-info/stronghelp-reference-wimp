@@ -102,7 +102,7 @@ Validation string 'L'
 
 *Notes*:	This option can only be used with icons which are horizontally and vertically centred, and do not contain an anti-aliased font. The icon must not be writeable, since the caret would not be positioned correctly inside it.
 
- 		The height will only take effect on Window Managers after 3.80.
+ 		The height will only take effect on Window Manager 3.80 and later.
 
 *Examples*:	{Fcode:L40}
 #
@@ -131,8 +131,8 @@ Validation string 'R'
 		6	default action
 		7	writable
 
-*Examples*:	{Fcode:R5,3}	Action button which sinks down to colour 3 (Acorn approved type)
- 		{Fcode:R4}	Acorn recommended border type.
+*Examples*:	{Fcode:R5,3}	Action button which sinks down to colour 3 (Style Guide approved type)
+ 		{Fcode:R4}	Style Guide recommended border type.
 #
 #Subpage S
 Validation string 'S'
@@ -157,11 +157,11 @@ Validation string 'T'
 #
 #subpage X
 Validation string 'X'
-*Use*:	Disable the wimp's calculation of text in text+sprite icons on the iconbar.
+*Use*:	Disable the Wimp's calculation of text in text+sprite icons on the iconbar.
 
 *Syntax*:	{fCode:X}
 
-*Notes*:	When you place a text+sprite icon on the iconbar, the wimp will automatically calculate the width of the text and hence the icon. If your application may change the text at some point later (for example to display a status), you instead need to calculate the largest width of all potential strings (using <Wimp_TextOp 1=>Wimp_TextOp>) and create the icon with this width - disabling the wimp's calculaton by using the X validation string command.
+*Notes*:	When you place a text+sprite icon on the iconbar, the Wimp will automatically calculate the width of the text and hence the icon. If your application may change the text at some point later (for example to display a status), you instead need to calculate the largest width of all potential strings (using <Wimp_TextOp 1=>Wimp_TextOp>) and create the icon with this width - disabling the wimp's calculaton by using the X validation string command.
 
 	You should recalculate the widths and resize the icon when you receive <Message_FontChanged=>msg_400cf>.
 #

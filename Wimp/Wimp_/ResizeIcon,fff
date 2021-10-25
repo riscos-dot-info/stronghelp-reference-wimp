@@ -1,4 +1,4 @@
-Wimp_ResizeIcon (&400FC) (3.5)
+Wimp_ResizeIcon (&400FC) (3.50)
 #Parent Wimp_
 <=	R0 =	window handle
 	R1 =	icon handle
@@ -10,4 +10,4 @@ Wimp_ResizeIcon (&400FC) (3.5)
 
 This call resizes the given icon in the given window to the new bounding box coordinates as given in registers R2 to R5.
 #line
-Justin Fletcher's WimpHack module provides an implementation of this SWI for Wimps lower than 3.5. In the event of the Wimp_ResizeIcon not being available (e.g. test using <OS_SWINumberFromString=>OS:OS_SWINumberFromString>, one is able to load the WimpHack module and call <WimpHack_ResizeIcon=>MiscSWIs:WimpHack_ResizeIcon> (&C0480) with the same parameters.
+Justin Fletcher's WimpHack module provides an implementation of this SWI for Wimps pre 3.50. In the event of the Wimp_ResizeIcon not being available (e.g. test using <OS_SWINumberFromString=>OS:OS_SWINumberFromString>, one is able to load the WimpHack module and call <WimpHack_ResizeIcon=>MiscSWIs:WimpHack_ResizeIcon> (&C0480) with the same parameters.

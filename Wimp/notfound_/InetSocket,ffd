@@ -1,3 +1,3 @@
 InetSocket manual
 #Parent !Root
-The StrongHelp InetSocket manual details calls (from SWIs and C) used to control internet sockets. Together with the <InetSWIs=>InetSWIs:!Root> manual (which details the support calls that other modules provide) it should detail almost all of the internet stack. It can be obtained from iain truskett's <stronghelp website=>#url http://koschei.shada.com/manuals/>.
+The StrongHelp InetSocket manual details calls (from SWIs and C) used to control internet sockets. Together with the <InetSWIs=>InetSWIs:!Root> manual (which details the support calls that other modules provide) it should detail almost all of the internet stack. It can be obtained from the usual place (<http://sudden.recoil.org/stronghelp/=>#url>).

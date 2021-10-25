@@ -8,7 +8,7 @@ Returns a list of article numbers with extra header information. Replies take th
 
 More than one data item may be requested - eg, a flag string of "rdx" would return, for each article, first the normal Newsbase_Reply 200 message, followed by three Newsbase_Reply 210 messages; containing the References, Date and Xref: headers.
 
-It should not normally be necessary to request the Date, From, Subject, or Message-ID headers, as this information is returned in Newsbase_Reply 200 anyway. However, they may be requested if the information is important (as the Newsbase_Reply 200 forms may be truncated due to the limited space available in a single wimp message).
+It should not normally be necessary to request the Date, From, Subject, or Message-ID headers, as this information is returned in Newsbase_Reply 200 anyway. However, they may be requested if the information is important (as the Newsbase_Reply 200 forms may be truncated due to the limited space available in a single Wimp message).
 
 For compatibility with older versions of Newsbase, if no flag string is given, the flag "r" (to return References) is assumed.
 #Subpage flags

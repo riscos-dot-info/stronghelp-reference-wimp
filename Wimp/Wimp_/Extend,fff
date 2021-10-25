@@ -4,7 +4,7 @@ Wimp_Extend (&400FB)
 	Other registers depend on code
 <=	Depends on code
 
-This call is only present for versions of WindowManagers after 3.80.
+This call is only present for versions of Window Manager 3.80 and later.
 #Subpage reason
 Wimp_Extend reason codes
 Reason	Meaning

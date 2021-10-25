@@ -3,7 +3,7 @@ Wimp_BaseOfSprites  (&400EA)
 <=	R0 =	pointer to ROM sprites area
 	R1 =	pointer to RMA sprites area
 
-This SWI gives you the two areas that make up the Wimp sprite pool. Note that the RMA area may move around (when sprites are added) and that WindowManagers >= 3.5 actually use a dynamic area instead of the RMA.
+This SWI gives you the two areas that make up the Wimp sprite pool. Note that the RMA area may move around (when sprites are added) and that Window Managers >= 3.5 actually use a dynamic area instead of the RMA.
 
 You can use these addresses with <OS_SpriteOp=>OS:OS_SpriteOp>, but you should always use <Wimp_SpriteOp>.
 

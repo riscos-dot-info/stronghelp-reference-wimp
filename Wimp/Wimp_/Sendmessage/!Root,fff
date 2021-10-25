@@ -5,7 +5,7 @@ Wimp_SendMessage  (&400E7)
 	R2 =	Handle of destination task
 	 	or Window handle
 	 	or -2, and R3 = icon handle
-	 	or 0 to Broadcast.
+	 	or 0 to broadcast.
 <=	R0 corrupt
 	R2 =	handle of destination task, if not broadcast
 	Message block my_ref (+8) and sender (+4) updated.

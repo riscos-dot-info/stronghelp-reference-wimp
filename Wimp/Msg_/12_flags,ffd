@@ -2,7 +2,7 @@ Flags
 Bit	Meaning when set
 #Line
  0	Have changed pointer shape
- 1	Remove wimp dragbox
+ 1	Remove Wimp dragbox
  3	Source should be deleted
 
 All other bits reserved and 0.

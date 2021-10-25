@@ -6,7 +6,7 @@ Wimp_ProcessKey  (&400DC)
 #Tab
 This call has two uses:
   1 :	Pass on keypresses that your program has received from Wimp_Poll <reason 8=>Wimp_poll8>, but doesn't use.
-  2 :	Insert keypresses into the wimp buffer.
+  2 :	Insert keypresses into the Wimp buffer.
 
 #Tab
 Note 1 :	You should not insert more than one or two characters at a time this way. It seems that the Wimp gets confused after that.

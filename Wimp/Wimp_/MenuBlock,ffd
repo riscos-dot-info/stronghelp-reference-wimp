@@ -7,7 +7,7 @@ Offset	Contents				Normal value
 13	title background colour			2
 14	work-area foreground colour		7
 15	work-area background colour		0
-16	width of menu items			(calculated by wimp)
+16	width of menu items			(calculated by Wimp)
 20	height of menu items			44
 24	vertical gap between items		0
 28	<menu items=>.item> (24 bytes each)

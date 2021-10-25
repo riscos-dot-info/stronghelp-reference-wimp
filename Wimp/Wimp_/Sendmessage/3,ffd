@@ -2,10 +2,10 @@ Acknowledge
 This prevents a broadcast message from being passed on, and a UserMessage_Recorded from being returned to the sender.
 
 call <Wimp_SendMessage> with :
-{f25}Þ{f}	your_ref	=	0 (iff finding task handle of a window/icon)
+=>	your_ref	=	0 (iff finding task handle of a window/icon)
  	 		 	else it should be from the my_ref field
  	R2		=	task/window handle
  	R3		=	icon handle if R2 = -2
-{f25}Ü{f}	R2	=	task handle.
+<=	R2	=	task handle.
 
 You can also use this if you only want to find out who owns a window or an icon on the iconbar.

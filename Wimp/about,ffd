@@ -18,7 +18,7 @@ Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
 For comments, suggestions and submissions for these, please mail Christian Ludlam <christian@recoil.org=>#URL mailto:christian@recoil.org> who is currently moderating the collection. These manuals will continue to be available from <http://sudden.recoil.org/stronghelp/=>#url>.
 #line
-<This page=>.hist120> gives history and credits.
+<This page=>.hist121> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -67,7 +67,7 @@ History for Wimp v1.04
 #Align Left
 è	Wimp_SetFontColour and others changed (Nicholas Clark)
 è	Plugin protocol 'string_value' and others tidied up.
-è	Nested window manager calls updated with documentation from the Acorn site.
+è	Nested Window Manager calls updated with documentation from the Acorn site.
 è	DDEUtils SWIs finally added (!)
 è	Miscellaneous fixes for new calls
 è	Updates to DDEUtils (NC), other minor changes
@@ -158,4 +158,13 @@ History for Wimp v1.20
 è	More information on foreground and background window bits in <window flags=>wimp_windowflags>
 è	Many formatting and layout improvements
 #tab;line
-<Previous history=>.hist108>
+<Previous history=>.hist108>	<Next history=>.hist121>
+#subpage hist121
+History for Wimp v1.21
+#align right
+{/}20 August 2003{/}
+#align left
+#line
+è	A huge list of dreary typos and consistency updates (no new info!)
+#tab;line
+<Previous history=>.hist120>

@@ -3,7 +3,7 @@ The client application is defined as that which initiates the editing session, i
 
 The client application decides (usually at the request of the user) that some data needs to be edited. Unable to supply this function itself, it broadcasts to all other applications requesting an External Editing session (<EditRq=>Msg_45d80>).
 
-If no reply is recieved (the message bounces), then the client may take any appropriate action (for example, run an editor (Using the <Alias variable=>Msg_ExtEditVariable>) and then re-broadcast the request), but if the edit is not possible, the client will inform the user with an error message indicating that the edit is not possible.
+If no reply is received (the message bounces), then the client may take any appropriate action (for example, run an editor (Using the <Alias variable=>Msg_ExtEditVariable>) and then re-broadcast the request), but if the edit is not possible, the client will inform the user with an error message indicating that the edit is not possible.
 
 If a reply is received (<EditAck=>Msg_45d81>), then a window will have been opened, and the user may now edit the (blank) data in this window. The client now has the following options:
 

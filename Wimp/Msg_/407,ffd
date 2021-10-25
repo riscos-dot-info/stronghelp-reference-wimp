@@ -12,7 +12,7 @@ Message FilerSelection (&407)
 + 56	end column
 + 60	end row
 
-This message is sent from the filer to an application when a selection has been dragged, just before the application recieves the multiple <DataLoad=>Msg_3> messages.
+This message is sent from the filer to an application when a selection has been dragged, just before the application receives the multiple <DataLoad=>Msg_3> messages.
 #Line
 See <PRM 3, page 238=>PRM-3:238>.
 #Subpage viewmode

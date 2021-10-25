@@ -1,4 +1,4 @@
-Message_IconizeAt (&400D0) [4.0+]
+Message_IconizeAt (&400D0) (4.00+)
 #Parent MSG_
  + 20	window handle
  + 24	task handle of window being iconised

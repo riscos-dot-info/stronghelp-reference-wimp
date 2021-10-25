@@ -14,4 +14,4 @@ Wimp_CloseWindow (nested version)
 	R2 =	"TASK" (&4B534154)
 	R3 =	window handle of parent
 
-This call closes a window within another window. Only present on versions of the window manager later than 3.82.
+This call closes a window within another window. Only present on versions of the Window Manager later than 3.82.

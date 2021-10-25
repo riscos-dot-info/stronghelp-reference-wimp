@@ -18,19 +18,19 @@ See <PRM 3, page 87=>PRM-3:87>.
 Known Wimp version
 Value	Meaning
 #Line
-200	RISC OS 2 WindowManager
+200	RISC OS 2 Window Manager
 	No use of pollwords, indirected menu titles, menu help, validation strings R, K and P, only <Wimp_ReadSysInfo> 0 supported, sprites in icons do not use colour translations, messages may not be 'filtered' with <Wimp_AddMessages>, etc
-300	RISC OS 3.00 WindowManager
+300	RISC OS 3.00 Window Manager
 	Message 'filtering' is broken, <Wimp_ReadSysInfo> 1 to 7 supported
-310	RISC OS 3.10 WindowManager
+310	RISC OS 3.10 Window Manager
 	Message 'filtering' fixed. No use of <Wimp_TextOp>, <Wimp_SetWatchdogState>, <Wimp_ResizeIcon>.
-350	RISC OS 3.5-7 WindowManager
+350	RISC OS 3.50-3.70 Window Manager
 	<Wimp_ReadSysInfo> 8 to 10 supported, <Wimp_ReportError> may have extra buttons
 	*nb*: not recognised as an official version
-380	Softloadable nested WindowManager
+380	Softloadable nested Window Manager
 	Nestable windows added, <validation string C=>Wimp_validationstring.C> added, h option in <validation string L=>Wimp_validationstring.L> implemented, 'partial' full size windows implemented, windows may now be opened or forceably redrawn by other tasks
 
-Within this list it is assumed that the features not present in higher versions of the WindowManager are also not present in lower versions.
+Within this list it is assumed that the features not present in higher versions of the Window Manager are also not present in lower versions.
 
 In the event of the version given being later than the version of the Wimp available, then an error will be generated.
 #

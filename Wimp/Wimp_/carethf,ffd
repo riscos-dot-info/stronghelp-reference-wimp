@@ -7,6 +7,6 @@ Bits	Meaning
 	0 => Use anti-aliased caret.
 25	1 => Caret is invisible.
 26	1 => Use bits 16-23 for colour.
-	0 => Use wimp colour 11.
+	0 => Use Wimp colour 11.
 27	1 => 16-23 is untranslated col.
-	0 => 16-23 is wimp colour.
+	0 => 16-23 is Wimp colour.

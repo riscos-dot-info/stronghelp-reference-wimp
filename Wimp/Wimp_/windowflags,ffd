@@ -60,7 +60,7 @@ Within each domain, there are three stacks of windows:
       	These have the foreground bit set and lie above normal windows, and above the window furniture of their parent. Bringing a standard window to the front will move it just behind the backmost 'foreground' window. For a child window, moving a foreground window so that it touches the parent's window furniture will cause the furniture to move to make room for thie child. The Wimp's error box window has this bit set.
 
  è Background windows
-	These have the background bit set and live below normal windows. The pinboard window has this bit set to prevent standard windows being opened behind it. Note that attempting to move windows around in the backround window stack causes undesirable results on versions of the WindowManager prior to 5.18 (windows can get 'lost' behind the back-window).
+	These have the background bit set and live below normal windows. The pinboard window has this bit set to prevent standard windows being opened behind it. Note that attempting to move windows around in the backround window stack causes undesirable results on versions of the Window Manager prior to 5.18 (windows can get 'lost' behind the back-window).
 
  è Standard windows
 	These have neither bit set and live between the other stacks.

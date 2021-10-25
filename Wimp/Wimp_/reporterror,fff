@@ -11,7 +11,7 @@ Wimp_ReportError  (&400DF)
 	 	Return gives default, Escape the alternate
 	R0 corrupt
         
-This SWI opens a standard, non-multitasking, errorbox on the screen. Avoid, if possible. It is boring and, as stated above, non-multitasking. However, the RO3.5 extensions make the use of error boxes much more appealing to the programmer.
+This SWI opens a standard, non-multitasking, errorbox on the screen. Avoid, if possible. It is boring and, as stated above, non-multitasking. However, the RISC OS 3.50 extensions make the use of error boxes much more appealing to the programmer.
 #Line
 See <PRM 3, page 179=>PRM-3:179>.
 #

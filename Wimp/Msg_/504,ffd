@@ -1,4 +1,4 @@
-Message_HelpEnable (&504) [4.0+]
+Message_HelpEnable (&504) (4.00+)
 + 20	flags word
 	 	bit 0	set = disable interactive Help (put it into suspend state)
 	 	 	unset = enable help

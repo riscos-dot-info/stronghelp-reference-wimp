@@ -10,6 +10,6 @@ Filter Wimp_GetRectangle icon plotting code
 	R12 =	value of R2 when filter registered
 <=	all registers preserved
 
-This is called after the wimp has redraw the icons in a window, before moving onto the next rectangle. This allows applications to plot over their window's icons.
+This is called after the Wimp has redraw the icons in a window, before moving onto the next rectangle. This allows applications to plot over their window's icons.
 
 You can probably modify the updated block, but R0 and R1 should probably remain as passed.

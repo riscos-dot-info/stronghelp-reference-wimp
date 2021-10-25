@@ -14,7 +14,7 @@ Code	Message
 \\a	"ADJUST"
 |M	return
 
-In RISC OS 3.7 there are additional codes:
+In RISC OS 3.70 and later there are additional codes:
 
 \\0	" for triangles (in multiples of the path width)."
 \\1	"ing"

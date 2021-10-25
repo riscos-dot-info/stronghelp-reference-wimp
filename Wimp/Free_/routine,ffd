@@ -71,7 +71,7 @@ Free GetFreeSpace64 (4)
 <=	R0 =	0
 		R1 - R3 preserved, R2 <buffer=>.4buffer> updated.
 #line
-This is used to find the free space on a device. From RISC OS 3.6, this call is used rather than <2=>.2>. If R0 is non-zero on exit, or if an error occurs, then <reason code 2=>.2> is called. Thus your routine must give an error for both reason codes 4 and 2 before Free will believe it.
+This is used to find the free space on a device. From RISC OS 3.60, this call is used rather than <2=>.2>. If R0 is non-zero on exit, or if an error occurs, then <reason code 2=>.2> is called. Thus your routine must give an error for both reason codes 4 and 2 before Free will believe it.
 #line;tab
 See also:	<PRM 5a-258=>PRM-5a:258>
 #

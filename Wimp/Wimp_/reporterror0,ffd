@@ -26,4 +26,4 @@ Wimp_ReportError categories
 6	User icon 2 (ie undefined)
 7	Program again (do not use)
 
-These define the type of error under RO3.5 and display the type of the error. Bit 8 must be set.
+These define the type of error under RO3.50 and display the type of the error. Bit 8 must be set.
