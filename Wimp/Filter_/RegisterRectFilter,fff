@@ -7,8 +7,4 @@ Filter_RegisterRectFilter  (&42644)  (0.18)
 
 <=	all registers preserved
 
-Adds a new <Wimp_GetRectangle> pre-filter to the list of pre-filters.
-
-The address pointed to by R1 will be called whenever the task who's handle is passed in R3 calls <Wimp_GetRectangle> with R12 equal to the value of R2 when this SWI is called.
-
-Note: This is still only a 'guess' at the way it works.
+Adds a new GetRectangle filter. This filter is called just before the redrawing of a rectangle begins, before the window background has been filled, and before the VDU graphics window has been set up.

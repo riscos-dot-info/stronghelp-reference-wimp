@@ -15,8 +15,8 @@ Bits	Meaning when set
 11	Display sprite at half size.
 12-15	<Icon button type=>Wimp_iconbutton>.
 16-19	Exclusive Selection Group.
-20	Bit 20 is not in the ESG from RISC OS 3.10
-	onwards, and is now reserved.
+20	Text is numeric and shouldn't be reversed
+	in territories with right-to-left alphabet.
 21	Icon is selected by user, and is inverted.
 22	Icon is un-selectable (shaded)
 23	Icon is deleted.

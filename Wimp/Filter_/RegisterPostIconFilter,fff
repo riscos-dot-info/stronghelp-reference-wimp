@@ -10,5 +10,3 @@ Filter_RegisterPostIconFilter  (&4264A)  (0.18)
 Adds a new <Wimp_GetRectangle> icon plotting post-filter to the list of post-filters.
 
 The address pointed to by R1 will be called whenever the task who's handle is passed in R3 calls <Wimp_GetRectangle> and just after the windows icons have been plotted with R12 equal to the value of R2 when this SWI is called.
-
-Note: This is still only a 'guess' at the way it works.

@@ -20,5 +20,6 @@ Bits	Meaning
 	 0	The box
 	 1	The pointer
 7	Use drop shadow
-8	Don't dither sprite (RISC OS 3.50 onwards)
-9-31	Reserved for future use, should be set to 0.
+8	Don't dither sprite (RISC OS 3.50)
+9	Centre sprite around pointer (RISC OS 4.00)
+10-31	Reserved for future use, should be set to 0.

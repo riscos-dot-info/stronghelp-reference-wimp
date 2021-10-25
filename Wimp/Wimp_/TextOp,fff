@@ -45,7 +45,7 @@ Wimp_TextOp 2 (&400F9)
 Plots a string in the current desktop font.
 #
 #Subpage 3
-Wimp_TextOp 3 (&400F9) [4.00]
+Wimp_TextOp 3 (&400F9) [5.00]
 =>	R0 =	3 (reason code)
 	R1 =	pointer to string
 	R2 =	width in OS units
@@ -55,7 +55,7 @@ Wimp_TextOp 3 (&400F9) [4.00]
 	all others preserved
 #
 #Subpage 4
-Wimp_TextOp 4 (&400F9) [4.00]
+Wimp_TextOp 4 (&400F9) [5.00]
 =>	R0 =	4 (reason code)
 	R1 =	pointer to string
 	R2 =	pointer to output buffer

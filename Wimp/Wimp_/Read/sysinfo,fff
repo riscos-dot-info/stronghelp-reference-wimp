@@ -21,7 +21,7 @@ Currently defined values for R0 :
 9	Toolsprites <sprite area=>OS:OS_SpriteOp_Area>
 10	/Internal use only/
 # 10	Read iconbar window handle
-11	Application limit
+11	Maximum size of Application space
 16	<Read WIMP sprite pools pointers=>.16> (4.00+)
 17	Read the configured auto-scroll pause delay in cs (4.00+)
 #Line

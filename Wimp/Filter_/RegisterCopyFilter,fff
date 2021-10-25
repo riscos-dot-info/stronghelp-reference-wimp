@@ -9,5 +9,3 @@ Filter_RegisterCopyFilter  (&42646)  (0.18)
 Adds a new <Wimp_BlockCopy> pre-filter to the list of pre-filters.
 
 The address pointed to by R1 will be called whenever a task calls <Wimp_BlockCopy> with R12 equal to the value of R2 when this SWI is called.
-
-Note: This is still only a 'guess' at the way it works.

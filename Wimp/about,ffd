@@ -18,7 +18,7 @@ Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
 For comments, suggestions and submissions for these, please mail Christian Ludlam <christian@recoil.org=>#URL mailto:christian@recoil.org> who is currently moderating the collection. These manuals will continue to be available from <http://sudden.recoil.org/stronghelp/=>#url>.
 #line
-<This page=>.hist123> gives history and credits.
+<This page=>.hist124> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -198,4 +198,17 @@ History for Wimp v1.23
 è	Updated <DragAnObject=>DragAnObject_> adding a note about user mode function calls for latest version released by Castle.
 è	Added note to <Wimp_BlockCopy> and <Wimp_ForceRedraw> that coordinates are work-area relative (Erik Groenhuis)
 #tab;line
-<Previous history=>.hist122>
+<Previous history=>.hist122>	<Next history=>.hist124>
+#subpage hist124
+History for Wimp v1.24
+#align right
+{/}27 November 2007{/}
+#align left
+#line
+è	Update <Wimp_PlotIcon> (Steve Revill)
+è	<Wimp_TextOp> reasons 3 and 4 are not available on RISC OS 4 (Adam Richardson)
+è	Added <DragASprite_Start> flags bit 9
+è	Added <DragAnObject_Start> flags bit 9
+è	Updated <Icon flags=>Wimp_Iconflags> bit 20 (Steve Revill)
+#tab;line
+<Previous history=>.hist123>

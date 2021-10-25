@@ -1,7 +1,6 @@
-Filter Wimp_BlockCopy code
+RectangleCopy filter code
 #Parent Filter_RegisterCopyFilter
-=>	R0 =	window handle
-	R2 =	source		minx (incl)
+=>	R2 =	source		minx (incl)
 	R3 =	 		miny (incl)
 	R4 =	 		maxx (excl)
 	R5 =	 		maxy (excl)
@@ -9,7 +8,7 @@ Filter Wimp_BlockCopy code
 	R7 =	 		miny (incl)
 	R6 =	 		maxx (excl)
 	R7 =	 		maxy (excl)
-	R10 =	window handle - 1
+	R10 =	window handle - 1  [Wimp 3.90+]
 	R12 =	value of R2 when filter registered
 
 <=	R0, R1, R3-R10 preserved
