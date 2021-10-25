@@ -13,7 +13,7 @@ Wimp_GetWindowState  (&400CB)
 	  28	<Handle to open window behind=>wimp_windowlocation>
 	  32	<Window flags=>wimp_windowflags>
 
-This call reads a windows visible state. The <nested version=>.nested> can be used to read the windows parent.
+This call reads a window's visible state. The <nested version=>.nested> can be used to read the window's parent.
 #Line
 See <PRM 3, page 135=>PRM-3:135>.
 #subpage nested

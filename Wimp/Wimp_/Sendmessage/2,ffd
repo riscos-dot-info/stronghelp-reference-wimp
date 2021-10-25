@@ -1,7 +1,7 @@
 Receiving UserMessages (17,18,19)
 17	UserMessage			Doesn't expect a reply
-18	UserMessage_Recorded		If noone answers, it returns.
-19	<UserMessage_Acknowledge=>Wimp_SendMessage3>  	A UM_Recorded returns.
+18	UserMessage_Recorded		If no one answers, it returns.
+19	<UserMessage_Acknowledge=>Wimp_SendMessage3>  	Confirmation that UM_Recorded was received.
 
 Format of block :
  0	length of block

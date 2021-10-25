@@ -7,7 +7,7 @@ Wimp_ReportError  (&400DF)
 	R4 =	<sprite area=>OS:OS_SpriteOp_area> (if bit 8 set)
 	R5 =	pointer to <extra buttons string=>.buttons> (if bit 8 set)
 
-<=	R1 =	0 if nothing selected, 1 if OK selected and 2 if Cancel, 3-5 if extra buttons
+<=	R1 =	0 if nothing selected, 1 if OK selected and 2 if Cancel, 3-6 if extra buttons
 	 	Return gives default, Escape the alternate
 	R0 corrupt
         

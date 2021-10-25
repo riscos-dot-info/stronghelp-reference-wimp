@@ -1,0 +1,5 @@
+TaskManager_StartTask  (&42683) (3.80+)
+#Parent TaskManager_
+=>	R0 =	pointer to *command to execute
+
+This call queues the given command until the desktop is next free (or starts, if not currently in the desktop) and runs the command as a new task with <Wimp_StartTask>.

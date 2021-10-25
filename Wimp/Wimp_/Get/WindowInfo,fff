@@ -5,6 +5,6 @@ Wimp_GetWindowInfo  (&400CC)
 	  0	Window handle
 	  4..	<Window block=>wimp_windowblock>
 
-This SWI returns complete details of the given windows state, including any icons created after the window itself. If bit 0 of R1 is set, then the icons are *not* returned.
+This SWI returns complete details of the given window's state, including any icons created after the window itself. If bit 0 of R1 is set, then the icons are *not* returned.
 #Line
 See <PRM 3-137=>PRM-3:137>.

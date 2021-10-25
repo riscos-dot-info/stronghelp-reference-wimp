@@ -1,0 +1,3 @@
+DDEUtils_FlushCL (&4258B) [1.66]
+#Parent DDEUtils_
+Forgets the current command line and frees any associated memory.

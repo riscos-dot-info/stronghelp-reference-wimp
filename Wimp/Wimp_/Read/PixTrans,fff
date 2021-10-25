@@ -5,8 +5,8 @@ Wimp_ReadPixTrans  (&400ED)
 	 	&2xx if sprite in user area, and R2 = pointer
 	R1 =	pointer to <spritearea=>OS:OS_SpriteOp_Area> (0 for system, 1 for Wimp)
 	R2 =	pointer to sprite name, or <sprite=>OS:OS_SpriteOp_Ptr> itself
-	R6 =	Block to receive scale factors
-	R7 =	Block to receive translation table (2,4 or 16 bytes long)
+	R6 =	Block to receive scale factors (or 0 for 'none')
+	R7 =	Block to receive translation table (or 0 for 'none') of size 2/4/16 bytes as appropriate for the colour depth
 
 <=	R0 corrupt
 	Block at R6 contains <scale factors=>OS:OS_scalefactors>

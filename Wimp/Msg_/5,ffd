@@ -10,7 +10,7 @@ Message_DataOpen  (5)
 + 44	full pathname
 # cl> why isn't this -1 for untyped, as in DataSave?
 
-This message is broadcasted when the user doubleclicks on a file. If the receiver wants to load the file, it should acknowledge this message by returning a <DataLoadAck=>Msg_4> message.
+This message is broadcast when the user doubleclicks on a file. If the receiver wants to load the file, it should acknowledge this message by returning a <DataLoadAck=>Msg_4> message.
 
 If no one acknowledges the message, the filer will try to <run=>OS:OS_FSControl4> it.
 #Line

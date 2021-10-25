@@ -3,7 +3,7 @@ Message_PrintTypeOdd  (&80145)
 + 40	<filetype=>Filetypes:!Root> of data
 + 44	filename
 
-This message is sent by !Printers when it doesn't know how to print the file. The filetype and filename cannot be relied on if we have just come from a <PrintSave=>Msg_80142> message, but since the application started the print protocol it should still remember what it was planing to print.
+This message is sent by !Printers when it doesn't know how to print the file. The filetype and filename cannot be relied on if we have just come from a <PrintSave=>Msg_80142> message, but since the application started the print protocol it should still remember what it was planning to print.
 
 When this message is sent by !Printers to print a file from its queue, the information is correct.
 

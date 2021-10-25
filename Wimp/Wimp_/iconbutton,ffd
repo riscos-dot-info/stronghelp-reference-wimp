@@ -3,16 +3,16 @@ Bits 12-15	Meaning
 #Line
 0		Ignore everything (except menu).
 1		Notify continuously while pointer is over icon.
-2		Click (auto-repeat)
-3		Click (no auto-repeat)
+2		Click notifies (auto-repeat)
+3		Click notifies (once, no auto-repeat)
 4		Click selects, move away deselects. Notify of release.
 5		Click selects. Doubleclick notifies task.
-6		3 + Drag (*16).
-7		4 + Drag (*16). Moving away doesn't deselect.
-8		5 + Drag (*16).
+6		3 + Drag (returns *16).
+7		4 + Drag (returns *16). Moving away doesn't deselect.
+8		5 + Drag (returns *16).
 9		'menu' icon
-10		Click (*256), Drag (*16), Doubleclick (*1)
-11		Click selects (*1), Drag notifies (*16)
+10		Click (returns *256), Drag (returns *16), Doubleclick (returns *1)
+11		Click selects (and returns *1), Drag (returns *16)
 12-13		Reserved.
-14		Click causes it to gain caret. Can also Drag
+14		Click causes it to gain caret, can also Drag,
 15		Click causes it to gain caret.

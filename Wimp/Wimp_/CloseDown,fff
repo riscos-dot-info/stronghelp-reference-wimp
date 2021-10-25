@@ -1,6 +1,6 @@
 Wimp_CloseDown  (&400DD)
 #Parent Wimp_
-=>	R0 =	Taskhadle returned by <Wimp_Initialise>
+=>	R0 =	Task handle returned by <Wimp_Initialise>
 	R1 =	"TASK" (&4B534154)
 <=	R0 corrupt
 

@@ -2,9 +2,13 @@ Message_ReleaseEntity  (&13)
 #Parent MSG_
 +20	<flags=>.flags>
 
-This message should be broadcast to all tasks when your application has the clipboard and is about to quit.
+This message was defined as part of the work for the Network Computer (NC) with the idea to broadcast it if your application owns the clipboard and is about to quit, giving other applications the possibility of requesting and holding the clipboard contents once quit. It is deprecated, due to a number of usability inconsistencies:
 
-Part of the {/}{*}NEW{*} RISC OS Selection Model and Clipboard{/} protocol.
+è The <Message_DataSave=>Msg_1> dialogue that would follow results in only 1 format being retained by the clipboard holder after the original application quits, compared with potentially many while the application is running normally
+è As this message was defined after the <RISC OS Selection Model and Clipboard=>.clip> protocol was support for it may be missing from some applications
+è Requires a clipboard holding task, which may not be present on all systems
+
+In the sequence Copy/Quit/Paste the selection is lost when the application finishes, so it is consistent that the clipboard is cleared too.
 #Subpage flags
 Message_ClaimEntity flags
 Bit	Meaning if set

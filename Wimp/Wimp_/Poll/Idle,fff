@@ -1,4 +1,4 @@
-Wimp_PollIdle  (&4000E1)
+Wimp_PollIdle  (&400E1)
 #Parent Wimp_
 =>	R0 =	<mask=>wimp_pollmask>
 	R1 =	256-byte block

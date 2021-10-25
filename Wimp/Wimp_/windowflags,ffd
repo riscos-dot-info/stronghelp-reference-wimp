@@ -52,7 +52,7 @@ From semi-full size	0	0	0
 These are the only values that can be returned in combination with bit 19 being set.
 #subpage stack
 Window stacks
-Under RISC OS 4.00 and later, there are several window stacks per 'domain' of windows, where a domain is either the main window stack or the parent of a numer of child windows.
+Under RISC OS 4.00 and later, there are several window stacks per 'domain' of windows, where a domain is either the main window stack or the parent of a number of child windows.
 
 Within each domain, there are three stacks of windows:
 

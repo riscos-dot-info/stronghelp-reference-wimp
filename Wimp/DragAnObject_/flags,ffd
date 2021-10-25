@@ -30,7 +30,7 @@ Bits	Meaning
 	 0	<User mode=>.note>
 	 1	SVC mode
 18	Actually use <user mode=>.note>
-18-31	Reserved for future use, should be set to 0.
+19-31	Reserved for future use, should be set to 0.
 #subpage note
 Note about DragAnObject User mode
 #wrap on

@@ -3,7 +3,7 @@ Wimp_CreateIcon  (&400C2)
 =>	R0 =	if window is \< -3 : icon number, or <priority=>.priorities>
 	R1 =	Pointer to block :
 		0..3	Window handle, or <iconbar location=>.position>
-		4..31	<Icon block=>Wimp_iconblock>
+		4..35	<Icon block=>Wimp_iconblock>
 
 <=	R0 =	icon handle (unique within window)
 

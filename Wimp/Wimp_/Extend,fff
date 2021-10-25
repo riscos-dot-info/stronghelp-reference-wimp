@@ -89,7 +89,7 @@ Offset	Contents
 #subpage 13
 Wimp_Extend 13 (&400FB) [5.00]
 =>	R0 =	13 (reason code)
-	R1 = 	pointer to filname without suffix
+	R1 = 	pointer to filename without suffix
 	R2 =	pointer to output buffer
 	R3 =	size of buffer, or 0 to read size required
 

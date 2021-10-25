@@ -13,6 +13,7 @@ DDEUtils
 <ThrowbackSend>
 <ThrowbackEnd>
 <ReadPrefix>
+<FlushCL>
 #EndTable
 
 Throwback protocol :

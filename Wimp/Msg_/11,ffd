@@ -8,4 +8,4 @@ Message_Dragging  (&11)
 + 40	bounding box
 + 56	list of filetypes, terminated with -1
 
-This message is sent continuously by the task which is doing the dragging. Initially it is broadcasted, but after a task claims the message, it is only sent to that. Claim by sending <DragClaim=>Msg_12> message
+This message is sent continuously by the task which is doing the dragging. Initially it is broadcast, but after a task claims the message, it is only sent to that. Claim by sending <DragClaim=>Msg_12> message

@@ -22,6 +22,10 @@ Currently defined values for R0 :
 10	/Internal use only/
 # 10	Read iconbar window handle
 11	Maximum size of Application space
+12	/Internal use only/
+13	/Internal use only/
+14	/Internal use only/
+15	/Internal use only/
 16	<Read WIMP sprite pools pointers=>.16> (4.00+)
 17	Read the configured auto-scroll pause delay in cs (4.00+)
 #Line

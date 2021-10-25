@@ -42,6 +42,8 @@ Misc :
 400CE ToolsChanged
 <400CF FontChanged=>Msg_400CF>
 <400D0 IconizeAt=>Msg_400D0>
+400D1 ToggleBackdrop
+400D2 ScreenEdgeNotification
 #EndTable
 
 #Indent

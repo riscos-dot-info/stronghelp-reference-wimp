@@ -11,14 +11,14 @@ This manual is part of a collection comprising the main public domain programmin
 <InetSocket>	Internet socket calls
 <MiscSWIs>	Miscellaneous SWIs
 <VDU>		VDU commands
-<Toolbox>	Toolbox (by Neil Bingham)
+<Toolbox>	Toolbox
 #Indent
 
 Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
-For comments, suggestions and submissions for these, please mail Christian Ludlam <christian@recoil.org=>#URL mailto:christian@recoil.org> who is currently moderating the collection. These manuals will continue to be available from <http://sudden.recoil.org/stronghelp/=>#url>.
+These manuals are kindly hosted by <www.riscos.info=>#url http://www.riscos.info/downloads/stronghelp/manuals/>
 #line
-<This page=>.hist124> gives history and credits.
+<This page=>.hist125> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -206,9 +206,27 @@ History for Wimp v1.24
 #align left
 #line
 è	Update <Wimp_PlotIcon> (Steve Revill)
-è	<Wimp_TextOp> reasons 3 and 4 are not available on RISC OS 4 (Adam Richardson)
+è	<Wimp_TextOp> reasons 3 and 4 are not available on RISC OS 4.00 (Adam Richardson)
 è	Added <DragASprite_Start> flags bit 9
 è	Added <DragAnObject_Start> flags bit 9
 è	Updated <Icon flags=>Wimp_Iconflags> bit 20 (Steve Revill)
 #tab;line
-<Previous history=>.hist123>
+<Previous history=>.hist123>	<Next history=>.hist125>
+#subpage hist125
+History for Wimp v1.25
+#align right
+{/}12 May 2015{/}
+#align left
+#line
+è	Added <DDEUtils_FlushCL>
+è	Lots of typing and grammatical errors fixed
+è	Added <TaskManager_StartTask>
+è	Extra TaskManager <shutdown flags=>TaskManager_Shutdown.flags> documented
+è	Added <Message_IconizeAt=>Msg_400D0>
+è	Clarify (non) purpose of <Message_ReleaseEntity=>Msg_13>
+è	<Wimp_ReadPixTrans> accepts '0' to mean skip reading
+è	Added Windows logo and menu keys to Wimp <key codes=>Wimp_Poll.8a>
+è	Clarify <button types=>Wimp_iconbutton>
+è	Fixed example program in <Wimp_BaseOfSprites> to work
+#tab;line
+<Previous history=>.hist124>

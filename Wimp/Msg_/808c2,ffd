@@ -3,6 +3,6 @@ TaskWindow_Ego  (&808C2)
 + 4	Task handle of child.
 + 20	Parent's txt-handle.
 
-This message is sent to your task after you've issued a *StartTask .... -txt &xxxxxxxx  command. This is the first and last time the txt-handle will be used. From now on, the child's task-id will be used instead.
+This message is sent to your task after you've issued a *TaskWindow .... -txt &xxxxxxxx  command (or *ShellCLI_Task). This is the first and last time the txt-handle will be used. From now on, the child's task-id will be used instead.
 #Line
 See <PRM 3, page 266=>PRM-3:266>.

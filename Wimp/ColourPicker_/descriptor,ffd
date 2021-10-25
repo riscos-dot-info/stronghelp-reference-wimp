@@ -21,7 +21,7 @@ Type	Meaning
 	+20 = <yellow value=>OS:colourtrans_fixedpoint>
 	+24 = <key value=>OS:colourtrans_fixedpoint>
 
-2	HSW data (16 bytes of extension data)
+2	HSV data (16 bytes of extension data)
 	+12 = <hue angle=>OS:colourtrans_fixedpoint>
 	+16 = <saturation percentage=>OS:colourtrans_fixedpoint>
 	+20 = <value percentage=>OS:colourtrans_fixedpoint>
