@@ -10,5 +10,7 @@ Wimp_GetCaretPosition  (&400D3)
 	  12	y offset
 	  16	<height + flags=>wimp_carethf>, or -1
 	  20	index into string, or -1
+
+The index into the string is a byte index, not a character index - there is only a distinction when the system alphabet is {fCode:UTF8}.
 #Line
 See <PRM 3, page 154=>PRM-3:154>.

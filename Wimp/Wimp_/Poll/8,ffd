@@ -9,4 +9,4 @@ Returned block contains :
   20	Index of caret into string (if icon)
   24	<Character code=>wimp_poll8a> (it's a word!)
 
-If you're not interested in this keypress, then pass it on with <Wimp_ProcessKey>.
+If you're not interested in this keypress, then pass it on with <Wimp_ProcessKey>. Wide characters are reported using multiple Key Pressed events.

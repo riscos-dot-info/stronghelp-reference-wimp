@@ -42,7 +42,7 @@ If the colour given is &FF, then on pre-Wimp 3.80, then it means that the window
 Window block extra flags.
 /Bit/	/Meaning/
 0	use <24-bit colour=>.win24> in title bar validation	(4.00+)
-1	window should use extended scroll requests		(Select 2)
+1	window should use extended scroll requests		(Select 2)
 2	window should never be given a 3D border		(4.00+)
 3	window should always be given a 3D border		(4.00+)
 4	Wimp_GetPointerInfo should return shaded icons as well	(5.00+)

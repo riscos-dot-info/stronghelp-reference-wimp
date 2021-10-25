@@ -9,7 +9,7 @@ This call has two uses:
   2 :	Insert keypresses into the Wimp buffer.
 
 #Tab
-Note 1 :	You should not insert more than one or two characters at a time this way. It seems that the Wimp gets confused after that.
+Note 1 :	Before RISC OS 4, you should not insert more than one or two characters at a time this way. It seems that the Wimp gets confused after that.
 
 Note 2 :	Characters inserted this way takes precedence over characters in the keyboard buffer.
 #Line

@@ -14,16 +14,19 @@ Validation string can contain the following commands:
 <R>	Border commands.
 <S>	Spritename.
 <T>	Tint.
+<U>	Unicode character limit.
 <X>	Disable width calculation.
 <Y>	Enable features.
 #
 #Subpage A
 Validation string 'A'
-*Use*:	Exclude/accept only certain characters into a writeable icon.
+*Use*:	Exclude/accept only certain characters into a writable icon.
 
 *Syntax*:	{Fcode:A[char list][~exclusion list]}
 	Allow characters in 'char list'.
 	Disallow characters in 'exclusion list'
+
+*Notes*:	When the system alphabet is {fCode:UTF8} this validation command accepts multi-byte characters.
 
 *Examples*:	A0-9a-z~b	Allows 0..9, a, c..z
 	A~X		Allows all chars but X
@@ -36,7 +39,7 @@ Validation string 'C' (3.98+)
 #line
 {/}{*}Wimp 3.98+{*}{/}
 *Syntax*:	{FCode:C\{BBGGRR\}[/\{BBGGRR\}]}
-	First BBGGRR is the foreground colour, the second is the backgound colour.
+	First BBGGRR is the foreground colour, the second is the background colour.
 	If either colour is not included, then colour is as the <flags word=>wimp_iconflags>
 #line
 {/}{*}Wimp 4.00+{*}{/}
@@ -60,6 +63,8 @@ Validation string 'D'
 *Syntax*:	{Fcode:Dchar}
 	Displays all typed chars as 'char'
 	Special characters must be preceded by a \\
+
+*Notes*:	When the system alphabet is {fCode:UTF8} this validation command accepts multi-byte characters.
 
 *Examples*:	{Fcode:D*}	Contents of the icon is displayed as a series of *'s.
 		{Fcode:D\-}	Contents displayed as a series of '-'s
@@ -85,7 +90,7 @@ Validation string 'K'
 *Syntax*:	{Fcode:Koptions}
 
 *Options*:	R	Return moves caret to next writable icon. (Except for last.)
-	A	Up/Down arrow moves to prev/next writable
+	A	Up/Down arrow moves to previous/next writable
 	T	Tab moves to next, shift-Tab to previous
 	D	Deleting will also report the keypress
 	N	Task will be notified of all keypresses in icon
@@ -100,7 +105,7 @@ Validation string 'L'
 *Syntax*:	{Fcode:Lh}
 	h is the vertical spacing between lines of text in OS units. If omitted, 40 units is used (a system font character is 32 OS units high).
 
-*Notes*:	This option can only be used with icons which are horizontally and vertically centred, and do not contain an anti-aliased font. The icon must not be writeable, since the caret would not be positioned correctly inside it.
+*Notes*:	This option can only be used with icons which are horizontally and vertically centred, and do not contain an anti-aliased font. The icon must not be writable, since the caret would not be positioned correctly inside it.
 
  		The height will only take effect on Window Manager 3.80 and later.
 
@@ -155,13 +160,21 @@ Validation string 'T'
 		
 *Notes*:	Type is the decimal type number as defined by the ColourMap module. Parameters is a comma separated list of hex numbers passed in R3 to R9 to the ColourMap module when creating the colourmap descriptor.
 #
+#subpage U
+Validation string 'U'
+*Use*:	Set the maximum number of characters.
+
+*Syntax*:	{fCode:U\<n\>}
+		
+*Notes*:	This sets the maximum number of /characters/ allowed in a writable icon. This is distinct from the maximum number of /bytes/ allowed, specified in the icon block, when the system alphabet is {fcode:UTF8}. Theoretically you should allow 6 bytes per character, but in practice 4 is usually sufficient.
+#
 #subpage X
 Validation string 'X'
 *Use*:	Disable the Wimp's calculation of text in text+sprite icons on the iconbar.
 
 *Syntax*:	{fCode:X}
 
-*Notes*:	When you place a text+sprite icon on the iconbar, the Wimp will automatically calculate the width of the text and hence the icon. If your application may change the text at some point later (for example to display a status), you instead need to calculate the largest width of all potential strings (using <Wimp_TextOp 1=>Wimp_TextOp>) and create the icon with this width - disabling the wimp's calculaton by using the X validation string command.
+*Notes*:	When you place a text+sprite icon on the iconbar, the Wimp will automatically calculate the width of the text and hence the icon. If your application may change the text at some point later (for example to display a status), you instead need to calculate the largest width of all potential strings (using <Wimp_TextOp 1=>Wimp_TextOp>) and create the icon with this width - disabling the wimp's calculation by using the X validation string command.
 
 	You should recalculate the widths and resize the icon when you receive <Message_FontChanged=>msg_400cf>.
 #

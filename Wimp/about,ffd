@@ -18,7 +18,7 @@ Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
 For comments, suggestions and submissions for these, please mail Christian Ludlam <christian@recoil.org=>#URL mailto:christian@recoil.org> who is currently moderating the collection. These manuals will continue to be available from <http://sudden.recoil.org/stronghelp/=>#url>.
 #line
-<This page=>.hist121> gives history and credits.
+<This page=>.hist122> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -167,4 +167,22 @@ History for Wimp v1.21
 #line
 è	A huge list of dreary typos and consistency updates (no new info!)
 #tab;line
-<Previous history=>.hist120>
+<Previous history=>.hist120>	<Next history=>.hist122>
+#subpage hist122
+History for Wimp v1.22
+#align right
+{/}20 February 2004{/}
+#align left
+#line
+è	Fix <TaskManager_EnumerateTasks> slot size (it's in bytes, not K)
+è	Update Wimp section with new information from Castle. This affects
+	 	<Wimp_AddMessages>
+	 	<Wimp_Extend 13=>Wimp_Extend>
+	 	<Wimp_Poll 8=>Wimp_Poll8>
+	 	<Wimp_GetCaretPosition>
+	 	<Wimp_SetCaretPosition>
+	 	<Wimp_ProcessKey>
+	 	<Validation strings U, A, D=>Wimp_validationstring>
+
+#tab;line
+<Previous history=>.hist121>

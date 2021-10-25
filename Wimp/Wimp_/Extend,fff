@@ -1,21 +1,14 @@
-Wimp_Extend (&400FB)
+Wimp_Extend (&400FB) [3.80]
 #Parent Wimp_
 =>	R0 =	<reason code=>.reason>
-	Other registers depend on code
-<=	Depends on code
-
-This call is only present for versions of Window Manager 3.80 and later.
-#Subpage reason
-Wimp_Extend reason codes
-Reason	Meaning
-#Line
-0-5	Internal use only
-6	<Parent window=>.6789A>
-7	<Top child window=>.6789A>
-8	<Bottom child window=>.6789A>
-9	<Sibling immediately below=>.6789A>
-10	<Sibling immediately above=>.6789A>
-11	<Window information=>.11>
+	 	0-5	Internal use only
+	 	6	<Parent window=>.6789A>
+	 	7	<Top child window=>.6789A>
+	 	8	<Bottom child window=>.6789A>
+	 	9	<Sibling immediately below=>.6789A>
+	 	10	<Sibling immediately above=>.6789A>
+	 	11	<Window information=>.11>
+	 	13	<Sprite suffix=>.13>
 #subpage 6789A
 Wimp_Extend 6-10
 =>	R0 =	6	= return parent window handle
@@ -77,3 +70,17 @@ Offset	Contents
 88	Horizontal scroll well width,		0 if no horizontal scrollbar (corrupt if no window handle was given on entry)
 92	Left-arrow width, possibly squashed,	0 if no horizontal scrollbar
 96	Horizontal scrollbar left-gap,		0 if no horizontal scrollbar
+#
+#subpage 13
+Wimp_Extend 13 (&400FB) [5.00]
+=>	R0 =	13 (reason code)
+	R1 = 	pointer to filname without suffix
+	R2 =	pointer to output buffer
+	R3 =	size of buffer, or 0 to read size required
+
+<=	R0 corrupt
+	R3 =	space left in buffer, or -required size.
+
+This call adds a sprite file suffix onto a pathname. It uses a multi-pass strategy so that it will fall back where a particular file is not available.
+
+Old Wimps do not support this call, but don't return an error. In this case, all registers will be preserved and you should use <Wimp_ReadSysInfo> 2 instead.

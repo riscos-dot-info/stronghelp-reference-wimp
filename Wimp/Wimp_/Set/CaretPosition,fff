@@ -7,7 +7,8 @@ Wimp_SetCaretPosition  (&400D2)
 	R4 =	<height + flags=>wimp_carethf>, or -1
 	R5 =	index into string, or -1
 
-This SWI moves caret to a new position.
-If the caret is moved to a new window, a <LoseCaret=>Wimp_Poll11> message is sent to the owner of the old window, and a <GainCaret=>Wimp_Poll12> message is sent to the owner of the new one.
+This SWI moves caret to a new position. If the caret is moved to a new window, a <LoseCaret=>Wimp_Poll11> message is sent to the owner of the old window, and a <GainCaret=>Wimp_Poll12> message is sent to the owner of the new one.
+
+The index into the string is a byte index, not a character index - there is only a distinction when the system alphabet is {fCode:UTF8}.
 #Line
 See <PRM 3, page 152=>PRM-3:152>.

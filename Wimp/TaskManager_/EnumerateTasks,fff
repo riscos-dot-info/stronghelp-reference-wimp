@@ -13,7 +13,7 @@ This SWI returns information about the running tasks. This is necessarily the sa
 #Tab
 0	Task handle
 4	Task name (which should be copied if you use it)
-8	Slot size (K)
+8	Slot size (in bytes, despite what the PRMs say)
 12	<Flags=>.flags>
 #Line
 See <PRM 3, page 315=>PRM-3:315>.

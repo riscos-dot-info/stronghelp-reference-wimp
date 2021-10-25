@@ -4,15 +4,17 @@ Wimp_TextOp  (&400F9) (3.50)
 	 	 0	<set text colours=>.0>
 	 	 1	<calculate width of string=>.1>
 	 	 2	<plot text=>.2>
+	 	 3	<get split point=>.3>
+	 	 4	<truncate=>.4>
 other registers depend on R0
 
 Operations on text in the current desktop font.
 
-See also <Wimp_ReadSysInfo> with R0=8
+See also <Wimp_ReadSysInfo> with R0 = 8.
 #
 #Subpage 0
 Wimp_TextOp 0 (&400F9)
-=>	R0 =	0
+=>	R0 =	0 (reason code)
 	R1 =	foreground colour
 	R2 =	background colour
 
@@ -20,7 +22,7 @@ Sets the text colours in the form &BBGGRR00.
 #
 #Subpage 1
 Wimp_TextOp 1 (&400F9)
-=>	R0 =	1
+=>	R0 =	1 (reason code)
 	R1 =	Pointer to string
 	R2 =	Number of characters to scan, or 0 for whole string
 
@@ -35,9 +37,32 @@ Wimp_TextOp 2 (&400F9)
 	 	 	30	Vertically justify, so baseline of characters is at same height as when using system font
 	 	 	31	Right-justify 
 	R1 =	Pointer to string
-	R2 =	-1 (?)
-	R3 =	-1 (?)
+	R2 =	-1
+	R3 =	-1
 	R4 =	X coordinate
 	R5 =	Y coordinate
 
-Plots a string in the current desktop font. Prior to plotting, the font colours are set (with <Wimp_SetColour>).
+Plots a string in the current desktop font.
+#
+#Subpage 3
+Wimp_TextOp 3 (&400F9) [4.00]
+=>	R0 =	3 (reason code)
+	R1 =	pointer to string
+	R2 =	width in OS units
+	R3 =	split character
+
+<=	R0 =	pointer to split point
+	all others preserved
+#
+#Subpage 4
+Wimp_TextOp 4 (&400F9) [4.00]
+=>	R0 =	4 (reason code)
+	R1 =	pointer to string
+	R2 =	pointer to output buffer
+	R3 =	buffer size, or 0 to find required size
+	R4 = 	maximum width in OS units
+
+<=	R0 =	required buffer size
+	all others preserved
+
+This call fills the buffer with the string, truncated if necessary with an ellipsis. Depending on the current alphabet and Wimp font, either an ellipsis character is used, or three full stops.

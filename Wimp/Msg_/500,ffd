@@ -32,7 +32,7 @@ Message_AlarmSet 0
 + 27	date
 + 28	hour
 + 29	minute
-+ 30{*}	name of application (null terminated)
++ 30	name of application (null terminated)
 + /n/	application's identifier (null terminated)
 
 This message instructs !Alarm to set an alarm. Name and identifier must each be 40 or less bytes. !Alarm performs range checks (so an hour of 30 gives 6am the next day) but will happily add alarms out of the range (roughly \< 1900 or > 2247), and then quit with an error when it attempts to display them. By keeping this window closed, and saving the alarms file when quitting !Alarm, it is possible to write these illegal alarms to a file. Fortunately they can be deleted with <Message_AlarmSet 2=>.2>.

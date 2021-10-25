@@ -1,8 +1,8 @@
 Wimp_LoadTemplate  (&400DB)
 #Parent Wimp_
-=>	R1 =	pointer to userbuffer for template, or 0 to find required buffersize
+=>	R1 =	pointer to buffer for template, or 0 to find required buffer size
 	R2 =	pointer to workspace for indirected data.
-	R3 =	pointer to end of workspace (+1?)
+	R3 =	pointer to end of workspace + 1
 	R4 =	pointer to 256-byte array for font ref, or -1 for no fonts
 	R5 =	pointer to (wildcarded) name to match (3 aligned words)
 	R6 =	position to search from, or 0 for the first call
