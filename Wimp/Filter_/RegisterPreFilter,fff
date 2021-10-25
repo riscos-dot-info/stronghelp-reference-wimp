@@ -1,7 +1,7 @@
 Filter_RegisterPreFilter  (&42640)
 #Parent Filter_
 =>	R0 =	Pointer to zero terminated filter name
-	R1 =	Address of <filter code=>Filter_filtercode>
+	R1 =	Address of <filter code=>Filter_precode>
 	R2 =	Value to be passed in R12
 	R3 =	Task handle of task to which filter is applied or 0 for all tasks
 

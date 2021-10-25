@@ -19,3 +19,4 @@ Bit	Part of dialogue to update when set
 6	colour setting
 7	the colour model and setting (including optional data)
 8	whether the dialogue ignores <Message_HelpRequest=>Msg_502>
+9	whether the dialogue passes on unhandled keypresses

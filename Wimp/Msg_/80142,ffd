@@ -15,6 +15,6 @@ Printers will respond with one of :
  è	<PrintError=>Msg_80144> if the printer is busy.
  è	<PrintFile=>Msg_80140> (for compatability with RISC OS 2 applications).
  è	<PrintTypeOdd=>Msg_80145> if it doesn't know how to print the file.
- è	<DataSaveAck=>Msg_2> if the file should be saved for queueing (later, a PrintTypeOdd message will be broadcast).
+ è	<DataSaveAck=>Msg_2> if the file should be saved for queueing (later, a PrintTypeOdd message will be broadcast when needed).
 #Line
 See <PRM 3, page 262=>PRM-3:262>.

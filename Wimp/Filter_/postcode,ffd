@@ -1,0 +1,13 @@
+Post filter code
+#Parent Filter_
+#Wrap Off
+=>	R0 =	Event reason code being returned for Post filters
+	R1 =	User's event buffer
+	R2 =	Task handle of task that called Wimp_Poll
+	R3 =	Pointer to poll word if applicable
+	R12 =	Value of R2 when filter registered
+#Wrap
+
+<=	You may modify the reason code in R0 and the contents of the buffer pointed to by R1 to provide a new event.
+	Return R0 = -1 to prevent event being passed to task.
+	You must preserve all other registers.

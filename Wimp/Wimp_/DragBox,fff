@@ -1,7 +1,7 @@
 Wimp_DragBox (&400D0)
 #Parent Wimp_
 =>	R1 =	pointer to <block=>.block>, or -1 to cancel drag
-	R2 =	"TASK", invokes R3 as flags word (Wimp 3.80 or later)
+	R2 =	"TASK" invokes R3 as flags word {/}[3.80+]{/}
 	R3 =	<flags=>.ursulaflags>
 <=	R0 corrupt
 	If R2 was "TASK" on entry, it is cleared

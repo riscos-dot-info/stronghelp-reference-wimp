@@ -3,7 +3,7 @@ TaskWindow
 #Prefix TaskWindow_
 <TaskInfo>
 
-Message :
+Messages:
 #Indent 3
 #Table 4 24
 <808C0 TW_Input=>Msg_808c0>

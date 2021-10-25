@@ -1,7 +1,20 @@
-Wimp_Extend (&400FB) [3.80]
+Wimp_Extend (&400FB) [3.50]
 #Parent Wimp_
-=>	R0 =	<reason code=>.reason>
+=>	R0 =	reason code
 	 	0-5	Internal use only
+# From extreme hacking:
+# 1: return window manager workspace pointer
+# 2: return some sort of branch table
+#     0 plot text in desktop font
+#     4 SWI dispatch code
+#     8 SWI exit code
+#    12 page in different task?
+#    16 plot icon??
+#    20 a return instruction
+#    24 perform wimp_spriteop
+# 3: give/return pointer of routine to be called instead of SWI handler code
+# 4: return two pointers inside WM workspace
+# 5: give/return pointer of routine to be called to fill in window background
 	 	6	<Parent window=>.6789A>
 	 	7	<Top child window=>.6789A>
 	 	8	<Bottom child window=>.6789A>
@@ -9,6 +22,8 @@ Wimp_Extend (&400FB) [3.80]
 	 	10	<Sibling immediately above=>.6789A>
 	 	11	<Window information=>.11>
 	 	13	<Sprite suffix=>.13>
+
+Note that unrecognised reason codes do not generate an error, but simply return with all registers preserved.
 #subpage 6789A
 Wimp_Extend 6-10
 =>	R0 =	6	= return parent window handle

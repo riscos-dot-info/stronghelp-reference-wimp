@@ -5,6 +5,18 @@ Wimp_StartTask  (&400DE)
 
 This SWI creates a new task, and executes the given *command. The SWI returns to you when new task exits, or calls <Wimp_Poll>.
 
-Note that you can only call this SWI from USR mode, and only if you are a 'live' task (ie. gained control from <Wimp_Initialise> or Wimp_Poll.
+Note that you can only call this SWI from USR mode with an empty SVC stack (see <note=>.subpage>), and only if you are a 'live' task (ie. gained control from <Wimp_Initialise> or Wimp_Poll.
 #Line
 See <PRM 3, page 177=>PRM-3:177>.
+#subpage subpage
+Wimp_StartTask footnote
+When calling Wimp_StartTask, you must be in an initialised Wimp context, in USR mode and with an empty supervisor stack. This means it is not sufficient to drop from SVC mode into USR mode to call this SWI, and precludes starting tasks from within
+
+è Callbacks
+è Interrupts
+è Filters
+è SWIs
+è Vectors (events, etc)
+è Any other system call mechanism.
+
+The same conditions apply to Wimp_Poll; this is because both SWIs use the <callback handler=>OS:OS_handlers_callback> to context switch between tasks.

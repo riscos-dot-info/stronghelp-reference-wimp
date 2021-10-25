@@ -1,4 +1,5 @@
 Character code
+#parent Wimp_ProcessKey
 {*}Key{*}		{*}Alone{*}		{*}+Shift{*}	{*}+Ctrl{*}		{*}+Ctrl Shift{*}
 #line
 Backspace	&008		&008		&008		&008

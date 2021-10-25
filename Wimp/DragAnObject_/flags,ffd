@@ -27,6 +27,22 @@ Bits	Meaning
 	 0	a <SWI=>DragAnObject_withSWI>
 	 1	a <C/assembler function=>DragAnObject_withFN>
 17	If the renderer is a function, it is called in:
-	 0	User mode
+	 0	<User mode=>.note>
 	 1	SVC mode
+18	Actually use <user mode=>.note>
 18-31	Reserved for future use, should be set to 0.
+#subpage note
+Note about DragAnObject User mode
+#wrap on
+Prior to version 0.09 (Castle), DragAnObject would call client functions in
+SVC mode even when asked to call them in user mode. On 32 bit systems, this
+leads to an incorrect stack limit which leads to aborts.
+
+Rather than fix the module, which may cause further faults in existing
+clients, a new bit (b18) indicates that the function should actually be
+called in user mode. If bit 18 is set, bit 17 should be clear.
+
+The calling environment should be set up sufficiently to allow access to user
+and C library statics, provided that DragAnObject_Start was called via a
+veneer that preserves R10 and R11 (sl and fp). OSLib and _kernel_swi veneers
+are fine, and _swi is fine except on an unpatched RISC OS 3.70/3.71.

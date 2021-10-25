@@ -17,6 +17,6 @@ Bit	Meaning
 #Line
 0-1	0 =	normal dialogue
 	1 =	menu dialogue
-	2 =	toolbox dialogue (has close and back icons)
+	2 =	toolbox dialogue (has Close and Back icons instead of OK and Cancel buttons)
 	3 =	submenu dialogue
 other	reserved (must be 0)

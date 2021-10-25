@@ -1,6 +1,6 @@
 'String_value' in the Plugin Protocol
 #Parent Msg_PlugIn_
-Many of the strings passed around in this protocol are of unspecified size and may, especially in the case of URL's, be larger than could fit within the body of a Wimp message. Therefore, they are defined in this spec as {fCode}string_value{f}s.
+Many of the strings passed around in this protocol are of unspecified size and may, especially in the case of URLs, be larger than could fit within the body of a Wimp message. Therefore, they are defined in this spec as {fCode}string_value{f}s.
 
 These are also used in the Browser spec and are defined as being either :
 #Indent 2

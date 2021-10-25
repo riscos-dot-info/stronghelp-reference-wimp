@@ -10,6 +10,6 @@ Post rect filter code
 	R12 =	value of R2 when filter registered
 <=	all registers preserved
 
-This is called after the window background is filled, before <Wimp_GetRectange> returns, unless the call is returning with 'no more to do' status. This is not called due to <Wimp_UpdateWindow> since it does not fill the background, but is is called after a transparent window would have been filled.
+This is called after the window background is filled, before <Wimp_GetRectangle> returns, unless the call is returning with 'no more to do' status. This is not called due to <Wimp_UpdateWindow> since it does not fill the background, but is is called after a transparent window would have been filled.
 
 You can probably modify the updated block, but R0 and R1 should probably remain as passed.

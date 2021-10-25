@@ -1,7 +1,7 @@
 Filter_DeRegisterPostRectFilter  (&42649)  (0.18)
 #Parent Filter_
 =>	R0 =	pointer to zero terminated filter name
-	R1 =	addresss of <filter code=>Filter_rectcode>
+	R1 =	addresss of <filter code=>Filter_postrectcode>
 	R2 =	value to be passed in R12
 	R3 =	task handle of task to which filter was applied
 	

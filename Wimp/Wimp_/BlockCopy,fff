@@ -10,6 +10,8 @@ Wimp_BlockCopy  (&400EB)
 
 This SWI copies as much as possible of source-rectangle, to given dest. The rest is invalidated. This call cannot be made from inside a <redraw=>Wimp_RedrawWindow> / <update=>Wimp_UpdateWindow> loop.
 
+All coordinates are relative to the window's work area.
+
 Note that ECF fills and tiling patterns can get out of step with this call (for an example watch the taskmanager in a 2 colour mode).
 # N> It screws up with the tiling sprite in 256 colour modes. But I guess not
 #    on an A5000

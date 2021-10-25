@@ -1,0 +1,12 @@
+Pre filter code
+#Parent Filter_
+#Wrap Off
+=>	R0 =	Event mask as passed to <Wimp_Poll> for Pre filters
+	R1 =	User's event buffer
+	R2 =	Task handle of task that called Wimp_Poll
+	R3 =	Pointer to poll word if applicable
+	R12 =	Value of R2 when filter registered
+#Wrap
+
+<=	You may clear bits in R0 to provide a new event mask.
+	You must preserve all other registers.

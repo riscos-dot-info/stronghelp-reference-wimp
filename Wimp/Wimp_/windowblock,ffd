@@ -1,7 +1,7 @@
 Format of a window block
 #Parent Wimp_CreateWindow
 #Wrap off
-Offset	Contents
+Offset	Contents						    Standard values
 #Line
 0	Visible area minimum x
 4	Visible area minimum y
@@ -10,15 +10,15 @@ Offset	Contents
 16	Scroll x offset
 20	Scroll y offset
 24	<Handle to open window behind=>wimp_windowlocation>
-28	<Window flags=>wimp_windowflags>			Normal values
-32	Title foreground, and frame colour			7 Black
+28	<Window flags=>wimp_windowflags>			
+32	Title foreground, and frame colour			    7 Black
 	(&FF is a <special value=>.titlefore>)
-33	Title background					2 Grey
+33	Title background					    2 Grey
 34	Work area foreground
 35	Work area background (&FF means Wimp won't clear)
-36	Scrollbar outer colour					3 Mid grey
-37	Scrollbar inner colour					1 Light grey
-38	Title background when input focus			12 Cream
+36	Scrollbar outer colour					    3 Mid grey
+37	Scrollbar inner colour					    1 Light grey
+38	Title background when input focus			    12 Cream
 39	<Extra flags=>.moreflags> byte.
 40	Work area minimum x
 44	Work area minimum y

@@ -10,6 +10,7 @@ Validation string can contain the following commands:
 <F>	Set font colours.
 <K>	Assign functionality to specific keys.
 <L>	Text in icon will be formatted (split).
+<N>	Icon name.
 <P>	Sets pointer shape and active point.
 <R>	Border commands.
 <S>	Spritename.
@@ -110,6 +111,17 @@ Validation string 'L'
  		The height will only take effect on Window Manager 3.80 and later.
 
 *Examples*:	{Fcode:L40}
+#
+#Subpage N
+Validation string 'N'
+*Use*:	Give icon a name.
+
+*Syntax*:	{Fcode:N\<string\>}
+
+*Notes*:	This option is ignored by the Wimp; it has been reserved for template editors and applications to give icons a name so they can reference them by other means than the icon number.
+
+*Examples*:	{Fcode:N3/FILENAME}
+# Example taked from ResEd's templates
 #
 #Subpage P
 Validation string 'P'

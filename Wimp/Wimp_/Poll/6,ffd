@@ -9,4 +9,5 @@ Offset	Meaning
 8	Buttons
 12	Window handle	(-1=background, -2=iconbar)
 16	Icon handle	(-1=workarea)
-20	Button state prior to click.
+# 20	Button state prior to click.
+# cl 08-Nov-04> +20 was valid in Arthur but removed in RISC OS 2

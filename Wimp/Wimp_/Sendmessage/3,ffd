@@ -2,8 +2,9 @@ Acknowledge
 This prevents a broadcast message from being passed on, and a UserMessage_Recorded from being returned to the sender.
 
 call <Wimp_SendMessage> with :
-=>	your_ref	=	0 (iff finding task handle of a window/icon)
- 	 		 	else it should be from the my_ref field
+=>	your_ref	=	0 if finding task handle of a window/icon
+ 	 		 	otherwise it should be copied from the my_ref field
+ 	R0		=	19 (poll code)
  	R2		=	task/window handle
  	R3		=	icon handle if R2 = -2
 <=	R2	=	task handle.

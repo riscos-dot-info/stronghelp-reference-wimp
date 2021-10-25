@@ -10,8 +10,9 @@ Message PrintFile  (&80140)
 
 This message is sent by !Printers when it receives a DataSave or PrintSave message. The task can do the following :
 
-  *	Ignore. !Printers will send <DataSaveAck=>Msg_2>, to save the file for later printing.
+  *	Ignore! This message if for RISC OS 2 compatibility and its use is deprecated. !Printers will send <PrintTypeOdd=>Msg_80145> or <DataSaveAck=>Msg_2> later.
   *	Respond with <WillPrint=>Msg_80141>, to send data to Printer:
+  	This will 'jump the queue' and force itself to print first.
   *	Put data in Printer$Temp and send <DataLoad=>Msg_3>.
 #Line
 See <PRM 3, page 261=>PRM-3:261>.

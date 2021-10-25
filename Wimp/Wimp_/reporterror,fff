@@ -1,6 +1,6 @@
 Wimp_ReportError  (&400DF)
 #Parent Wimp_
-=>	R0 =	pointer to standard <SWI errorblock=>OS:swi_errorblock>
+=>	R0 =	pointer to standard <SWI error block=>OS:swi_errorblock>
 	R1 =	<flags=>wimp_reporterror0>
 	R2 =	pointer to application name (or title if bit 4 set), or 0 for simply 'Error'
 	R3 =	sprite name (if bit 8 set)

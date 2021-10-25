@@ -9,7 +9,9 @@ Wimp_ForceRedraw  (&400D1)
 
 This SWI marks area of screen as invalid, and to be redrawn later. If you are doing some kind of animation, or other temporary changes, then you should use <Wimp_UpdateWindow> instead.
 
-Under the nested Wimp it is possible to force a redraw of windows which do not belong to the application. An <extended version=>.nested> is available.
+Coordinates are relative to the window's work area, unless R0 is -1 on entry in which case absolute screen coordinates are given.
+
+Under the nested Wimp it is possible to force a redraw of windows which do not belong to the application, and an <extended version=>.nested> is available.
 #Line
 See <PRM 3, page 150=>PRM-3:150>.
 #Subpage nested
@@ -17,5 +19,14 @@ Wimp_ForceRedraw (nested version)
 =>	R0 =	window handle
 	R1 =	"TASK" (&4B534154)
 	R2 =	3 - update the title bar
+# or 0: all furniture
+#    1: back icon
+#    2: close icon
+#    3: title bar
+#    4: toggle size icon
+#    5: vertical scroll bar
+#    6: size icon
+#    7: horizontal scroll bar
+#    8: iconise button
 
 This call is the best way to force a redraw of the window's title bar, when available.

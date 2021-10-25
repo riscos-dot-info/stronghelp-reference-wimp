@@ -1,12 +1,12 @@
 Wimp_DecodeMenu  (&400D5)
 #Parent Wimp_
 =>	R1 =	pointer to menu data structure
-	R2 =	pointer to list of menuselections
+	R2 =	pointer to list of menu selections
 	R3 =	pointer to buffer for answer
 
 <=	R0 corrupt
 	Buffer pointed to by R3, contains menu item texts, separated by '.'s
 
-This SWI is incredibly useful if you want to decode menus by their contents. This is easier than playing with the selection number if you want an easy life. If you had a menu containing 'Selection', with a sub-option 'Delete' which was chosen you would get the string 'Selection.Delete' back.
+This SWI is incredibly useful if you want to decode menus by their contents. This is easier than playing with the selection number if you want an easy life. If you had a menu containing 'Selection', with a sub-option 'Delete' which was chosen you would get the string 'Selection.Delete' back. Note that the string is terminated with CR.
 #Line
 See <PRM 3, page 161=>PRM-3:161>.

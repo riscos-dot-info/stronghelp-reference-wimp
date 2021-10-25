@@ -18,7 +18,7 @@ Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
 For comments, suggestions and submissions for these, please mail Christian Ludlam <christian@recoil.org=>#URL mailto:christian@recoil.org> who is currently moderating the collection. These manuals will continue to be available from <http://sudden.recoil.org/stronghelp/=>#url>.
 #line
-<This page=>.hist122> gives history and credits.
+<This page=>.hist123> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -185,4 +185,17 @@ History for Wimp v1.22
 	 	<Validation strings U, A, D=>Wimp_validationstring>
 
 #tab;line
-<Previous history=>.hist121>
+<Previous history=>.hist121>	<Next history=>.hist123>
+#subpage hist123
+History for Wimp v1.23
+#align right
+{/}31 January 2006{/}
+#align left
+#line
+è	Update <Wimp_Extend>
+è	Update the Printer protocol <user messages=>Msg_> (Maarten Bezemer)
+è	Added a footnote to clarify <Wimp_StartTask> (Justin Fletcher)
+è	Updated <DragAnObject=>DragAnObject_> adding a note about user mode function calls for latest version released by Castle.
+è	Added note to <Wimp_BlockCopy> and <Wimp_ForceRedraw> that coordinates are work-area relative (Erik Groenhuis)
+#tab;line
+<Previous history=>.hist122>

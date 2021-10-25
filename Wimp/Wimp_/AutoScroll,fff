@@ -1,8 +1,7 @@
 Wimp_AutoScroll (&400FD) (4.00)
 #Parent Wimp_
 =>	R0 =	<flags=>.inflags>
-If R0 bits 0 or 1 are set,
-	R1 =	pointer to <block=>.r1>
+	R1 =	pointer to <block=>.r1> (if flags b0 or b1 set)
 <=	R0 =	<new flags=>.newflags>
 
 This call controls how the Wimp automatically scrolls an application's windows.

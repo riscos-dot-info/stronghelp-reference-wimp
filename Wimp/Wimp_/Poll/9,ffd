@@ -6,4 +6,4 @@ Returned block contains :
    	...
 	Terminated by -1
 
-If the user clicks with adjust (call <Wimp_GetPointerInfo> to find out), the menu should remain on screen. To do this, you have to reopen the menu after having responded to selection. This is done by calling <Wimp_CreateMenu> again.
+If the user clicks with adjust (call <Wimp_GetPointerInfo> to find out), the menu should remain on screen. To do this, you have to reopen the menu after having responded to selection by calling <Wimp_CreateMenu> again.
