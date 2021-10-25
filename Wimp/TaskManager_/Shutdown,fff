@@ -21,4 +21,4 @@ TaskManager_Shutdown types
 
 Bit 2, when set, flags in CMOS that the last shutdown was forced by a low battery, and message reporting this is issued on the next Desktop start.
 
-Bit 7 controls whether the contents of Choices:Boot.PostDesk should be run or not, on versions of the Task Manager which support this feature..
+Bit 7 controls whether the contents of Choices:Boot.PostDesk should be run or not, on versions of the Task Manager which support this feature.

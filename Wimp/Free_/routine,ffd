@@ -26,10 +26,10 @@ Free GetFSName (1)
 	R1 =	<FS number=>OS:fsys_ident>
 	R2 =	pointer to buffer
 	R3 =	pointer to device or ID
-<=	R0 =	length of name
+<=	R0 =	number of bytes placed into the buffer, including the terminator
 	R1-R3 preserved
 #line
-You should place the device name at R2 and the length of the name in R0.
+You should expand the device or ID into a name, and copy it to the buffer at R2, and update R0.
 #line;tab
 See also:	<PRM 2-513=>PRM-2:513>, < 5a-258=>PRM-5a:258>
 #

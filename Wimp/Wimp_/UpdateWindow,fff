@@ -12,7 +12,7 @@ Wimp_UpdateWindow  (&400C9)
 #Tab
 This SWI is similar to <Wimp_RedrawWindow>.
 Differences :
-  è	Not all of window has to be updated.
+  è	Not all of the window has to be updated.
   è	Rectangles are not cleared by Wimp.
   è	Can be called at any time, not just in response to RedrawWindow message.
 

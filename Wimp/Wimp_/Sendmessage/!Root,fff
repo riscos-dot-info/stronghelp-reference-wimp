@@ -13,6 +13,6 @@ Wimp_SendMessage  (&400E7)
 #tab
 Most often, this SWI is used to send <user messages=>wimp_sendmessage1>. Sending an Acknowledge (R0 = 19) to a window allows its owner's task handle to be found.
 
-{*}Note:{*}	In versions of the Window Manager prior to 4.00, message blocks in dynamic areas will not have their sender and my_ref fields filled.
+{*}Note:{*}	In versions of the Window Manager prior to 4.00, message blocks in dynamic areas (high address) will not have their sender and my_ref fields filled.
 #Line;tab
 See also:	<PRM 3-196=>PRM-3:196>.

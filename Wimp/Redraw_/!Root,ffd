@@ -1,0 +1,5 @@
+RedrawManager
+#Parent !Root
+#Prefix Redraw_
+AddCallBack
+RemoveCallBack

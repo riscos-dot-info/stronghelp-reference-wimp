@@ -1,0 +1,7 @@
+Message FilerDevicePath (&408) (4.00+)
+#Parent MSG_
++ 20	path, zero terminated
+
+This message is sent from the filing system specific filer to the Filer and specifies where to save a selection of files to when dropped on the filing system's icon bar icon. If your filing system specific filer serves several drives, first resolve the icon to a drive name.
+
+If the system variable \<FSName$DefaultDir> is set, append its contents to {/}FSName::DriveName.$.{/} so that the user can set a default save directory, or if unset just return {/}FSName::DriveName.${/} (no trailing dot) which results in selections being <FilerAction=>Wimp:FilerAction_> copied to the root.

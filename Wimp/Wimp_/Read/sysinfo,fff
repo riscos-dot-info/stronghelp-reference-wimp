@@ -28,6 +28,18 @@ Currently defined values for R0 :
 15	/Internal use only/
 16	<Read WIMP sprite pools pointers=>.16> (4.00+)
 17	Read the configured auto-scroll pause delay in cs (4.00+)
+18	/Reserved/
+19	/Reserved/
+20	/Reserved/
+21	/Reserved/
+22	/Reserved/
+23	Read mouse drag delay in cs (?)
+24	Read double click delay in cs (?)
+25	Read auto menu open settings (?)
+26	Read iconbar speed and acceleration (?)
+27	/Reserved/
+28	Read WimpVisualFlags (5.22+)
+29	Read alpha sprite file suffix, cf. reason code 2 (5.22+)
 #Line
 See <PRM 3, page 218=>PRM-3:218>.
 #

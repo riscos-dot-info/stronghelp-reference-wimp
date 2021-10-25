@@ -19,6 +19,7 @@ Misc :
 <405 FilerAction=>Msg_405>
 <406 FilerControlAction=>Msg_406>
 <407 FilerSelection=>Msg_407>
+<408 FilerDevicePath=>Msg_408>
 <500 AlarmSet=>Msg_500>
 <501 AlarmGoneOff=>Msg_501>
 <502 HelpRequest=>Msg_502>

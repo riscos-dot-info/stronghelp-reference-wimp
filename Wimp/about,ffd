@@ -18,7 +18,7 @@ Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
 These manuals are kindly hosted by <www.riscos.info=>#url http://www.riscos.info/downloads/stronghelp/manuals/>
 #line
-<This page=>.hist125> gives history and credits.
+<This page=>.hist126> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -229,4 +229,17 @@ History for Wimp v1.25
 è	Clarify <button types=>Wimp_iconbutton>
 è	Fixed example program in <Wimp_BaseOfSprites> to work
 #tab;line
-<Previous history=>.hist124>
+<Previous history=>.hist125>	<Next history=>.hist126>
+#subpage hist126
+History for Wimp v1.26
+#align right
+{/}05 Nov 2016{/}
+#align left
+#line
+è	More subreasons for <Wimp_ReadSysInfo>
+è	Lots of typing and grammatical errors fixed
+è	Added <Message_FilerDevicePath=>Msg_408>
+è	Clarified that Free subreason <GetFSName=>Free_routine.1> needs to include the terminator in the length
+è	Added <RedrawManager=>Redraw_>
+#tab;line
+<Previous history=>.hist125>

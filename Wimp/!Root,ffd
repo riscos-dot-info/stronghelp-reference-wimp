@@ -3,20 +3,20 @@ Wimp SWIs
 #Postfix _
 #Align Centre;Wrap off
 #Table Columns 3
-<Wimp=>Wimp_!RootSWIs>
-<Filter>
-<TaskManager>
-<TaskWindow>
-<DragASprite>
-<DragAnObject>
-<FilerAction>
-<Free>
 <ColourPicker>
 <DDEUtils>
+<DragASprite>
+<DragAnObject>
+<Filter>
+<FilerAction>
+<Free>
+<RedrawManager=>Redraw_>
+<TaskManager>
+<TaskWindow>
+<Wimp=>Wimp_!RootSWIs>
 #EndTable
-# <RedrawManager=>Redraw_>
 #Indent;Line
 #include topics
 #Line
 #align centre
-{/}<Wimp SWIs manual=>about>  v1.25, 12 May 2015{/}
+{/}<Wimp SWIs manual=>about>  v1.26, 05 Nov 2016{/}

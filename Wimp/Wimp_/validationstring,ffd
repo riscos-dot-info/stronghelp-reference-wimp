@@ -41,7 +41,7 @@ Validation string 'C' (3.98+)
 {/}{*}Wimp 3.98+{*}{/}
 *Syntax*:	{FCode:C\{BBGGRR\}[/\{BBGGRR\}]}
 	First BBGGRR is the foreground colour, the second is the background colour.
-	If either colour is not included, then colour is as the <flags word=>wimp_iconflags>
+	If either colour is not included, then colour is per the top 8 bits of the <flags word=>wimp_iconflags>
 #line
 {/}{*}Wimp 4.00+{*}{/}
 *Syntax*:	{fCode}C[foreground]/
@@ -51,7 +51,7 @@ Validation string 'C' (3.98+)
 		 [light 3D edge]/
 		 [dark 3D edge]{f}
 	All colours are in the form BBGGRR
-	If any colour is not included, then colour is as the <flags word=>wimp_iconflags>
+	If any colour is not included, then colour is per the top 8 bits of the <flags word=>wimp_iconflags>
 #line
 *Examples*:	{FCode:C008000/0080FF}	foreground mid green, background orange.
 	{FCode:CFF00FF}		foreground magenta, background as for flags word.
