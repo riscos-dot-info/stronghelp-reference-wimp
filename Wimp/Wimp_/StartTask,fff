@@ -5,6 +5,6 @@ Wimp_StartTask  (&400DE)
 
 This SWI creates a new task, and executes the given *command. The SWI returns to you when new task exits, or calls <Wimp_Poll>.
 
-Note that you can only call this SWI from USR mode, and only if you are a 'live' task ({/}i.e.{/} gained control from <Wimp_Initialise> or Wimp_Poll.
+Note that you can only call this SWI from USR mode, and only if you are a 'live' task (ie. gained control from <Wimp_Initialise> or Wimp_Poll.
 #Line
 See <PRM 3, page 177=>PRM-3:177>.

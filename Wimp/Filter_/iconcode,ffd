@@ -1,14 +1,15 @@
 Filter Wimp_GetRectangle icon plotting code
 #Parent Filter_RegisterPostIconFilter
-#Wrap Off
-{*}Post:{*}
 =>	R0 =	window handle
 	R2 =	task handle
 	R6 =	minimum x
 	R7 =	minimum y
 	R8 =	maximum x
 	R9 =	maximum y
+	R10 =	window handle - 1
 	R12 =	value of R2 when filter registered
 <=	all registers preserved
 
-You can probably modify the updated block, but R0 and R1 should probably remain as passed. You should use {fCode}MOVS pc,link{f}.
+This is called after the wimp has redraw the icons in a window, before moving onto the next rectangle. This allows applications to plot over their window's icons.
+
+You can probably modify the updated block, but R0 and R1 should probably remain as passed.

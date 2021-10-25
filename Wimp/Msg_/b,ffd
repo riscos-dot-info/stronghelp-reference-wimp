@@ -1,8 +1,8 @@
 Message_DeviceClaim  (11)
 #Parent MSG_
-20	<major device number=>devices>
-24	<minor device number=>devices>
-28	information string (zero-terminated)
++20	<major device number=>devices>
++24	<minor device number=>devices>
++28	information string (zero-terminated)
 
 This message is broadcast by a task wishing to claim exclusive use of a system device.
 #Line

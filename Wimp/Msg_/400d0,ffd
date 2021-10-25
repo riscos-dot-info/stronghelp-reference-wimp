@@ -11,5 +11,4 @@ Message_IconizeAt (&400D0) [4.0+]
 #subpage flags
 Message_IconizeAt flags
 /Bit/	/Meaning/
-0	Window was iconised with a shift-click on close button
-	thus êiconise at buttonë behaviour is able to work.
+0	Window was iconised with a shift-click on close button, thus êiconise at buttonë behaviour is able to work.

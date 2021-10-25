@@ -15,6 +15,7 @@ Differences :
   è	Not all of window has to be updated.
   è	Rectangles are not cleared by Wimp.
   è	Can be called at any time, not just in response to RedrawWindow message.
-  è	NOTE: This SWI does not remove rectangles from Wimp_RedrawWindows list of invalid rectangles. If the area is already invalid, then Wimp will send you redraw messages, even if you have updated the area.
+
+Note: This SWI does not remove rectangles from Wimp_RedrawWindows list of invalid rectangles. If the area is already invalid, then Wimp will send you redraw messages, even if you have updated the area.
 #Line
 See <PRM 3, page 131=>PRM-3:131>.

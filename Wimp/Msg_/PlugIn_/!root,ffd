@@ -23,6 +23,3 @@ Message	Name
 &4D552	<Message_PlugIn_Abort=>Msg_Plugin_4D552>
 
 <System variables=>Msg_Plugin_Variables>
-
-#fH4:Note:
-This protocol is constantly being developed. See the <Acorn website=>#URL http://www.acorn.com/browser/specs.html> for more details.

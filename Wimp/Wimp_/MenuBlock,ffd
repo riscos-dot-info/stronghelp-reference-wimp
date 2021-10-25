@@ -7,14 +7,14 @@ Offset	Contents				Normal value
 13	title background colour			2
 14	work-area foreground colour		7
 15	work-area background colour		0
-16	width of menu items			(calculated)
+16	width of menu items			(calculated by wimp)
 20	height of menu items			44
 24	vertical gap between items		0
 28	<menu items=>.item> (24 bytes each)
 
-If bit 8 of the flags for the first item is set, then the menutitle is indirected, and the 3 first words are as for an indirected texticon.
+If bit 8 of the flags for the first item is set, then the menu's title is indirected, and the 3 first words are as for an indirected <text icon=>wimp_icondata>.
 
-If menutitle begins with an "\\", then this menu and all its submenus are "reversed"
+If the menu's title begins with "\\", then this menu and all its submenus are "reversed"
 #
 #Subpage item
 Menu item

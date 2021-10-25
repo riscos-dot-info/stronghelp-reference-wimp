@@ -1,7 +1,7 @@
 Wimp SWIs
 #Parent StrongHelp:!Menu
 #Postfix _
-#Align Centre;Wrap off;Indent 2
+#Align Centre;Wrap off
 #Table Columns 3
 <Wimp=>Wimp_!RootSWIs>
 <FilterManager=>Filter_>
@@ -19,4 +19,4 @@ Wimp SWIs
 #include topics
 #Line
 #align centre
-{/}<Wimp SWIs manual=>about>, v1.08, 26-Nov-1999{/}
+{/}<Wimp SWIs manual=>about>  v1.20, 04-Aug-2003{/}

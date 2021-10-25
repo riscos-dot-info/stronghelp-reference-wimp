@@ -22,6 +22,6 @@ Reason Codes :
 
 Priority : Highest: 17-19  Next: 1-6,8,9  Then: the rest  Lowest: 0
 
-Related SWIs : <Wimp_PollIdle>
+Related SWIs: <Wimp_PollIdle>
 #Line
 See <PRM 3, page 115=>PRM-3:115>.

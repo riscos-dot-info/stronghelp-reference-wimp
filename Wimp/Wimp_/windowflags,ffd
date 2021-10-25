@@ -1,39 +1,39 @@
 Window flags
 Bits	Wimp	Meaning when set
 #Line
-0	Old	Has title bar
+0	Old	Has title bar.
 1	 	Window is moveable (draggable).
-2	Old	Vertical scroll bar
-3	Old	Horizontal scroll bar
+2	Old	Vertical scroll bar.
+3	Old	Horizontal scroll bar.
 4	 	Window can be drawn completely by Wimp.
 5	 	Window is a pane.
 6	 	Window can be opened/dragged outside screen.
 7	Old	Has no quit or back boxes
 8	 	Return Scroll Request with autorepeat.
 9	 	Return Scroll Request without autorepeat.
-10	 	Treat colours given as GCOL numbers {f25}ﬁ{f} 0å254
-11	 	Don't allow any window below this one.
+10	 	Treat colours given as GCOL numbers 0-254.
+11	 	Window belongs on background window <stack=>.stack>.
 12	 	Trap keypresses.
-13	3.10	Force window to stay on screen
-14	3.10	Ignore right-extent when dragging size-box
-15	3.10	Ignore bottom-extent when dragging size-box
+13	3.10	Force window to stay on screen.
+14	3.10	Ignore right-extent when dragging size-box.
+15	3.10	Ignore bottom-extent when dragging size-box.
 16	 	Window is open.
 17	 	Window is fully visible.
 18	 	Window has been toggled to full size.
 19	 	Open Window Request, is caused by Toggle Size.
 20	 	Window has the input focus.
-21	3.10	Force window to screen on next <Wimp_OpenWindow>
-22	 	<Toggle method=>.toggle>
-23	3.98	Furniture window {/}[if child]{/}
-	4.00	Foreground window
-24	 	Window has Back icon
-25	 	Close icon
-26	 	Title Bar
-27	 	Toggle size icon
-28	 	Vertical scrollbar
-29	 	Adjust Size icon
-30	 	Horizontal Scrollbar
-31	 	1 for using new format, 0 for old
+21	3.10	Force window to screen on next <Wimp_OpenWindow>.
+22	 	<Toggle method=>.toggle>.
+23	3.98	Furniture window (if child).
+	4.00	Foreground window <stack=>.stack>.
+24	 	Window has back icon.
+25	 	Close icon.
+26	 	Title bar.
+27	 	Toggle size icon.
+28	 	Vertical scrollbar.
+29	 	Adjust size icon.
+30	 	Horizontal scrollbar.
+31	 	1 for using new format, 0 for old.
 #subpage toggle
 Window Flags - bit 22 - Toggle method
 This bit is overwritten by the Wimp and may be read using <Wimp_GetWindowState>. If set, it indicates that the window is, or /will be/, toggled to full size without covering the icon bar. Note that this behaviour is different to bit 18, which is set if the window is, or /has been/, toggled to full size including the icon bar.
@@ -41,8 +41,8 @@ This bit is overwritten by the Wimp and may be read using <Wimp_GetWindowState>.
 Toggling behaviour can only be properly resolved after <Wimp_Poll> returns an <Open_Window_Request=>Wimp_Poll2> reason code and before the subsequent call to <Wimp_OpenWindow>. Flags bit 19 is set, by definition; applications may distinguish between different types of toggle-size clicks using the following truth table:
 
 #indent 4
-Operation	Bit 22	Bit 21	Bit 18
-#line
+Operation		Bit 22	Bit 21	Bit 18
+#line 100
 To full size		0	1	0
 From full size		0	0	1
 To semi-full size	1	1	0
@@ -50,3 +50,19 @@ From semi-full size	0	0	0
 #indent
 
 These are the only values that can be returned in combination with bit 19 being set.
+#subpage stack
+Window stacks
+Under RISC OS 4.00 and later, there are several window stacks per 'domain' of windows, where a domain is either the main window stack or the parent of a numer of child windows.
+
+Within each domain, there are three stacks of windows:
+
+ è Foreground windows
+      	These have the foreground bit set and lie above normal windows, and above the window furniture of their parent. Bringing a standard window to the front will move it just behind the backmost 'foreground' window. For a child window, moving a foreground window so that it touches the parent's window furniture will cause the furniture to move to make room for thie child. The Wimp's error box window has this bit set.
+
+ è Background windows
+	These have the background bit set and live below normal windows. The pinboard window has this bit set to prevent standard windows being opened behind it. Note that attempting to move windows around in the backround window stack causes undesirable results on versions of the WindowManager prior to 5.18 (windows can get 'lost' behind the back-window).
+
+ è Standard windows
+	These have neither bit set and live between the other stacks.
+
+There is also a fourth stack of 'hidden' windows, which appear behind the back-most window. Windows are moved into this stack when iconised - they will never be displayed, and attempting to move windows around in this stack will have no effect.

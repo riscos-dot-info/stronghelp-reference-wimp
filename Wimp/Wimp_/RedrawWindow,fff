@@ -3,6 +3,6 @@ Wimp_RedrawWindow  (&400C8)
 =>	R1 =	pointer to block containing window handle
 <=	Exits through <Wimp_GetRectangle>
 
-This SWI is called in response to a <RedrawWindow=>Wimp_Poll1> message from Wimp. It must be 1st Wimp call after <Wimp_Poll>.    
+This SWI is called in response to a <RedrawWindow=>Wimp_Poll1> message from Wimp. It must be the first Wimp call after <Wimp_Poll>.    
 #Line
 See <PRM 3, page 129=>PRM-3:129>.

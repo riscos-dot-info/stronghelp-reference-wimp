@@ -1,16 +1,17 @@
 Wimp_SendMessage  (&400E7)
 #Parent Wimp_
-{f25}Þ{f}	R0 =	Reason code, see <Wimp_Poll>
+=>	R0 =	Reason code, see <Wimp_Poll>
 	R1 =	Pointer to message block
 	R2 =	Handle of destination task
 	 	or Window handle
 	 	or -2, and R3 = icon handle
 	 	or 0 to Broadcast.
-{f25}Ü{f}	R0 corrupt
+<=	R0 corrupt
 	R2 =	handle of destination task, if not broadcast
 	Message block my_ref (+8) and sender (+4) updated.
-#line
-Most often, this SWI is used to send <user messages=>wimp_sendmessage1>. Sending an Acknowledge (R0 = 19) to a window allows its parent's task handle to be found.
+
+#tab
+Most often, this SWI is used to send <user messages=>wimp_sendmessage1>. Sending an Acknowledge (R0 = 19) to a window allows its owner's task handle to be found.
 
 {*}Note:{*}	In versions of the Window Manager prior to 4.00, message blocks in dynamic areas will not have their sender and my_ref fields filled.
 #Line;tab

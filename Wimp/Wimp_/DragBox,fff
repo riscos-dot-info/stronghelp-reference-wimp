@@ -1,22 +1,23 @@
 Wimp_DragBox (&400D0)
 #Parent Wimp_
-{f25}Þ{f}	R1 =	pointer to <block=>.block>, or -1 to cancel drag
-		R2 =	"TASK", invokes R3 as flags word (Wimp 3.8 or later)
-		R3 =	<flags=>.ursulaflags>
-{f25}Ü{f}	R0 corrupt
-		If R2 was "TASK" on entry, it is cleared
-		All other registers preserved.
-#line;tab
-This SWI initiates a drag. A drag can span several calls to <Wimp_Poll>, so the task must remember what is being dragged and why.
-The termination of a drag is reported by <Wimp message 7=>Wimp_Poll7>.
+=>	R1 =	pointer to <block=>.block>, or -1 to cancel drag
+	R2 =	"TASK", invokes R3 as flags word (Wimp 3.80 or later)
+	R3 =	<flags=>.ursulaflags>
+<=	R0 corrupt
+	If R2 was "TASK" on entry, it is cleared
+	All other registers preserved.
+
+#tab
+This SWI initiates a drag. A drag can span several calls to <Wimp_Poll>, so the task must remember what is being dragged and why. The termination of a drag is reported by <Wimp message 7=>Wimp_Poll7>.
 #Line
-See <PRM 3, page 145=>PRM-3:145>, <DragASprite_Start>, and <DragAnObject_Start=>MiscSWIs:DragAnObject_Start>.
+See <PRM 3, page 145=>PRM-3:145>.
 #
 #subpage ursulaflags
 Wimp_DragBox flags
-/bit/	/meaning/
-0	Keep fixed end of rubber-box drags in line with work area of the window whose handle is given in <r1=>.block>
-1	Clip the dragbox so that it is only displayed within the work area of the window whose handle is given in <r1=>.block>
+Bit	Meaning when set
+#line
+0	Keep fixed end of rubber-box drags in line with work area of the window whose handle is given in <R1=>.block>
+1	Clip the dragbox so that it is only displayed within the work area of the window whose handle is given in <R1=>.block>
 Other bits are reserved.
 #
 #Subpage block
@@ -40,7 +41,7 @@ For types 8-11 only :
  40	R12 value for userroutines
  44	Address of drawbox routine
  48	Address of removebox routine
- 52	Address of movebox routine (or \<0 if none - move is remove followed by draw)
+ 52	Address of movebox routine (or \< 0 if none - move is remove followed by draw)
 #
 #Subpage dragtype
 Dragtypes

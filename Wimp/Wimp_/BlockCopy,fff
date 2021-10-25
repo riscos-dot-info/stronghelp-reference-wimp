@@ -8,7 +8,7 @@ Wimp_BlockCopy  (&400EB)
 	R5 =	destination	minx (incl)
 	R6 =	 		miny (incl)
 
-This SWI copies as much as possible of source-rectangle, to given dest. The rest is invalidated. This call cannot be made from inside a <redraw=>Wimp_RedrawWindow>/<update=>Wimp_UpdateWindow> loop.
+This SWI copies as much as possible of source-rectangle, to given dest. The rest is invalidated. This call cannot be made from inside a <redraw=>Wimp_RedrawWindow> / <update=>Wimp_UpdateWindow> loop.
 
 Note that ECF fills and tiling patterns can get out of step with this call (for an example watch the taskmanager in a 2 colour mode).
 # N> It screws up with the tiling sprite in 256 colour modes. But I guess not

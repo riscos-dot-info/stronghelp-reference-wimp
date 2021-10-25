@@ -12,10 +12,12 @@ Returned block contains :
   36	Scroll y direction
 
 Scroll directions :
+  -3	<Autoscroll Left/Down=>Wimp_AutoScroll>
   -2	Page Left/Down
   -1	Left/Down
    0
    1	Right/Up
    2	Page Right/Up
+   3	<Autoscroll Right/Up=>Wimp_AutoScroll>
 
 You use the scroll directions to update the scroll offsets, and then you do a <Wimp_OpenWindow>.

@@ -1,16 +1,16 @@
 Wimp_OpenWindow  (&400C5)
 #Parent Wimp_
 =>	R1 =	Pointer to block :
-	 	   0	Window handle {/}[does not have to belong to task (3.98+)]{/}
+	 	   0	Window handle
 	 	   4	Visible area minimum x
 	 	   8	Visible area minimum y
 	 	  12	Visible area maximum x
 	 	  16	Visible area maximum y
 	 	  20	Scroll x offset
 	 	  24	Scroll y offset
-	 	  28	Handle to open window behind
-	 	 	(-1=top, -2=bottom, -3=hide/iconise)
-<=	R1 + [4..24] updated to indicate new location. This is now an official effect.
+	 	  28	<Handle to open window behind=>wimp_windowlocation>
+<=	R1 + [4..24] updated to indicate new location.
+# This is now an official effect.
 
 #Tab
 This call updates the list of active windows. It is used
@@ -33,6 +33,3 @@ Wimp_OpenWindow (nested version)
 	R4 =	<nesting flags=>Wimp_nestingflags>
 
 This call opens a window within another window. Only present on versions of the Window Manager later than 3.80.
-
-#tab
-Note:	Under the nested Wimp you *may* move windows belonging to other clients with either the extended or normal versions of this call.

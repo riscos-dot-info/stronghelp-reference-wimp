@@ -4,7 +4,7 @@ Wimp_ReportError  (&400DF)
 	R1 =	<flags=>wimp_reporterror0>
 	R2 =	pointer to application name (or title if bit 4 set), or 0 for simply 'Error'
 	R3 =	sprite name (if bit 8 set)
-	R4 =	sprite <block=>OS:OS_SpriteOp_area> (if bit 8 set)
+	R4 =	<sprite area=>OS:OS_SpriteOp_area> (if bit 8 set)
 	R5 =	pointer to <extra buttons string=>.buttons> (if bit 8 set)
 
 <=	R1 =	0 if nothing selected, 1 if OK selected and 2 if Cancel, 3-5 if extra buttons
@@ -17,6 +17,6 @@ See <PRM 3, page 179=>PRM-3:179>.
 #
 #subpage buttons
 Wimp_ReportError extra buttons string
-{f24}j{f}	The list of buttons is comma seperated
-{f24}j{f}	Limit of buttons is 4 (3.98-), or 8 (4.00+)
-{f24}j{f}	Buffer size is 64 (3.98-) or 256 (4.00+) characters.
+è	The list of buttons is comma seperated
+è	Limit of buttons is 4 (3.98-), or 8 (4.00+)
+è	Buffer size is 64 (3.98-) or 256 (4.00+) characters.

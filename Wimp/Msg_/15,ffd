@@ -10,7 +10,7 @@ This message is used to control applications in a generic manner.
 # Koschei> And elaborated/confirmed by hotpot.
 #Subpage operation
 AppControl operations
-/Value/	/Meaning/
+Value	Meaning
 #Line
 0	Stop
 1	Wake up
@@ -20,6 +20,6 @@ AppControl operations
 #
 #Subpage flags
 Flags
-/Bit/	/Meaning/
+Bit	Meaning
 #line
 0	Do action immediately

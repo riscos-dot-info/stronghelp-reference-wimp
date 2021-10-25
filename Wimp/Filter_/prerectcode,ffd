@@ -1,0 +1,14 @@
+Rect filter code
+#Parent Filter_RegisterRectFilter
+=>	R0 =	0 if no more to redraw
+	R2 =	task handle
+	R6 =	minimum x
+	R7 =	minimum y
+	R8 =	maximum x
+	R9 =	maximum y
+	R12 =	value of R2 when filter registered
+<=	all registers preserved
+
+This is called before the redraw of a rectangle begins, before the background has been filled, and before the VDU graphics window has been set up.
+
+You should not fiddle with these things, I would have thought.

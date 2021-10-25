@@ -9,17 +9,18 @@ Message_DataSave (1)
 	&1000 for directory, &2000 for application, -1 for untyped.
 44	proposed leafname, 0-terminated
 
-This indicates that the sender wants to save data to the receiver
+This indicates that the sender wants to save data to the receiver. Conventionally, if this message is ignored, then the sender gives up silently.
+
+You should store the my_ref of each data save message, to check against any future <DataSaved=>Msg_D> message you might receive.
 
 Normal use:
   è	User has terminated a drag.
-  è	You get the first four words with <Wimp_GetPointerInfo>
-  è	You send message to mentioned window.
+  è	Get the first four words with <Wimp_GetPointerInfo>
+  è	Send the message to mentioned window.
 
 Possible responses from other task:
-  è	It sends <DataSaveAck=>Msg_2>
-  è	It sends <RamFetch=>Msg_6>
-
-You should store the my_ref of each data save message, to check against any future <DataSaved=>Msg_D> message you might recieve.
+  è	It sends <DataSaveAck=>Msg_2> (wishes to use file transfer)
+  è	It sends <RamFetch=>Msg_6> (wishes to use memory transfer)
+  è	It doesn't reply (not interested in files of that type)
 #Line
 See <PRM 3, page 252=>PRM-3:252>.

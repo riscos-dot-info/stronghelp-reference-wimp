@@ -1,18 +1,21 @@
 Validation Strings
 #Prefix .
-Validation string can contain the following commands :
-(Commands can be separated by ";")
+Validation string can contain the following commands:
+(Commands are separated by ";")
 
 #Indent 2
 <A>	Allowable characters.
 <C>	24-bit colours. (3.98+)
 <D>	Mask typed characters.
 <F>	Set font colours.
-<K>	Assign functionality to specific keys
-<L>	Text in icon will be formatted (split)
-<P>	Sets pointer shape and active point
+<K>	Assign functionality to specific keys.
+<L>	Text in icon will be formatted (split).
+<P>	Sets pointer shape and active point.
 <R>	Border commands.
 <S>	Spritename.
+<T>	Tint.
+<X>	Disable width calculation.
+<Y>	Enable features.
 #
 #Subpage A
 Validation string 'A'
@@ -44,7 +47,7 @@ Validation string 'C' (3.98+)
 		 [light 3D edge]/
 		 [dark 3D edge]{f}
 	All colours are in the form BBGGRR
-	If either colour is not included, then colour is as the <flags word=>wimp_iconflags>
+	If any colour is not included, then colour is as the <flags word=>wimp_iconflags>
 #line
 *Examples*:	{FCode:C008000/0080FF}	foreground mid green, background orange.
 	{FCode:CFF00FF}		foreground magenta, background as for flags word.
@@ -121,12 +124,12 @@ Validation string 'R'
 *Syntax*:	{Fcode:Rtype[,pushcolour]}
 	pushcolour is used for when the icon is in a selected state for types 5 and 6.
 *Types*:	1	slab out
-	2	slab in
-	3	ridge
-	4	channel
-	5	action button
-	6	default action
-	7	writable
+		2	slab in
+		3	ridge
+		4	channel
+		5	action button
+		6	default action
+		7	writable
 
 *Examples*:	{Fcode:R5,3}	Action button which sinks down to colour 3 (Acorn approved type)
  		{Fcode:R4}	Acorn recommended border type.
@@ -140,3 +143,36 @@ Validation string 'S'
 
 *Examples*:	{Fcode}	Sswitcher
 		Soptoff,opton{F}
+#
+#subpage T
+Validation string 'T'
+*Use*:	Apply a colour translation to an icon
+
+*Syntax*:	{/}Select 1 (deprecated){/}
+		    {fCode:T0,\<BBGGRR\>}
+		{/}Select 3 and later{/}
+		    {fCode:T\<type\>[,\<parameters\>]}
+		
+*Notes*:	Type is the decimal type number as defined by the ColourMap module. Parameters is a comma separated list of hex numbers passed in R3 to R9 to the ColourMap module when creating the colourmap descriptor.
+#
+#subpage X
+Validation string 'X'
+*Use*:	Disable the wimp's calculation of text in text+sprite icons on the iconbar.
+
+*Syntax*:	{fCode:X}
+
+*Notes*:	When you place a text+sprite icon on the iconbar, the wimp will automatically calculate the width of the text and hence the icon. If your application may change the text at some point later (for example to display a status), you instead need to calculate the largest width of all potential strings (using <Wimp_TextOp 1=>Wimp_TextOp>) and create the icon with this width - disabling the wimp's calculaton by using the X validation string command.
+
+	You should recalculate the widths and resize the icon when you receive <Message_FontChanged=>msg_400cf>.
+#
+#subpage Y
+Validation string 'Y'
+*Use*:	Set an feature flag applying to the icon.
+
+*Syntax*:	{fCode:Y\<option list\>}
+		
+*Notes*:	This string enables various features for the icon depending on the letters present.
+
+*Types*:	S	Icon should be sent Message_ScrollRequest when a mouse's scroll wheel is moved while over it.
+
+*Example*:	{fCode:Ys}

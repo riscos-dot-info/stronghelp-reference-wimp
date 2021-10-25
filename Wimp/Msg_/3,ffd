@@ -5,11 +5,17 @@ Message_DataLoad  (3)
 + 28	x coord
 + 32	y coord
 + 36	Estimated size
-+ 40	<filetype=>Filetypes:!Root>
++ 40	<filetype=>Filetypes2:!Root>
 + 44	full pathname
 + /n/	column of file in current selection
 + /n/ + 4	row of file in current selection
 
-Receiver of message should load, and answer with <DataLoadAck=>Msg_4> if success. The column and row information stored word aligned after the pathname is not present in RISC OS 2.
+This message is sent by the Filer to ask an application to load a file, or by a task in response to a <DataSaveAck=>Msg_2> message.
+
+When replying to a <DataSaveAck=>Msg_2>, the data-saving task should write its data to the temporary file specified, and reply by sending this message. It should be sent as a <UserMessage_Recorded=>Wimp_Sendmessage.1> so that if it returns unanswered, the sender can delete the temporary file and report an error.
+
+Possible responses from the data-loading task:
+  è	It sends <DataLoadAck=>Msg_4> (file successfully loaded).
+  è	It doesn't reply (error loading file/not interested in filetype).
 #Line
 See <PRM 3, page 253=>PRM-3:253>.

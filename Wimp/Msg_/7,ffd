@@ -3,6 +3,18 @@ Message_RamTransmit (7)
 + 20	pointer to buffer from RamFetch message
 + 24	amount of data written to the buffer
 
-After recieving a RamFetch message, you write data to buffer, using <Wimp_TransferBlock>, and then send back this message.
+After receiving a <RamFetch=>Msg_6> message, you should write data to the given buffer, using <Wimp_TransferBlock>, and then send back this message.
+
+Since you cannot guarantee that the buffer offered is large enough for all your data, you should keep a record (across <Wimp_Poll=>Wimp_Poll>s) of how much data has been transmitted so far.
+
+If the number of bytes written doesn't fill the buffer, then this will be the last message in the dialogue: You should not expect a reply, sending it as a <UserMessage=>Wimp_Sendmessage.1>.
+
+If you {/}do{/} fill the buffer, then you should send this message as a <UserMessage_Recorded=>Wimp_Sendmessage.1> and expect further <RamFetch=>Msg_6> messages.
+
+Possible responses from the data-loading task:
+  è	It sends another <RamFetch=>Msg_6> message (request more data).
+  è	It doesn't reply (error reading data / transfer finished).
+
+If this message returns unanswered as a <UserMessage_Acknowledge=>Wimp_Sendmessage.1>, then you should abort the data transfer and report an error.
 #Line
 See <PRM 3, page 256=>PRM-3:256>.

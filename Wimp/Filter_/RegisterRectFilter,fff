@@ -1,7 +1,7 @@
-Filter_RegisterRectFilter
+Filter_RegisterRectFilter  (&42644)  (0.18)
 #Parent Filter_
 =>	R0 =	pointer to zero terminated filter name
-	R1 =	address of <filter code=>Filter_rectcode>
+	R1 =	address of <filter code=>Filter_prerectcode>
 	R2 =	value to be passed in R12
 	R3 =	task handle of task to which filter is applied or 0 for all tasks
 
@@ -11,4 +11,4 @@ Adds a new <Wimp_GetRectangle> pre-filter to the list of pre-filters.
 
 The address pointed to by R1 will be called whenever the task who's handle is passed in R3 calls <Wimp_GetRectangle> with R12 equal to the value of R2 when this SWI is called.
 
-*Note:* This is still only a 'guess' at the way it works.
+Note: This is still only a 'guess' at the way it works.

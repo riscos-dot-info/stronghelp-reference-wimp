@@ -8,6 +8,6 @@ Wimp_SetPointerShape  (&400D8)
 	R5 =	active point y offset
 <=	R0 corrupt
 
-This SWI is obsolete. New programs should use <Wimp_SpriteOp>,36.
+This SWI is deprecated in favour of <Wimp_SpriteOp> 36.
 #Line
 See <PRM 3, page 166=>PRM-3:166>.

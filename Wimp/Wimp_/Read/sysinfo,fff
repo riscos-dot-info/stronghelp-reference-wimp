@@ -22,8 +22,8 @@ Currently defined values for R0 :
 10	/Internal use only/
 # 10	Read iconbar window handle
 11	Application limit
-16	<Read WIMP sprite pools pointers=>.16> (RO4+)
-17	Read the configured auto-scroll pause delay in cs (RO4+)
+16	<Read WIMP sprite pools pointers=>.16> (4.00+)
+17	Read the configured auto-scroll pause delay in cs (4.00+)
 #Line
 See <PRM 3, page 218=>PRM-3:218>.
 #

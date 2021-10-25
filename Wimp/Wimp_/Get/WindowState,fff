@@ -10,7 +10,7 @@ Wimp_GetWindowState  (&400CB)
 	  16	Visible area maximum y
 	  20	Scroll x offset
 	  24	Scroll y offset
-	  28	Handle to open window behind (-1=top, -2=bottom, -3=iconised)
+	  28	<Handle to open window behind=>wimp_windowlocation>
 	  32	<Window flags=>wimp_windowflags>
 
 This call reads a windows visible state. The <nested version=>.nested> can be used to read the windows parent.

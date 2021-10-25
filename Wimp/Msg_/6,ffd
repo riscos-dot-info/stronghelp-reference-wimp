@@ -2,5 +2,22 @@ Message_RamFetch (6)
 #Parent MSG_
 + 20	pointer to buffer where receiver should put data
 + 24	size of buffer
+
+You should send this message either in response to a <DataSave=>Msg_1>, indicating that you want to use memory transfer, or in response to a <RamTransmit=>Msg_7>, to request more data. It should {/}always{/} be sent as a <UserMessage_Recorded=>Wimp_Sendmessage.1>, so that if it is unanswered you can either revert to the file transfer protocol, or abort the data transfer.
+
+Before sending this message, you must allocate a buffer for the data-saving task to write data to. You can use the estimated data size from the <DataSave=>Msg_1> message for this purpose, but you should be prepared for more (or less) data to actually be sent.
+
+If you receive a <RamTransmit=>Msg_7> message where the data-saving task has {/}filled{/} the buffer (data transferred=buffer size), then you should reply with this message. If you receive a <RamTransmit=>Msg_7> where the data-saving task has {/}not{/} filled your buffer, then this marks the successful conclusion of the transfer.
+
+If you can't process the received data, you should report an error and abandon the transfer.
+
+#tab
+Possible responses from the data-saving task:
+  è	It sends <RamTransmit=>Msg_7> (data successfully written to specified buffer).
+  è	It doesn't reply (memory transfer not supported/error writing data).
+
+If this message returns unanswered:
+  è	If no reply is received to the first RamFetch, file transfer should be used instead (send a <DataSaveAck=>Msg_2>).
+  è	If there is no reply to subsequent messages, then the transfer should be abandoned {/}silently{/} (the other end will already have reported an error).
 #Line
 See <PRM 3, page 256=>PRM-3:256>.

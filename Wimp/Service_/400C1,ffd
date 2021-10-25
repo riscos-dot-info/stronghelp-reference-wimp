@@ -1,0 +1,22 @@
+Service_WimpErrorButtonPressed (&400C1)
+#Parent OS:service_index
+=>	R0 =	0
+	R1 =	&400C1 (reason code)
+	R2 =	button number
+	 	 	1	OK
+	 	 	2	Cancel
+	 	 	3	Rightmost additional button
+	 	 	 	...
+	R3 =	pointer to extra button string
+
+<=	R0 =	0 to return to application
+	R1 =	preserved
+	R2 =	Button number (normally unchanged)
+
+	/or/
+
+	R0 =	1 to redisplay error report
+	R1 =	0 (claimed)
+	R2 =	pointer to block holding registers for new call to <Wimp_reportError>
+
+This service is issued when a button is pressed on a Wimp error box. You can use it to detect clicks on buttons you may have added using <Service_ErrorStarting=>service_400c0>.

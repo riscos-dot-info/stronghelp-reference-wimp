@@ -16,7 +16,7 @@ Bits	Meaning when set
 12-15	<Icon button type=>Wimp_iconbutton>.
 16-19	Exclusive Selection Group.
 20	Bit 20 is not in the ESG from RISC OS 3.10
-	onwards, and thus is reserved.
+	onwards, and is now reserved.
 21	Icon is selected by user, and is inverted.
 22	Icon is un-selectable (shaded)
 23	Icon is deleted.

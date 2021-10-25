@@ -1,0 +1,11 @@
+Service_ErrorStarting (&400C0)
+#Parent OS:service_index
+=>	R1	=	&400C0 (reason code)
+	R2-R7	=	R0-R5 of call to <Wimp_ReportError>
+
+<=	R1	preserved (do not claim)
+	R2-R7	=	updated values
+
+This service call allows modules to alter the contents of wimp error windows, and add their own buttons. If you wish to change the data that these registers point to, you should make a copy and change that - do not alter application memory.
+
+You should append new buttons rather than insert them to avoid confusion over button numbering.

@@ -6,7 +6,7 @@ Wimp_SlotSize  (&400EC)
 <=	R0 =	size of current slot
 	R1 =	size of next slot
 	R2 =	size of free pool
-	R4 corrupted
+	R4 corrupted on RISC OS 2.
 
 This SWI reads or sets the amount of memory allocated to the current, or next application.
 #Line

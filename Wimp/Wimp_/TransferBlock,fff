@@ -7,6 +7,6 @@ Wimp_TransferBlock  (&400F1)
 	R4 =	length of buffer
 <=	R0 corrupt
 
-This SWI is used to transfer a block of data from one task to another. Addresses and bufferlength are all byte-aligned.
+This SWI is used to transfer a block of data from one task to another. Addresses and lengths are all byte-aligned.
 #Line
 See <PRM 3, page 216=>PRM-3:216>.

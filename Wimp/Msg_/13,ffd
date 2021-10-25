@@ -1,0 +1,14 @@
+Message_ReleaseEntity  (&13)
+#Parent MSG_
++20	<flags=>.flags>
+
+This message should be broadcast to all tasks when your application has the clipboard and is about to quit.
+
+Part of the {/}{*}NEW{*} RISC OS Selection Model and Clipboard{/} protocol.
+#Subpage flags
+Message_ClaimEntity flags
+Bit	Meaning if set
+#Line
+2	clipboard being released
+
+All other bits are reserved and must be set to zero.

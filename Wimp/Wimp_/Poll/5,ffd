@@ -2,8 +2,8 @@ Pointer Entering Window (5)
 Returned block contains :
   0 Window handle
 
-This message is returned when the pointer, for some reason, suddenly finds itself over this window. This can be because you moved it there, but also because a menu is closed, a window deleted, or something similar
+This message is returned when the pointer, for some reason, suddenly finds itself over this window. This can be because you moved it there, but also because a menu is closed, a window deleted, or something similar.
 
-Note: If your pointer is over a window, and you delete this and create a new window, all in one go, you will :
- 1:	Not get a Pointer_Leaving_Window for the old window.
- 2:	Not get a Pointer_Entering_Window for the new one. (Probably because they will have the same handle..)
+Note: If your pointer is over a window, and you delete this and create a new window, all in one go, you will:
+ 1.	Not get a Pointer_Leaving_Window for the old window.
+ 2.	Not get a Pointer_Entering_Window for the new one. (Probably because they will have the same handle...)

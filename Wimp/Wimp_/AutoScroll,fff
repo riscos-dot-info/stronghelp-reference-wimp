@@ -1,31 +1,37 @@
-Wimp_AutoScroll (&400FD)
+Wimp_AutoScroll (&400FD) (4.00)
 #Parent Wimp_
-{f25}Þ{f}	R0 =	<flags=>.inflags>
-		{/}If R0 bits 0 or 1 are set,{/}
-		R1 =	pointer to <block=>.r1>
-{f25}Ü{f}	R0	<new flags=>.newflags>
-#line
+=>	R0 =	<flags=>.inflags>
+If R0 bits 0 or 1 are set,
+	R1 =	pointer to <block=>.r1>
+<=	R0 =	<new flags=>.newflags>
+
 This call controls how the Wimp automatically scrolls an application's windows.
 #
 #subpage r1
 Wimp_AutoScroll block
-/Offset/	/Meaning/
+#tab align right, align left, align right, align left
+Offset	Meaning
 #line
 0	Window handle of window to scroll
-4	Left pause zone width (in OS units), eg. 80, ignored if flag bit 0 is clear
-8	Bottom pause zone height (in OS units), eg. 80, ignored if flag bit 1 is clear
-12	Right pause zone width (in OS units), eg. 80, ignored if flag bit 0 is clear
-16	Top pause zone height (in OS units), eg. 80, ignored if flag bit 1 is clear
-20	Pause duration (in centiseconds), or 0 for no pause, or -1 for configured pause length
+4	Left pause zone width
+8	Bottom pause zone height
+12	Right pause zone width
+16	Top pause zone height
+20	Pause duration in centiseconds
+	 	-1 	configured pause length
+	 	0 	no pause
+	 	Other	duration in cs
 24	State change handler:
  	 	0	none
- 	 	1	use inbuilt Wimp pointer shape routine
- 	 		Other values are interpreted as a pointer to a routine.
+ 	 	1	use Wimp's pointer shape routine
+ 	 	> 1	pointer to a routine.
 28	Value to pass in R12 to state change handler routine (if applicable)
+
+Zone sizes are in OS units, and are ignored unless the relevent flag bit is set. A sensible default for these is 80.
 #
 #subpage inflags
 Wimp_AutoScroll R0 entry flags
-/Bit/	/Meaning/
+Bit	Meaning when set
 #line
 0	Enable horizontal autoscrolling
 1	Enable vertical autoscrolling
@@ -34,21 +40,21 @@ Wimp_AutoScroll R0 entry flags
 Other bits are reserved.
 #
 #subpage newflags
-Wimp_AutoScroll R0 exit flags
-/Bits/	/Meaning/
+Wimp_AutoScroll exit flags
+Bits	Meaning when set
 #line
-0-2	are preserved or read, according to <bit 7=>.inflags> on entry.
+0-2	are preserved or read, according to <bit 7 on entry=>.inflags>.
 7	is cleared
-8	set	Autoscrolling has commenced (this bit is set after a pause is completed, and remains set when a scroll has "hit the stops", but is cleared again when the pointer re-enters the centre zone)
-9	set	Pointer is outside the window's visible area
-10	set	Pointer is within one or two pause zones
-11	set	Pointer is within the centre zone
-12	set	Pointer is left of the centre zone
-13	set	Pointer is below the centre zone
-14	set	Pointer is right of the centre zone
-15	set	Pointer is above the centre zone
-16	set	There is work area to the left of the visible area (always cleared if <bit 0=>.inflags> is clear)
-17	set	There is work area below the visible area (always cleared if <bit 1=>.inflags> is clear)
-18	set	There is work area to the right of the visible area (always cleared if <bit 0=>.inflags> is clear)
-19	set	There is work area above the visible area (always cleared if <bit 1=>.inflags> is clear)
+8	Autoscrolling has commenced (this bit is set after a pause is completed, and remains set when a scroll has "hit the stops", but is cleared again when the pointer re-enters the centre zone)
+9	Pointer is outside the window's visible area
+10	Pointer is within one or two pause zones
+11	Pointer is within the centre zone
+12	Pointer is left of the centre zone
+13	Pointer is below the centre zone
+14	Pointer is right of the centre zone
+15	Pointer is above the centre zone
+16	There is work area to the left of the visible area (always cleared if <bit 0=>.inflags> is clear)
+17	There is work area below the visible area (always cleared if <bit 1=>.inflags> is clear)
+18	There is work area to the right of the visible area (always cleared if <bit 0=>.inflags> is clear)
+19	There is work area above the visible area (always cleared if <bit 1=>.inflags> is clear)
 Other bits must be ignored.

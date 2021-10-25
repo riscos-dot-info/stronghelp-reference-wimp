@@ -11,13 +11,6 @@ Bit	Meaning
 26-27	<child's y scroll offset=>.values>
 others	reserved, must be zero
 
-#Tab
-Note:	This call is now drawn from Acorn's documentation; it is no longer documented from experimental evidence.
-
-# Example:
-# #Indent 2
-# A window has a tool bar at the top of the screen, and a status bar at the bottom of the window. The tool bar would use bits 16, 19, 21 and 23, and the status bar would use bits 16, 18, 21, and 22. You might also have the document view as a nested window with bits 16, 18, 21, 23, 24 and 26 set.
-# #Indent
 Nesting windows and attaching them correctly is not an easy task; an amount of experimentation will be required before you can achieve the desired result.
 #Subpage values
 Nesting values

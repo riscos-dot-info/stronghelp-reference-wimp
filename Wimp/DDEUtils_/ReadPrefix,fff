@@ -1,11 +1,10 @@
 DDEUtils_ReadPrefix (&4258A) [1.56]
 #Parent DDEUtils_
-{f25}Þ{f}	R0 =	bits 0-15	object number (taskhandle)
+=>	R0 =	bits 0-15	object number (taskhandle)
 	 	bits 16-31	ignored
 	 	or all 0	use currently active object number
 
-{f25}Ü{f}	R0 =	pointer to the value of Prefix$Dir for the given task (read only, Ctrl-term)
-	 	or zero if none.
+<=	R0 =	pointer to the value of Prefix$Dir for the given task (read only, control terminated), or zero if none.
 #line
-*Notes*:	Added to DDEUtils entirely for Zap's benefit.
+Notes: Added to DDEUtils entirely for Zap's benefit.
 # at least, that's what stewart said

@@ -16,9 +16,9 @@ This manual is part of a collection comprising the main public domain programmin
 
 Thanks go to those mentioned in the <contributors=>OS:contributions> list.
 
-For comments, suggestions and submissions for these, please mail iain truskett <\<koschei@eh.org\>=>#URL mailto:koschei@eh.org> who is currently moderating the collection. The primary location for these manuals will be <http://eh.org/~koschei/manuals/=>#url>, with another copy at <http://freenet.barnet.ac.uk/manuals/=>#URL>.
+For comments, suggestions and submissions for these, please mail Christian Ludlam <christian@recoil.org=>#URL mailto:christian@recoil.org> who is currently moderating the collection. These manuals will continue to be available from <http://sudden.recoil.org/stronghelp/=>#url>.
 #line
-<This page=>.hist108> gives history and credits.
+<This page=>.hist120> gives history and credits.
 #
 #Subpage hist100
 History for Wimp v1.00
@@ -125,7 +125,7 @@ History for Wimp v.1.07
 #line
 è	<Wimp_AutoScroll> typo fixed.
 è	<Wimp_SendMessage> modified with RISC OS 4 information.
-è	<Free_Register>, and <Free_Unregister> have been reformatted, updated with corrections and also 64 bit routine info.
+è	<Free_Register>, and <Free_Deregister> have been reformatted, updated with corrections and also 64 bit routine info.
 #tab;line
 <Previous history=>.hist106>	<Next history=>.hist108>
 #subpage hist108
@@ -142,4 +142,20 @@ History for Wimp v.1.08
 è	<Message_AppControl=>Msg_15> also made clearer.
 è	Minor changes to <Wimp_Initialise> and <Wimp_GetWindowInfo>.
 #tab;line
-<Previous history=>.hist106>
+<Previous history=>.hist106>	<Next history=>.hist120>
+#
+#
+#subpage hist120
+History for Wimp v1.20
+#align right
+{/}4 August 2003{/}
+#align left
+#line
+è	Moderator now Christian Ludlam
+è	T, X and Y commands in <validation strings=>wimp_validationstring> added.
+è	DataSave protocol updated with much more information (Christopher Bazely)
+è	Updated <window block=>wimp_windowblock> flags and extra flags
+è	More information on foreground and background window bits in <window flags=>wimp_windowflags>
+è	Many formatting and layout improvements
+#tab;line
+<Previous history=>.hist108>

@@ -7,6 +7,6 @@ Returned block contains :
   12	y-offset of caret	(window origin)
   16	Caret height and flags
   20	Index of caret into string (if icon)
-  24	<Character code=>wimp_poll8a> ( It's a Word! )
+  24	<Character code=>wimp_poll8a> (it's a word!)
 
 If you're not interested in this keypress, then pass it on with <Wimp_ProcessKey>.

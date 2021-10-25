@@ -8,6 +8,17 @@ Message_DataSaveAck (2)
 + 40	<filetype=>Filetypes:!Root> of data
 + 44	full pathname (or "\<Wimp$Scrap\>")
 
-Words at 20 to 32 are preserved from <DataSave=>Msg_1> message. This is usually followed by a <DataLoad=>Msg_3> message.
+This message is used to reply to a <DataSave=>Msg_1> message, to indicate that the receiver should save their data to the specified file. Words at 20 to 32 are preserved from the original message.
+
+When the Filer replies using this message, it replaces the leafname from the <DataSave=>Msg_1> message with the full pathname of the file, and leaves the word at 36 as the estimated file size.
+
+Normal action on receiving a <DataSave=>Msg_1> message:
+  è	Alter the pathname to "\<Wimp$Scrap>".
+  è	Set the word at 36 to -1, to indicate that the file will be temporary.
+  è	Send this message in reply.
+
+Possible responses from other task:
+  è	It sends a <DataLoad=>Msg_3> message (data written to specified file)
+  è	It doesn't reply (error saving data / not listening)
 #Line
 See <PRM 3, page 253=>PRM-3:253>.

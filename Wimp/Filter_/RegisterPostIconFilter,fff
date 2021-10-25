@@ -1,4 +1,4 @@
-Filter_RegisterPostIconFilter
+Filter_RegisterPostIconFilter  (&4264A)  (0.18)
 #Parent Filter_
 =>	R0 =	pointer to zero terminated filter name
 	R1 =	address of <filter code=>Filter_iconcode>
@@ -11,4 +11,4 @@ Adds a new <Wimp_GetRectangle> icon plotting post-filter to the list of post-fil
 
 The address pointed to by R1 will be called whenever the task who's handle is passed in R3 calls <Wimp_GetRectangle> and just after the windows icons have been plotted with R12 equal to the value of R2 when this SWI is called.
 
-*Note:* This is still only a 'guess' at the way it works.
+Note: This is still only a 'guess' at the way it works.

@@ -13,7 +13,7 @@ Offset	Value
 20	optional pairs of words
 	<mode variable index=>OS:OS_ReadModeVariables>, value
 	mode variable index, value
-	Œetc
+	...etc
 	-1 terminator
 #line
 See also <Mode Specifier Strings=>Wimp_ModeString>

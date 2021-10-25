@@ -7,15 +7,12 @@
 <User messages=>Msg_>
 <Window block=>Wimp_windowblock>
 <Window flags=>Wimp_windowflags>
-
 <Menu block=>Wimp_MenuBlock>
 <Menu items=>Wimp_MenuBlock.item>
 <Menu flags=>Wimp_MenuBlock.flags>
-
-<Plug-in Protocol=>Msg_PlugIn_>
 <Icon block=>Wimp_iconblock>
 <Icon flags=>Wimp_iconflags>
 <Icon buttons=>Wimp_iconbutton>
 <Validation strings=>Wimp_validationstring>
-
+<Service calls=>services>
 #EndTable

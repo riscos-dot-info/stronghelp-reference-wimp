@@ -1,0 +1,15 @@
+Post rect filter code
+#Parent Filter_RegisterPostRectFilter
+=>	R0 =	0 if no more to redraw
+	R2 =	task handle
+	R6 =	minimum x
+	R7 =	minimum y
+	R8 =	maximum x
+	R9 =	maximum y
+	R10 =	window handle - 1
+	R12 =	value of R2 when filter registered
+<=	all registers preserved
+
+This is called after the window background is filled, before <Wimp_GetRectange> returns, unless the call is returning with 'no more to do' status. This is not called due to <Wimp_UpdateWindow> since it does not fill the background, but is is called after a transparent window would have been filled.
+
+You can probably modify the updated block, but R0 and R1 should probably remain as passed.

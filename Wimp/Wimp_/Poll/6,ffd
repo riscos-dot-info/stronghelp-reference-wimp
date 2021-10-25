@@ -2,7 +2,7 @@ Mouse Click (6)
 #Wrap Off
 Returned block contains :
 
-/Offset/	/Meaning/
+Offset	Meaning
 #line
 0	Mouse x		(Screen coord)
 4	Mouse y		(Screen coord)

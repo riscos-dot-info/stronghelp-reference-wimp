@@ -8,6 +8,10 @@ Message_DataLoadAck  (4)
 + 40	<filetype=>Filetypes:!Root>
 + 44	full pathname
 
-This is sent as an answer to a <DataLoad=>Msg_3> message. All that should be done, is to change message type to 4, and fill in the your_ref field.
+This is sent by a data-loading task, in answer to a <DataLoad=>Msg_3> message.
+
+If your program is capable of loading a file of the type specified in the <DataLoad=>Msg_3> message, then it should try to load the file. If successful, then you should reply using this message. All that should be done is change the message type to 4, and fill in the your_ref field.
+
+In addition, if the file was a temporary file, then the data-loading task should delete it. The best way to determine this seems to be that messages from the Filer (file loading rather than data transfer) will have their your_ref field set to 0, whereas <DataLoad=>Msg_3> messages which followed on from a <DataSaveAck=>Msg_2> will not.
 #Line
 See <PRM 3, page 254=>PRM-3:254>.

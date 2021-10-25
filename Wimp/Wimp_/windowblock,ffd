@@ -19,7 +19,7 @@ Offset	Contents
 36	Scrollbar outer colour					3 Mid grey
 37	Scrollbar inner colour					1 Light grey
 38	Title background when input focus			12 Cream
-39	Extra <flags=>.moreflags> byte.
+39	<Extra flags=>.moreflags> byte.
 40	Work area minimum x
 44	Work area minimum y
 48	Work area maximum x
@@ -39,14 +39,18 @@ The default colour for the title is 7 (black).
 If the colour given is &FF, then on pre-Wimp 3.80, then it means that the window will have no furniture (ie. no title bar, no scroll bars, no close, etc). If the Wimp is 3.80 or later, then the window will merely have no frame, but furniture will still be able to be present.
 #
 #subpage moreflags
-Window block, byte 39 flags.
+Window block extra flags.
 /Bit/	/Meaning/
-0	use <24-bit colour=>.win24> in title bar validation (4.00+)
-All other bits unspecified.
+0	use <24-bit colour=>.win24> in title bar validation	(4.00+)
+2	window should never be given a 3D border		(4.00+)
+3	window should always be given a 3D border		(4.00+)
+All other bits should be zero.
+
+Setting both bits 2 and 3 has the same effect as setting neither bit.
 #
 #subpage win24
 24-bit window colouring (4.00+)
-Set bit 0 of <byte 39=>.moreflags> in the window description block and the <validation string=>Wimp_icondata>. of the title bar will be checked for the 'C' option where C is:
+Set bit 0 of <byte 39=>.moreflags> in the window description block and the <validation string=>Wimp_icondata> of the title bar will be checked for the 'C' option where C is:
 #indent 2
 #fcode
 C[title foreground]/

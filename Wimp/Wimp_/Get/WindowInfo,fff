@@ -6,7 +6,5 @@ Wimp_GetWindowInfo  (&400CC)
 	  4..	<Window block=>wimp_windowblock>
 
 This SWI returns complete details of the given windows state, including any icons created after the window itself. If bit 0 of R1 is set, then the icons are *not* returned.
-
-Under the nested window manager, the form is not different, however the block returned complies with the block specified in <Wimp_CreateWindow>.
 #Line
 See <PRM 3-137=>PRM-3:137>.

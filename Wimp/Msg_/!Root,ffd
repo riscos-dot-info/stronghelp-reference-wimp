@@ -52,8 +52,8 @@ The block transfer model (Clipboard, Drag'n drop) :
 <10 DataRequest=>Msg_10>
 <11 Dragging=>Msg_11>
 <12 DragClaim=>Msg_12>
+<13 ReleaseEntity=>Msg_13>
 #EndTable
-# Gerph> 13 cannot be documented because it's not out of Acorn yet !
 
 #Indent
 Data Transfer protocol :

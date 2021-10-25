@@ -1,0 +1,16 @@
+Service_ErrorEnding (&400C2)
+#Parent OS:service_index
+=>	R1 =	&400C2 (reason code)
+	R2 =	button number
+	 	 	1	OK
+	 	 	2	Cancel
+	 	 	3	Rightmost additional button
+	 	 	 	...
+	R3 =	pointer to extra button string
+
+<=	R1 =	0 to claim
+	R2 =	Button number to return to applicaton
+
+This service is issued just before an error window closes, allowing you to modify the button number returned to the application. This is only really useful if you have dealt with the error yourself in some way.
+
+If you change the button number, you should claim the call.

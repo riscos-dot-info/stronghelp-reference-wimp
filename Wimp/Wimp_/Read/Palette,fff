@@ -1,7 +1,7 @@
 Wimp_ReadPalette  (&400E5)
 #Parent Wimp_
 =>	R1 =	pointer to 20-word <palette block=>Wimp_paletteblock>
-	R2 =	"TRUE" (&45555254) to return true colour (3.5+)
+	R2 =	"TRUE" (&45555254) to return true colour
 <=	R0 corrupt
 	block contains palette definitions
 

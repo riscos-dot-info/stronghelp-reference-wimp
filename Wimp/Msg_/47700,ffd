@@ -4,7 +4,7 @@ ColourPicker_Choice (&47700)
 + 24	<flags=>.flags>
 + 28+	<colour descriptor=>colourpicker_descriptor>
 
-This message is sent by ColourPicker to inform you of a click on 'Ok'. This message may or may not be followd by a <CloseDialogueRequest=>Msg_47703>
+This message is sent by ColourPicker to inform you of a click on 'OK'. This message may or may not be followed by a <CloseDialogueRequest=>Msg_47703>
 #Subpage flags
 ColourPicker Choice flags
 Bit	Meaning
