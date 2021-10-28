@@ -17,7 +17,7 @@ Bits	Meaning when set
 16-19	Exclusive Selection Group.
 20	Text is numeric and shouldn't be reversed
 	in territories with right-to-left alphabet.
-	Prior to RISC OS 3.10 this bit was part of the ESG.
+	Prior to RISC OS 3.50 this bit was part of the ESG.
 21	Icon is selected by user, and is inverted.
 22	Icon is un-selectable (shaded)
 23	Icon is deleted.
